@@ -40,7 +40,8 @@ public class LoginServlet extends HttpServlet {
                     Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/login712f.jsp");
+            resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/login_secure-f.jsp");
+          
         }
         resp.getWriter().print("Connection problem.Please try later");
     }
