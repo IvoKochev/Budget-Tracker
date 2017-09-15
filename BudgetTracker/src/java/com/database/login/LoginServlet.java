@@ -35,6 +35,7 @@ public class LoginServlet extends HttpServlet {
             if (checkEmailAndPassword(email, password)) {
                 try {
                     connection.close();
+                    resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
                     return;
                 } catch (SQLException ex) {
                     Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);

@@ -5,7 +5,6 @@
  */
 package com.database.connection;
 
-import com.database.registration.RegistrationServlet;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -27,8 +26,7 @@ public class DBConnection {
             connect = DriverManager.getConnection(url, "root", "1234");
 
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-            return false;
+            Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
         return true;
     }

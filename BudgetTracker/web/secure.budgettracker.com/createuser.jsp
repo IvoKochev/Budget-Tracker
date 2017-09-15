@@ -1,11 +1,3 @@
-<%-- 
-    Document   : createuser
-    Created on : Sep 14, 2017, 10:01:52 AM
-    Author     : slavi
---%>
-
-
-
 
 <html>
 
@@ -381,7 +373,7 @@
                                 <div style=position:relative>
 
                                     <div class="toplinks">
-                                        <input onclick="location.href = 'login_secure.html'" type=button class="button graybutton" value="LOGIN">
+                                        <input onclick="location.href = 'login_secure-f.jsp'" type=button class="button graybutton" value="LOGIN">
 
                                     </div>
 
