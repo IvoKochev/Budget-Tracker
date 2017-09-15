@@ -5,6 +5,7 @@
  */
 package com.database;
 
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +19,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /**
  *
  * @author slavi
@@ -26,18 +26,15 @@ import javax.servlet.http.HttpServletResponse;
 public class RegistrationServlet extends HttpServlet {
     
     private Connection connect = null;
+    Gson gson = new Gson();
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
         String emailaddress = request.getParameter("emailaddress");
         String password = request.getParameter("password");
-        String password2 = request.getParameter("password2");
-        
-        if (!this.checkPassword(password, password2)) {
-            response.sendRedirect("/BudgetTracker/secure.budgettracker.com/createuser.jsp");
-            return;
-        }
+      
+       
         if (this.openConnection()) {
             if (!checkEmail(emailaddress)) {
                 this.write(emailaddress, password);
@@ -74,10 +71,6 @@ public class RegistrationServlet extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    
-    private boolean checkPassword(String password, String password2) {
-        return password.equals(password2);
     }
     
     private boolean checkEmail(String email) {
