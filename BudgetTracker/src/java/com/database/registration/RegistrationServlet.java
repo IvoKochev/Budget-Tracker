@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.database;
+package com.database.registration;
 
-import com.google.gson.Gson;
+import com.database.connection.DBConnection;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,35 +26,27 @@ import javax.servlet.http.HttpServletResponse;
 public class RegistrationServlet extends HttpServlet {
 
     private Connection connect = null;
-    Gson gson = new Gson();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String emailaddress = request.getParameter("emailaddress");
         String password = request.getParameter("password");
+        connect = new DBConnection().getConnection();
 
-        if (this.openConnection()) {
+        if (connect != null) {
             if (!checkEmail(emailaddress)) {
-                this.write(emailaddress, password);
-                return;
+                try {
+                    this.write(emailaddress, password);
+                    connect.close();
+                    return;
+                } catch (SQLException ex) {
+                    Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
             response.sendRedirect("/BudgetTracker/secure.budgettracker.com/createuser.jsp");
         }
         response.getWriter().print("Connection problem.Please try later");
-    }
-
-    private boolean openConnection() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/budgettracker";
-            connect = DriverManager.getConnection(url, "root", "1234");
-
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-            return false;
-        }
-        return true;
     }
 
     private void write(String email, String password) {
@@ -75,7 +66,7 @@ public class RegistrationServlet extends HttpServlet {
 
     private boolean checkEmail(String email) {
         try {
-            String query = "SELECT * FROM accounts WHERE email ='" + email + "'";
+            String query = "SELECT email FROM accounts WHERE email ='" + email + "'";
             Statement stmt = connect.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             return rs.first();

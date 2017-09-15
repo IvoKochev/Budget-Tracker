@@ -64,7 +64,7 @@
 							</li>
 		</ul>
 		<div align=right id=loginformid style=display:none;>
-		<form class=loginfrm method=post action=https://secure.budgettracker.com/login_cookie.php>
+		<form class=loginfrm method=post action=../LoginServlet>
 		<div align=right>
 		<span style=color:#333;>Email:</span>
 		<input name=username id=emailid size=22 type=text class="textbox" value=""><br>
