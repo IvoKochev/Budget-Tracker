@@ -363,7 +363,7 @@
                     <table cellpadding=0  border=0 height="70" width="100%" cellspacing=0 class="headerSection">
                         <tr>
                             <td width=740 height="70" nowrap>
-                                <a class="btLogo" href="login712f.html"></a>
+                                <a class="btLogo" href="login712f.jsp"></a>
                                 <div style=position:absolute;left:420px;top:5px;color:#fff;z-index:99999;>
                                 </div>
 
@@ -482,7 +482,7 @@
 
                                                         <tr>
                                                             <td valign=top>
-                                                                <input type=hidden id=pagename value="createuser.html">
+                                                                <input type=hidden id=pagename value="createuser.jsp">
                                                                 <input type=hidden id=pagetitle value="Create User">
                                                                 <div class=subnavigation></div><div class=maincontentarea>			<table cellpadding=5 cellspacing=0 border=0>
                                                                         <form method="post" action="../RegistrationServlet"name="createuserfrm" onsubmit="return validateChars();">
@@ -538,10 +538,7 @@
                                                                                 document.location.href = 'login2c72.jsp?reference=budgettrackerblog';
                                                                             }
                                                                         }
-                                                                        function a() {
-                                                                           alert("AAAAAAAA");
-                                                                           return false;
-                                                                        }
+                                                                       
                                                                         function validateChars() {
                                                                             
 
@@ -645,7 +642,7 @@
 
                                                                 <script>
                                                                     function getdef() {
-                                                                        setTimeout("location.href='login712f.html';", 10000);
+                                                                        setTimeout("location.href='login712f.jsp';", 10000);
                                                                     }
 
 
@@ -672,7 +669,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <form name=switchuser style="margin:0px;padding:0px;" method="post" action="https://secure.budgettracker.com/switchuser.php"><input type=hidden name=refreshurl value="createuser.html"/><input type=hidden name=getid value=0/></form>
+                                                    <form name=switchuser style="margin:0px;padding:0px;" method="post" action="https://secure.budgettracker.com/switchuser.php"><input type=hidden name=refreshurl value="createuser.jsp"/><input type=hidden name=getid value=0/></form>
 
 
                                                     <div id=updatetabsid style=display:none; class=updatetabs>
@@ -685,7 +682,7 @@
                                                                 <tr>
                                                                     <td class="padding3 boxb" bgcolor="#c9e1f6">Side Modules</td>
                                                                     <td align=right class="padding3 boxb" bgcolor="#c9e1f6">
-                                                                        <a href="login712f.html">reset</a>
+                                                                        <a href="login712f.jsp">reset</a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
