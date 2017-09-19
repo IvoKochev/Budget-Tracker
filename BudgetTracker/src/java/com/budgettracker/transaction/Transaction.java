@@ -5,8 +5,6 @@
  */
 package com.budgettracker.transaction;
 
-import com.budgettracker.sender_or_payee.IPayee;
-import com.budgettracker.sender_or_payee.ISender;
 import com.budgettracker.sender_or_payee.SenderOrPayee;
 import java.util.Date;
 

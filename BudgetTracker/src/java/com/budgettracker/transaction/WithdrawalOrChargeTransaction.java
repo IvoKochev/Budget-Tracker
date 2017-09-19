@@ -12,9 +12,9 @@ import java.util.Date;
  *
  * @author slavi
  */
-public class WithdrawalOrCharge extends Transaction {
+public class WithdrawalOrChargeTransaction extends Transaction {
 
-    public WithdrawalOrCharge(SenderOrPayee sender, SenderOrPayee payee, Date date, Status status, double amount) {
+    public WithdrawalOrChargeTransaction(SenderOrPayee sender, SenderOrPayee payee, Date date, Status status, double amount) {
         super(sender, payee, date, status, amount);
     }
 }

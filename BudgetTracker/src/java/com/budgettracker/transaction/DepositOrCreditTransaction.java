@@ -12,10 +12,9 @@ import java.util.Date;
  *
  * @author slavi
  */
-public class Transfer extends Transaction {
-    
-    public Transfer(SenderOrPayee sender, SenderOrPayee payee, Date date, Status status, double amount) {
+public class DepositOrCreditTransaction extends Transaction {
+
+    public DepositOrCreditTransaction(SenderOrPayee sender, SenderOrPayee payee, Date date, Status status, double amount) {
         super(sender, payee, date, status, amount);
-        this.setName(sender.getName() + " to " + payee.getName() + " Transfer");
     }
 }

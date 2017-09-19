@@ -12,9 +12,9 @@ import java.util.Date;
  *
  * @author slavi
  */
-public class CashAdvance extends Transaction {
+public class CashAdvanceTransaction extends Transaction {
 
-    public CashAdvance(SenderOrPayee sender, SenderOrPayee payee, Date date, Status status, double amount) {
+    public CashAdvanceTransaction(SenderOrPayee sender, SenderOrPayee payee, Date date, Status status, double amount) {
         super(sender, payee, date, status, amount);
     }
 }
