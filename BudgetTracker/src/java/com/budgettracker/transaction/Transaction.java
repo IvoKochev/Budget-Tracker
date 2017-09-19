@@ -5,10 +5,16 @@
  */
 package com.budgettracker.transaction;
 
+import java.util.Date;
+
 /**
  *
  * @author slavi
  */
 public abstract class Transaction implements ITransaction {
 
+    private Date date;
+    private Status status;
+    private String description;
+    private double amount;
 }
