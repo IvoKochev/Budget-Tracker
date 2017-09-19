@@ -9,6 +9,7 @@ import com.budgettracker.Budget.Budget;
 import com.budgettracker.MyBills.Bill;
 import com.budgettracker.exceptions.InvalidMoneyException;
 import com.budgettracker.income.Income;
+import com.budgettracker.payee.IPayee;
 import com.budgettracker.transaction.Transaction;
 import java.util.List;
 import java.util.Set;
@@ -18,16 +19,22 @@ import java.util.Set;
  * @author slavi
  */
 public class Account implements IAccount {
-
+    
     private String name;
     private Set<Bill> bills;
     private List<Transaction> transactions;
     private Set<Income> incomes;
     private Set<Budget> budgets;
     private Save save;
-
+    
     @Override
-    public void addMoney(double money)throws InvalidMoneyException {
+    public void addMoney(double money) throws InvalidMoneyException {
         this.save.addMoney(money);
+    }
+    
+    @Override
+    public void sendMoney(IPayee payee, double money) throws InvalidMoneyException {
+        double myMoney = this.save.getMoney(money);
+        payee.addMoney(myMoney);
     }
 }

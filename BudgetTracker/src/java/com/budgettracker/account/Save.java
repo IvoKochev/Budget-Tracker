@@ -22,7 +22,7 @@ public class Save {
         this.money += money;
     }
 
-    void getMoney(double money) throws InvalidMoneyException {
+    double getMoney(double money) throws InvalidMoneyException {
         if (this.money < money) {
             throw new InvalidMoneyException("InvalidMoneyException: The current balance is insufficient");
         }
@@ -30,6 +30,7 @@ public class Save {
             throw new InvalidMoneyException();
         }
         this.money -= money;
+        return money;
     }
 
     double getBalance() {

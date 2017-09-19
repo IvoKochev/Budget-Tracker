@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.budgettracker.payee;
+package com.budgettracker.sender;
 
 import com.budgettracker.exceptions.InvalidMoneyException;
+import com.budgettracker.payee.IPayee;
 
 /**
  *
  * @author slavi
  */
-public interface Ipayee {
+public interface ISender {
 
-    void addMoney(double money) throws InvalidMoneyException;
+    void sendMoney(IPayee payee, double money) throws InvalidMoneyException;
 }

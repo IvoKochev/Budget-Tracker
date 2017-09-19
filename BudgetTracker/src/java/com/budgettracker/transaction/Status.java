@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.budgettracker.account;
-
-import com.budgettracker.sender.ISender;
-import com.budgettracker.payee.IPayee;
+package com.budgettracker.transaction;
 
 /**
  *
  * @author slavi
  */
-public interface IAccount extends IPayee, ISender {
-
+public enum Status {
+    Cleared, Unreconciled, Reconclied, Void;
 }
