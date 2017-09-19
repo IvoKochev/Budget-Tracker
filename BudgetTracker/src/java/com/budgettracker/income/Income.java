@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.budgettracker.account;
+package com.budgettracker.income;
 
 /**
  *
  * @author slavi
  */
-public interface ITransaction {
+public class Income {
     
 }

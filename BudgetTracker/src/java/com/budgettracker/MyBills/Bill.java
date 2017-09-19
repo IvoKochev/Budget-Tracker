@@ -1,5 +1,6 @@
 package com.budgettracker.MyBills;
 
+import com.budgettracker.account.Account;
 import java.util.Date;
 
 public class Bill {
@@ -12,5 +13,4 @@ public class Bill {
 	private Account transferToAcc;
 	private Recurrence recurrence;
 	private Category category;
-
 }

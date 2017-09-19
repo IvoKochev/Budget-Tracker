@@ -5,6 +5,8 @@
  */
 package com.budgettracker.account;
 
+import com.budgettracker.income.Income;
+import com.budgettracker.transaction.Transaction;
 import java.util.List;
 import java.util.Set;
 

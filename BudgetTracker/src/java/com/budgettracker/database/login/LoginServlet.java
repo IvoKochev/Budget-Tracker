@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.database.login;
+package com.budgettracker.database.login;
 
-import com.database.connection.DBConnection;
+import com.budgettracker.database.connection.DBConnection;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
