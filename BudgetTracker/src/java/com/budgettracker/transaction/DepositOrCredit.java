@@ -9,6 +9,6 @@ package com.budgettracker.transaction;
  *
  * @author slavi
  */
-public abstract class Transaction implements ITransaction {
+public class DepositOrCredit extends Transaction {
 
 }
