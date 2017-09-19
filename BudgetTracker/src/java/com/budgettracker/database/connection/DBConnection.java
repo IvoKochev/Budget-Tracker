@@ -8,8 +8,6 @@ package com.budgettracker.database.connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -17,24 +15,10 @@ import java.util.logging.Logger;
  */
 public class DBConnection {
 
-    private Connection connect = null;
-
-    private boolean openConnection() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/budgettracker";
-            connect = DriverManager.getConnection(url, "root", "1234");
-
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return true;
-    }
-
-    public Connection getConnection() {
-        if (openConnection()) {
-            return connect;
-        }
-        return null;
+    public Connection getConnection() throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        String url = "jdbc:mysql://localhost:3306/budgettracker";
+        Connection connect = DriverManager.getConnection(url, "root", "1234");
+        return connect;
     }
 }

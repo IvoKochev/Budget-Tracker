@@ -30,21 +30,23 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("username");
         String password = req.getParameter("password");
-        connection = new DBConnection().getConnection();
-        if (connection != null) {
+        try {
+            connection = new DBConnection().getConnection();
             if (checkEmailAndPassword(email, password)) {
-                try {
-                    connection.close();
-                    resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
-                    return;
-                } catch (SQLException ex) {
-                    Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
+                return;
             }
             resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/login_secure-f.jsp");
-          
+
+        } catch (ClassNotFoundException | SQLException ex) {
+            resp.getWriter().print(ex);
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-        resp.getWriter().print("Connection problem.Please try later");
     }
 
     private boolean checkEmailAndPassword(String email, String password) {

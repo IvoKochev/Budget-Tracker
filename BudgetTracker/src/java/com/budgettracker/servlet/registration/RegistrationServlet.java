@@ -32,21 +32,24 @@ public class RegistrationServlet extends HttpServlet {
 
         String emailaddress = request.getParameter("emailaddress");
         String password = request.getParameter("password");
-        connect = new DBConnection().getConnection();
-
-        if (connect != null) {
+        try {
+            connect = new DBConnection().getConnection();
             if (!checkEmail(emailaddress)) {
-                try {
-                    this.write(emailaddress, password);
-                    connect.close();
-                    return;
-                } catch (SQLException ex) {
-                    Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                this.write(emailaddress, password);
+                response.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
+                return;
             }
             response.sendRedirect("/BudgetTracker/secure.budgettracker.com/createuser.jsp");
+
+        } catch (ClassNotFoundException | SQLException ex) {
+            response.getWriter().print(ex);
+        } finally {
+            try {
+                connect.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-        response.getWriter().print("Connection problem.Please try later");
     }
 
     private void write(String email, String password) {
