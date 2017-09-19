@@ -5,6 +5,8 @@
  */
 package com.budgettracker.account;
 
+import com.budgettracker.Budget.Budget;
+import com.budgettracker.MyBills.Bill;
 import com.budgettracker.income.Income;
 import com.budgettracker.transaction.Transaction;
 import java.util.List;
@@ -17,8 +19,9 @@ import java.util.Set;
 public class Account {
 
     private String name;
-   // private Set<Bill> bills;
+    private Set<Bill> bills;
     private List<Transaction> transactions;
     private Set<Income> incomes;
-   // private Set<Budget> budgets;
+    private Set<Budget> budgets;
+    private Save save;
 }
