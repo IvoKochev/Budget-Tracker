@@ -5,8 +5,7 @@
  */
 package com.budgettracker.transaction;
 
-import com.budgettracker.payee.IPayee;
-import com.budgettracker.sender.ISender;
+import com.budgettracker.sender_or_payee.SenderOrPayee;
 import java.util.Date;
 
 /**
@@ -15,7 +14,7 @@ import java.util.Date;
  */
 public class CashAdvance extends Transaction {
 
-    public CashAdvance(ISender sender, IPayee payee, Date date, Status status, double amount) {
+    public CashAdvance(SenderOrPayee sender, SenderOrPayee payee, Date date, Status status, double amount) {
         super(sender, payee, date, status, amount);
     }
 }

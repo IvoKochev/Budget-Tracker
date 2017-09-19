@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.budgettracker.account;
-
+package com.budgettracker.sender_or_payee;
 
 /**
  *
  * @author slavi
  */
-public interface IAccount  {
+public abstract class SenderOrPayee implements IPayee, ISender {
 
+    private String name;
+
+    public String getName() {
+        return name;
+    }
 }
