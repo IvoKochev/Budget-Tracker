@@ -5,6 +5,8 @@
  */
 package com.budgettracker.transaction;
 
+import com.budgettracker.payee.IPayee;
+import com.budgettracker.sender.ISender;
 import java.util.Date;
 
 /**
@@ -13,8 +15,7 @@ import java.util.Date;
  */
 public class Transfer extends Transaction {
 
-    private Date date;
-    private Status status;
-    private String description;
-    private double amount;
+    public Transfer(ISender sender, IPayee payee, Date date, Status status, double amount) {
+        super(sender, payee, date, status, amount);
+    }
 }

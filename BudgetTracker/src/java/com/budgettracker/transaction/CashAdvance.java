@@ -5,10 +5,17 @@
  */
 package com.budgettracker.transaction;
 
+import com.budgettracker.payee.IPayee;
+import com.budgettracker.sender.ISender;
+import java.util.Date;
+
 /**
  *
  * @author slavi
  */
 public class CashAdvance extends Transaction {
 
+    public CashAdvance(ISender sender, IPayee payee, Date date, Status status, double amount) {
+        super(sender, payee, date, status, amount);
+    }
 }

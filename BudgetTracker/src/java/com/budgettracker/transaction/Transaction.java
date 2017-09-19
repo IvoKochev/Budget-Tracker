@@ -5,6 +5,8 @@
  */
 package com.budgettracker.transaction;
 
+import com.budgettracker.payee.IPayee;
+import com.budgettracker.sender.ISender;
 import java.util.Date;
 
 /**
@@ -13,8 +15,24 @@ import java.util.Date;
  */
 public abstract class Transaction implements ITransaction {
 
-    private Date date;
-    private Status status;
     private String description;
-    private double amount;
+    private final Date date;
+    private final Status status;
+    private final double amount;
+    private final IPayee payee;
+    private final ISender sender;
+
+    public Transaction(ISender sender, IPayee payee, Date date, Status status, double amount) {
+        this.sender = sender;
+        this.payee = payee;
+        this.status = status;
+        this.amount = amount;
+        this.date = date;
+
+    }
+
+    public Transaction(ISender sender, IPayee payee, Date date, Status status, double amount, String description) {
+        this(sender, payee, date, status, amount);
+        this.description = description;
+    }
 }
