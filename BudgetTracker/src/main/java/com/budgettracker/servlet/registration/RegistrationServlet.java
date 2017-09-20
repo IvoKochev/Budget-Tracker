@@ -24,12 +24,12 @@ import javax.servlet.http.HttpServletResponse;
  * @author slavi
  */
 public class RegistrationServlet extends HttpServlet {
-
+    
     private Connection connect = null;
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        
         String emailaddress = request.getParameter("emailaddress");
         String password = request.getParameter("password");
         try {
@@ -40,7 +40,7 @@ public class RegistrationServlet extends HttpServlet {
                 return;
             }
             response.sendRedirect("/BudgetTracker/secure.budgettracker.com/createuser.jsp");
-
+            
         } catch (ClassNotFoundException | SQLException ex) {
             response.getWriter().print(ex);
         } finally {
@@ -48,25 +48,27 @@ public class RegistrationServlet extends HttpServlet {
                 connect.close();
             } catch (SQLException ex) {
                 Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (NullPointerException e) {
+                response.getWriter().print("Database connection problem");
             }
         }
     }
-
+    
     private void write(String email, String password) {
         try {
             String query = " insert into accounts (email,password) values (?, ?)";
             PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
-
+            
             preparedStmt.setString(1, email);
             preparedStmt.setString(2, password);
-
+            
             preparedStmt.execute();
             connect.close();
         } catch (SQLException ex) {
             Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
     private boolean checkEmail(String email) {
         try {
             String query = "SELECT email FROM accounts WHERE email ='" + email + "'";

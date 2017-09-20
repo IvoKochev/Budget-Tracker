@@ -7,8 +7,6 @@
 <html>
 
     <meta http-equiv="refresh" content="0; url=secure.budgettracker.com/login712f.jsp" />
-
-
 </body>
 
 </html>

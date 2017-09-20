@@ -27,24 +27,26 @@ public class LoginServlet extends HttpServlet {
     private Connection connection = null;
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String email = req.getParameter("username");
-        String password = req.getParameter("password");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String email = request.getParameter("username");
+        String password = request.getParameter("password");
         try {
             connection = new DBConnection().getConnection();
             if (checkEmailAndPassword(email, password)) {
-                resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
+                response.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
                 return;
             }
-            resp.sendRedirect("/BudgetTracker/secure.budgettracker.com/login_secure-f.jsp");
+            response.sendRedirect("/BudgetTracker/secure.budgettracker.com/login_secure-f.jsp");
 
         } catch (ClassNotFoundException | SQLException ex) {
-            resp.getWriter().print(ex);
+            response.getWriter().print(ex);
         } finally {
             try {
                 connection.close();
             } catch (SQLException ex) {
                 Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (NullPointerException e) {
+                response.getWriter().print("Database connection problem");
             }
         }
     }
