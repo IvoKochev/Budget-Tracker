@@ -18,7 +18,6 @@ public class DBConnection {
     public Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/budgettracker";
-        Connection connect = DriverManager.getConnection(url, "root", "1234");
-        return connect;
+        return DriverManager.getConnection(url, "root", "1234");
     }
 }
