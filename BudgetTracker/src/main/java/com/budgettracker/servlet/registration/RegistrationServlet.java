@@ -12,8 +12,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,12 +22,12 @@ import javax.servlet.http.HttpServletResponse;
  * @author slavi
  */
 public class RegistrationServlet extends HttpServlet {
-    
+
     private Connection connect = null;
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+
         String emailaddress = request.getParameter("emailaddress");
         String password = request.getParameter("password");
         try {
@@ -40,44 +38,37 @@ public class RegistrationServlet extends HttpServlet {
                 return;
             }
             response.sendRedirect("/BudgetTracker/secure.budgettracker.com/createuser.jsp");
-            
+
         } catch (ClassNotFoundException | SQLException ex) {
             response.getWriter().print(ex);
         } finally {
             try {
                 connect.close();
             } catch (SQLException ex) {
-                Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
+                response.getWriter().print(ex);
             } catch (NullPointerException e) {
-                response.getWriter().print("Database connection problem");
+                response.getWriter().print("Database connection problem " + e);
             }
         }
     }
-    
-    private void write(String email, String password) {
-        try {
-            String query = " insert into users (email,password) values (?, ?)";
-            PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
-            
-            preparedStmt.setString(1, email);
-            preparedStmt.setString(2, password);
-            
-            preparedStmt.execute();
-            connect.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
+    private void write(String email, String password) throws SQLException {
+
+        String query = " insert into users (email,password) values (?, ?)";
+        PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
+
+        preparedStmt.setString(1, email);
+        preparedStmt.setString(2, password);
+
+        preparedStmt.execute();
+        connect.close();
     }
-    
-    private boolean checkEmail(String email) {
-        try {
-            String query = "SELECT email FROM users WHERE email ='" + email + "'";
-            Statement stmt = connect.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            return rs.first();
-        } catch (SQLException ex) {
-            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return false;
+
+    private boolean checkEmail(String email) throws SQLException {
+
+        String query = "SELECT email FROM users WHERE email ='" + email + "'";
+        Statement stmt = connect.createStatement();
+        ResultSet rs = stmt.executeQuery(query);
+        return rs.first();
     }
 }
