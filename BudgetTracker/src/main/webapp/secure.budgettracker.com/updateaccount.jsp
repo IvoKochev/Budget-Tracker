@@ -2331,7 +2331,7 @@ function ShowResults(month,year){
 	</form>
 	</div>
 	&nbsp;
-	<form action="https://secure.budgettracker.com/save/newaccount.php" method="post" onsubmit="return validateChars(this.accountName.value)" name="newaccount">
+	<form id="someform" action="../AccountServlet" method="post" onsubmit="return validateChars(this.accountName.value)" name="newaccount">
 	<div class="newentryboxId" id="newaccountID" style="display:none;">
 		<div class="newentryinner"><table bgcolor="#ffffff" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr>
 	 
@@ -2571,7 +2571,7 @@ function ShowResults(month,year){
 			</tr>
 	<tr>
 		<td colspan="4" class="padding3" align="right">
-			<input style="vertical-align:middle;" type="submit" value="Add Account" class="button">
+			<input style="vertical-align:middle;" type="submit" name="submit" value="Add Account" class="button">
 			<input style="vertical-align:middle;" type="button" onclick="CancelNewAccount()" class="button cancelbutton" value="Cancel">			
 		</td>
 	</tr>
@@ -2678,7 +2678,18 @@ function ShowResults(month,year){
 	<div id="balanceID" style="display:none;position:absolute;top:250px;right:200px;"></div>
 	</form>
 	
-	
+<script>
+    $(document).on("submit", "#someform", function (event) {
+        alert("safdasf")
+        var $form = $(this);
+
+        $.post($form.attr("action"), $form.serialize(), function (response) {
+           
+        });
+
+        event.preventDefault(); 
+    });
+</script>
 	
 	<script>
 		function opennewaccount(){
@@ -3177,13 +3188,13 @@ handleInfo_accountadd
 	function vclose(aid){
 		cacct=confirm("Are you sure you wish to close this account?");
 		if(cacct==true){
-			location.href="https://secure.budgettracker.com/save/closeaccount.php?aid="+aid;
+			location.href="/BudgetTracker/secure.budgettracker.com/createuser.jsp";
 		}
 	}
 	function vopen(aid){
 		cacct=confirm("Are you sure you wish to re-open this account?");
 		if(cacct==true){
-			location.href="https://secure.budgettracker.com/save/openaccount.php?aid="+aid;
+			location.href="/BudgetTracker/secure.budgettracker.com/createuser.jsp";
 		}
 	}
 	function checkbanks(bankid){

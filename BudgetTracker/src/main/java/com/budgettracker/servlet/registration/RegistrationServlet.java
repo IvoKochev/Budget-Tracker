@@ -56,7 +56,7 @@ public class RegistrationServlet extends HttpServlet {
     
     private void write(String email, String password) {
         try {
-            String query = " insert into accounts (email,password) values (?, ?)";
+            String query = " insert into users (email,password) values (?, ?)";
             PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
             
             preparedStmt.setString(1, email);
@@ -71,7 +71,7 @@ public class RegistrationServlet extends HttpServlet {
     
     private boolean checkEmail(String email) {
         try {
-            String query = "SELECT email FROM accounts WHERE email ='" + email + "'";
+            String query = "SELECT email FROM users WHERE email ='" + email + "'";
             Statement stmt = connect.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             return rs.first();

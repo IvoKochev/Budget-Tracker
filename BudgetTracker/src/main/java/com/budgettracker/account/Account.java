@@ -21,6 +21,8 @@ import java.util.Set;
  */
 public class Account extends SenderOrPayee implements IAccount {
 
+    private String name;
+    private double currentBalance;
     private Set<Bill> bills;
     private List<Transaction> transactions;
     private Set<Income> incomes;

@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
 
     private boolean checkEmailAndPassword(String email, String password) {
         try {
-            String query = "SELECT email,password FROM accounts WHERE email ='" + email + "'";
+            String query = "SELECT email,password FROM users WHERE email ='" + email + "'";
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             rs.next();
