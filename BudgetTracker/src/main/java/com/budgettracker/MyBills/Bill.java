@@ -3,7 +3,7 @@ package com.budgettracker.MyBills;
 import com.budgettracker.account.Account;
 import java.util.Date;
 
-public class Bill {
+public class Bill {   
 	private String payee;
 	private double amount;
 	private boolean isPaid;

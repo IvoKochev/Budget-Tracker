@@ -59,7 +59,6 @@ public class RegistrationServlet extends HttpServlet {
 
         preparedStmt.setString(1, email);
         preparedStmt.setString(2, password);
-
         preparedStmt.execute();
         connect.close();
     }

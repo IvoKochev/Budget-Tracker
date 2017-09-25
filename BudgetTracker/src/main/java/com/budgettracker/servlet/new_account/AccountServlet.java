@@ -6,14 +6,10 @@
 package com.budgettracker.servlet.new_account;
 
 import com.budgettracker.database.connection.DBConnection;
-import com.budgettracker.servlet.registration.RegistrationServlet;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,20 +28,27 @@ public class AccountServlet extends HttpServlet {
 
         String accountName = req.getParameter("accountName");
         String balance = req.getParameter("openingbalance");
+        try {
+            connect = new DBConnection().getConnection();
+            write(accountName, balance);
+        } catch (ClassNotFoundException | SQLException ex) {
+            resp.getWriter().print(ex);
+        } finally {
+            try {
+                connect.close();
+            } catch (SQLException ex) {
+                resp.getWriter().print(ex);
+            }
+        }
 
     }
 
-    private void write(String email) {
-        try {
-            String query = " insert into test (json) values (?)";
-            PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
-
-            preparedStmt.setString(1, email);
-
-            preparedStmt.execute();
-            connect.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(RegistrationServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    private void write(String accountName, String balance) throws SQLException {
+        String query = " insert into accounts (name,balance) values (?,?)";
+        PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
+        long b = Integer.parseInt(balance);
+        preparedStmt.setString(1, accountName);
+        preparedStmt.setLong(2, b);
+        preparedStmt.execute();
     }
 }

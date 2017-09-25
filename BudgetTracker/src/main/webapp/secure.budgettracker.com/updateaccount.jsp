@@ -1362,7 +1362,7 @@ var accountchanged = false;
 							<span>
 <span class="whiteTxt">Logged in as:</span>
 			<select onchange="header.updateuser(this.value);">
-						<option selected="" value="mvcdGOaDUT8=">slavi9419@abv.bg</option>
+						<option selected="" value="mvcdGOaDUT8="></option>
 									<option style="background:#e7e7e7;" value="0">Update Sub-Accounts...
 					</option></select>
 		
@@ -2331,7 +2331,7 @@ function ShowResults(month,year){
 	</form>
 	</div>
 	&nbsp;
-	<form id="someform" action="../AccountServlet" method="post" onsubmit="return validateChars(this.accountName.value)" name="newaccount">
+	<form id="someform" action="../AccountServlet" method="post"  name="newaccount">
 	<div class="newentryboxId" id="newaccountID" style="display:none;">
 		<div class="newentryinner"><table bgcolor="#ffffff" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr>
 	 
