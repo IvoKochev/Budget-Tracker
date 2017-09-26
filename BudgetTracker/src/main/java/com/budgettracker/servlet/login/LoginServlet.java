@@ -51,17 +51,12 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-    private boolean checkEmailAndPassword(String email, String password) {
-        try {
-            String query = "SELECT email,password FROM users WHERE email ='" + email + "'";
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            rs.next();
-            String pass = rs.getString("password");
-            return password.equals(pass);
-        } catch (SQLException ex) {
-            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return false;
+    private boolean checkEmailAndPassword(String email, String password) throws SQLException {
+        String query = "SELECT email,password FROM users WHERE email ='" + email + "'";
+        Statement stmt = connection.createStatement();
+        ResultSet rs = stmt.executeQuery(query);
+        rs.next();
+        String pass = rs.getString("password");
+        return password.equals(pass);
     }
 }
