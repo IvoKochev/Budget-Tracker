@@ -55,12 +55,11 @@ public class RegistrationServlet extends HttpServlet {
     private void write(String email, String password) throws SQLException {
 
         String query = " insert into users (email,password) values (?, ?)";
-        PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
-
-        preparedStmt.setString(1, email);
-        preparedStmt.setString(2, password);
-        preparedStmt.execute();
-        connect.close();
+        try (PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS)) {
+            preparedStmt.setString(1, email);
+            preparedStmt.setString(2, password);
+            preparedStmt.execute();
+        }
     }
 
     private boolean checkEmail(String email) throws SQLException {
