@@ -9,7 +9,7 @@ package com.budgettracker.exceptions;
  *
  * @author slavi
  */
-public class BudgetTrackerException extends Exception {
+public class BudgetTrackerException extends RuntimeException {
 
     BudgetTrackerException() {
         super();
