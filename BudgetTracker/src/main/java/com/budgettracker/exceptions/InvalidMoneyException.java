@@ -9,7 +9,7 @@ package com.budgettracker.exceptions;
  *
  * @author slavi
  */
-public class InvalidMoneyException extends Exception {
+public class InvalidMoneyException extends BudgetTrackerException {
 
     public InvalidMoneyException(String message) {
         super(message);
