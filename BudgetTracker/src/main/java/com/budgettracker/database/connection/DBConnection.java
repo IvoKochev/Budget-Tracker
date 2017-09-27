@@ -13,11 +13,16 @@ import java.sql.SQLException;
  *
  * @author slavi
  */
-public class DBConnection {
+public class DBConnection implements AutoCloseable {
 
     public Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/budgettracker";
         return DriverManager.getConnection(url, "root", "1234");
+    }
+
+    @Override
+    public void close() throws Exception {
+        System.out.println("The connection is successfully closed");
     }
 }

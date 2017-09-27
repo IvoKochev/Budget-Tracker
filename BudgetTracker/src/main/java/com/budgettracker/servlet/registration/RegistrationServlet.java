@@ -23,17 +23,15 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class RegistrationServlet extends HttpServlet {
 
-    private Connection connect = null;
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String emailaddress = request.getParameter("emailaddress");
         String password = request.getParameter("password");
-        try {
-            connect = new DBConnection().getConnection();
-            if (!checkEmail(emailaddress)) {
-                this.write(emailaddress, password);
+        try (Connection connect = new DBConnection().getConnection()) {
+
+            if (!checkEmail(emailaddress, connect)) {
+                this.write(emailaddress, password, connect);
                 response.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
                 return;
             }
@@ -41,30 +39,29 @@ public class RegistrationServlet extends HttpServlet {
 
         } catch (ClassNotFoundException | SQLException ex) {
             response.getWriter().print(ex);
-        } finally {
-            try {
-                connect.close();
-            } catch (SQLException ex) {
-                response.getWriter().print(ex);
-            } catch (NullPointerException e) {
-                response.getWriter().print("Database connection problem " + e);
-            }
         }
     }
 
-    private void write(String email, String password) throws SQLException {
+    private void write(String email, String password, Connection connection) throws SQLException {
         String query = " insert into users (email,password) values (?, ?)";
-        try (PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS)) {
+        try (PreparedStatement preparedStmt = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS)) {
             preparedStmt.setString(1, email);
             preparedStmt.setString(2, password);
             preparedStmt.execute();
         }
     }
 
-    private boolean checkEmail(String email) throws SQLException {
+    private boolean checkEmail(String email, Connection connect) throws SQLException {
         String query = "SELECT email FROM users WHERE email ='" + email + "'";
-        Statement stmt = connect.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
-        return rs.first();
+        ResultSet rs = null;
+        try (Statement stmt = connect.createStatement()) {
+            rs = stmt.executeQuery(query);
+            return rs.first();
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+        }
+
     }
 }

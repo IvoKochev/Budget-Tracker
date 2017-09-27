@@ -11,8 +11,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,15 +22,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class LoginServlet extends HttpServlet {
 
-    private Connection connection = null;
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("username");
         String password = request.getParameter("password");
-        try {
-            connection = new DBConnection().getConnection();
-            if (checkEmailAndPassword(email, password)) {
+        try (Connection connection = new DBConnection().getConnection()) {
+
+            if (checkEmailAndPassword(email, password, connection)) {
                 response.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
                 return;
             }
@@ -40,18 +36,10 @@ public class LoginServlet extends HttpServlet {
 
         } catch (ClassNotFoundException | SQLException ex) {
             response.getWriter().print(ex);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException ex) {
-                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (NullPointerException e) {
-                response.getWriter().print("Database connection problem");
-            }
         }
     }
 
-    private boolean checkEmailAndPassword(String email, String password) throws SQLException {
+    private boolean checkEmailAndPassword(String email, String password, Connection connection) throws SQLException {
         String query = "SELECT email,password FROM users WHERE email ='" + email + "'";
         String pass;
         try (Statement stmt = connection.createStatement()) {
