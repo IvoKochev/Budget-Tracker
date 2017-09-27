@@ -53,7 +53,6 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     private void write(String email, String password) throws SQLException {
-
         String query = " insert into users (email,password) values (?, ?)";
         try (PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS)) {
             preparedStmt.setString(1, email);
@@ -63,7 +62,6 @@ public class RegistrationServlet extends HttpServlet {
     }
 
     private boolean checkEmail(String email) throws SQLException {
-
         String query = "SELECT email FROM users WHERE email ='" + email + "'";
         Statement stmt = connect.createStatement();
         ResultSet rs = stmt.executeQuery(query);
