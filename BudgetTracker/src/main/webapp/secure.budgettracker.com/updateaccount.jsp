@@ -1099,8 +1099,8 @@ var accountchanged = false;
 			</div>
 						<div class="item off">
 				<span class="SideLink"><span class="SidebarIcon iconbudget"></span>
-				<a href="https://secure.budgettracker.com/my_budget.jsp">
-					<span>My Budget</span>
+				<a href="BudgetTracker/secure.budgettracker.com/my_budget.jsp">
+					<span>My ssssBudget</span>
 				</a>
 				</span>
 			</div>
@@ -1456,7 +1456,7 @@ var accountchanged = false;
 					</div>
 									<div class="off folder0">
 						<span class="SideLink"><span class="SidebarIcon iconbudget"></span>
-						<a href="https://secure.budgettracker.com/budget.php">
+						<a href="budget_tracker_budget.html">
 							<span>My Budget</span>
 						</a>
 						</span>
