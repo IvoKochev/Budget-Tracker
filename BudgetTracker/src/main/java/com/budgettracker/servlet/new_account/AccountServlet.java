@@ -5,6 +5,7 @@
  */
 package com.budgettracker.servlet.new_account;
 
+import com.budgettracker.current_user.User;
 import com.budgettracker.database.connection.DBConnection;
 import java.io.IOException;
 import java.sql.Connection;
@@ -44,11 +45,12 @@ public class AccountServlet extends HttpServlet {
     }
 
     private void write(String accountName, String balance) throws SQLException {
-        String query = " insert into accounts (name,balance) values (?,?)";
+        String query = " insert into accounts (name,user_id,balance) values (?,?,?)";
         PreparedStatement preparedStmt = connect.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
         long b = Integer.parseInt(balance);
         preparedStmt.setString(1, accountName);
-        preparedStmt.setLong(2, b);
+        preparedStmt.setInt(2, User.getId());
+        preparedStmt.setLong(3, b);
         preparedStmt.execute();
     }
 }

@@ -17,7 +17,7 @@ public class DBConnection implements AutoCloseable {
 
     public Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        String url = "jdbc:mysql://localhost:3306/budgettracker";
+        String url = "jdbc:mysql://localhost:3306/budget_tracker";
         return DriverManager.getConnection(url, "root", "1234");
     }
 
