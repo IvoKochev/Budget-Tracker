@@ -2732,7 +2732,7 @@ function ShowResults(month,year){
 		return false;
 	}
 </script>
-<form name="newsubfrm" onsubmit="return validateChars(this.catid.value,this.subcatid.value,this.newsubcat.value,this.budget.value)" method="post">
+<form action="../AddBudget"name="newsubfrm" method="post">
 	<table bgcolor="#ffffff" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="4" id="newbudgetfrmId" class="apps_titlebar1"><a style="float:right;" href="https://secure.budgettracker.com/setupwizard.php"><span class="smallTxt">Budgeting Wizard</span></a>Add to Budget</td></tr>	<tr>
 				<td class="padding3 gboxb">Category:</td>
 		<td class="padding3 gboxb" width="40%">
@@ -2781,22 +2781,14 @@ function ShowResults(month,year){
 		</td>
 			</tr>
 	<tr>
-			<td class="padding3 gboxb" nowrap="">Starting Month:</td>
+            <tr>
+        <td class="padding3 gboxb">Account name</td>
+		<td class="padding3 gboxb"><input onmouseout="closeshadepopup()" type="text" class="inputorselection textbox" name="account_name" id="AmountId" size="15"></td>
+			</tr>
+			<td class="padding3 gboxb" nowrap="">Start date </td>
 	<td class="padding3 gboxb">
 		<div id="monthlyStartDateId">
-			<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the month you would like to start tracking your budget. If you are viewing a previous month than what is selected, you will see text explaining when your budget will occur next. You can override this view by selecting the dropdown Related Pages in the top left corner and select Show All Spent&#39;)" class="inputorselection" name="monthstart">
-				<option value="01">January</option>
-<option value="02">February</option>
-<option value="03">March</option>
-<option value="04">April</option>
-<option value="05">May</option>
-<option value="06">June</option>
-<option value="07">July</option>
-<option value="08">August</option>
-<option value="09">September</option>
-<option value="10" selected="">October</option>
-<option value="11">November</option>
-<option value="12">December</option>			</select>
+
 			<select class="inputorselection" name="yearstart">
 				<option value="2014">2014</option>
 <option value="2015">2015</option>
@@ -2811,6 +2803,7 @@ function ShowResults(month,year){
 			<input type="text" class="textbox datetest hasDatepicker" name="startdate" value="10/06/2017" size="10" id="dp1507291209592">
 		</div>
 	</td>
+       <td class="padding3 gboxb" type="text" class="inputorselection textbox" name="account" id="AmountId" size="8"></td>
 	<td class="padding3 gboxb" nowrap="">Budget Type:</td>
 	<td class="padding3 gboxb">
 		<select id="incomeexpenseid" onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;The My Budget page allows you to combine both expenses and income to see how much will be left after all has been entered. Additionally you can mix expenses and income budget sub-categories under a single category&#39;)" name="budgettype" onchange="updatebillname();">
