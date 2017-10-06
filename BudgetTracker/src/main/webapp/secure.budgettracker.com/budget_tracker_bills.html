@@ -2189,32 +2189,241 @@ function ShowResults(month,year){
 		
 
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%" id="subnavcontainerId">
-	<tbody><tr>
-		<td class="subnavdivider" width="100">&nbsp;</td>
-				<td nowrap="" width="1%" id="subnavnewentryId" class="subnavnewentry"><a href="javascript:void(opennewbill())">Add a Bill</a></td>
-										
-	
-				<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/amortization.php">Amortization Schedule</a>					</td>
-								<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/billsforecast.php">Bill/Income Forecast</a>					</td>
-																
-						<td width="99%" class="subnavdivider">&nbsp;</td>
-										<td width="1%" nowrap="" class="subnavrelated helpSubNav"><a href="javascript:void(OpenGuide());">
-				<img src="./budget_tracker_bills_files/help2.png">
-			</a></td>
-						<td width="1%" class="subnavprinter"><a target="_new" href="https://secure.budgettracker.com/bills_print.php"><span class="IconOnly iconprinter"></span></a></td>
+<form action="../AddBillServlet"name="newsubfrm" method="post">
+	<table bgcolor="#ffffff" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="4" id="newbudgetfrmId" class="apps_titlebar1"><a style="float:right;" href="https://secure.budgettracker.com/setupwizard.php"><span class="smallTxt">Budgeting Wizard</span></a>Add to Budget</td></tr>	<tr>
+				<td class="padding3 gboxb">Category:</td>
+		<td class="padding3 gboxb" width="40%">
 		
-
-	</tr>
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the main category to keep all your sub-categories contained in. Most transaction will be recorded under your sub-categories but this gives you a way to organize your sub-categories and view reports on combined sub-category totals&#39;)" class="inputorselection" name="catid" onchange="updatecat(this.selectedIndex);">
+					<option value="Income">Income						</option><option value="Auto">Auto						</option><option value="Bills">Bills						</option><option value="Food">Food						</option><option value="Home">Home						</option><option value="Investments">Investments						</option><option value="Leisure">Leisure						</option><option value="Miscellaneous">Miscellaneous						</option><option value="Spending">Spending						</option><option value="Utilities">Utilities						</option><option class="transactionAddnew" value="">Add Category</option>
+		</select>
+		<span id="newcatid" style="display:none;">
+			<input type="text" class="inputorselection textbox" name="newcat">
+		</span>
+		</td>
+		<td class="padding3 gboxb">Amount:</td>
+		<td class="padding3 gboxb">$<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the amount you would like to be allocated to this category each month. This should be an estimated amount as your budget may change from month to month. To change the amount for one month only, you can update your budget by clicking the sub-category link and clicking the Override link next to the amount field on the update form.&#39;)" type="text" class="inputorselection textbox" name="amount" id="AmountId" size="8"></td>
+			</tr>
 	<tr>
-		<td colspan="14" class="fadeunder"></td>
-	</tr>
-</tbody></table>
+				<td class="padding3  gboxb" nowrap="">Sub-Category:</td>
+		<td class="padding3 gboxb">
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the category that will be directly tied to your Transactions, Bills and Income. Each sub-category will allow you to set a budget amount to compare expenses against. The sub-category is your main point of reference when comparing transaction expenses vs budgeted amounts.&#39;)" name="subcatid" onchange="updatesubcat();"><option value="Paycheck">Paycheck</option><option style="background: rgb(255, 0, 0); color: rgb(255, 255, 255);">New Sub-Category</option></select>
+		<span id="newsubcatid" style="display:none;">
+			<input type="text" class="textbox inputorselection" id="newsubcatinputId" name="newsubcat">
+		</span>
+		</td>
+		<td class="padding3 gboxb">Recurrence:</td>
+		<td class="padding3 gboxb">
+			<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;From here you can set your basic recurrence options for monthly budgeting but you can also choose Custom to define specific months during the year only to track your budget.&#39;)" class="inputorselection" name="occurance" onchange="checknewbudgetcat(this.value)" id="occuranceId">
+				<option value="onemonth">One Month Only				</option><option value="monthly" selected="">Every Month				</option><option value="bimonthly">Bi-Monthly				</option><option value="thirdmonth">Every Third Month				</option><option value="sixmonths">Every Six Months				</option><option value="yearly">Yearly				</option><option value="custom" style="background:#b1a0b9;" class="boxt">Custom...
+			</option></select>
+			<select name="weeklyoccurance" style="display:none;" id="weeklyoccuranceId">
+			<option value="weekly">Every Week			</option><option value="biweekly">Bi-Weekly			</option><option value="triweekly">Every 3 Weeks			</option></select>
+			<div style="display:none;" id="budgetreccustom">
+			<table>
+			<tbody><tr><td><input name="jan" id="newjan" type="checkbox"></td><td>January</td><td>$<input onkeyup="addChecked(&#39;newjan&#39;,this)" name="jana" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="feb" id="newfeb" type="checkbox"></td><td>February </td><td>$<input onkeyup="addChecked(&#39;newfeb&#39;,this)" name="feba" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="mar" id="newmar" type="checkbox"></td><td>March </td><td>$<input onkeyup="addChecked(&#39;newmar&#39;,this)" name="mara" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="apr" id="newapr" type="checkbox"></td><td>April </td><td>$<input onkeyup="addChecked(&#39;newapr&#39;,this)" name="apra" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="may" id="newmay" type="checkbox"></td><td>May </td><td>$<input onkeyup="addChecked(&#39;newmay&#39;,this)" name="maya" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="jun" id="newjun" type="checkbox"></td><td>June </td><td>$<input onkeyup="addChecked(&#39;newjun&#39;,this)" name="juna" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="jul" id="newjul" type="checkbox"></td><td>July </td><td>$<input onkeyup="addChecked(&#39;newjul&#39;,this)" name="jula" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="aug" id="newaug" type="checkbox"></td><td>August </td><td>$<input onkeyup="addChecked(&#39;newaug&#39;,this)" name="auga" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="sep" id="newsep" type="checkbox"></td><td>September </td><td>$<input onkeyup="addChecked(&#39;newsep&#39;,this)" name="sepa" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="oct" id="newoct" type="checkbox"></td><td>October </td><td>$<input onkeyup="addChecked(&#39;newoct&#39;,this)" name="octa" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="nov" id="newnov" type="checkbox"></td><td>November</td><td> $<input onkeyup="addChecked(&#39;newnov&#39;,this)" name="nova" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="dec" id="newdec" type="checkbox"></td><td>December </td><td>$<input onkeyup="addChecked(&#39;newdec&#39;,this)" name="deca" type="text" size="5" class="textbox"></td></tr>
+			</tbody></table>
+			</div>
+		</td>
+			</tr>
+	<tr>
+            <tr>
+        <td class="padding3 gboxb"><font color="red">*</font> Payee</td>
+        
+		<td class="padding3 gboxb"><input onmouseout="closeshadepopup()" type="text" class="inputorselection textbox" name="payee" id="AmountId" size="15"></td>
+			</tr>
+			<td class="padding3 gboxb" nowrap="">Start date </td>
+	<td class="padding3 gboxb">
+		<div id="monthlyStartDateId">
 
-		
-				
-				
-				
+			<select class="inputorselection" name="yearstart">
+				<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017" selected="">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+			</select>
+		</div>
+		<div id="weeklyStartDateId" style="display:none;">
+			<input type="text" class="textbox datetest hasDatepicker" name="startdate" value="10/06/2017" size="10" id="dp1507291209592">
+		</div>
+	</td>
+       <td class="padding3 gboxb" type="text" class="inputorselection textbox" name="account" id="AmountId" size="8"></td>
+	<td class="padding3 gboxb" nowrap="">Budget Type:</td>
+	<td class="padding3 gboxb">
+		<select id="incomeexpenseid" onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;The My Budget page allows you to combine both expenses and income to see how much will be left after all has been entered. Additionally you can mix expenses and income budget sub-categories under a single category&#39;)" name="budgettype" onchange="updatebillname();">
+			<option value="0">Expense</option>
+			<option value="1">Income/Deposit</option>
+			<option value="2">Transfer</option>
+		</select>
+	</td>
+	</tr>
+
+<tr class="optional" style="display: none;">
+			<td class="padding3 gboxb" nowrap="">Ending Month:</td>
+	<td colspan="3" class="padding3 gboxb">
+		<input type="checkbox" name="doEndDate" onclick="updateEndDate();" style="float:left;padding-top:3px;">
+		<div id="monthlyEndDateId" style="display:none;float:left;">
+			<select class="inputorselection" name="monthend">
+				<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10" selected="">October</option>
+<option value="11">November</option>
+<option value="12">December</option>			</select>
+			<select class="inputorselection" name="yearend">
+				<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017" selected="">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+			</select>
+		</div>
+	</td>
+	
+	</tr>
+<tr class="optional" style="display: none;">
+	<td class="padding3 gboxb" nowrap=""><span id="billname">Add to "My Bills":</span></td>
+	<td class="padding3 gboxb" colspan="3">
+		<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This will allow you to automatically create a Bill based on the amount entered for your Budget and the name you give your sub-category. Alternatively, you can go directly to the My Bills page and choose the category you enter here.&#39;)" type="checkbox" name="addtobill" onclick="showbills();">
+		<span id="addbills" style="display:none;">
+		Due on:
+		<select name="startday" class="inputorselection">
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+		and paid from:
+		<select name="account" class="inputorselection" onchange="selectredir(this.value)">
+			<option value="0">--Select Account--</option>
+			<option value="cash">Slavi</option><option style="background:;" value="590768">bobi</option>				<option value="addaccount" class="transactionAddnew">Add Account</option>
+		</select>
+		</span>
+	</td>
+	</tr>
+<tr class="optional" style="display: none;">
+	<td class="padding3 gboxb" nowrap=""><span id="billname">Add to Forecast:</span></td>
+	<td class="padding3 gboxb" colspan="3">
+		<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This will include your budget in your transaction forecast based on the account you choose.&#39;)" type="checkbox" name="addtoforecast" onclick="showforecast();">
+		<span id="addforecast" style="display:none;">
+		<select name="forecastoccurance" onchange="checkForecast(this.value)">
+			<option value="1">Beginning of the Month</option>
+			<option value="2">End of the Month</option>
+			<option value="3">Split into 4 weeks</option>
+			<option value="4">Split - 1rst and 15th</option>
+			<option value="5">Split - 15th and End of Month</option>
+			<option value="6">Split - 1rst and End of Month</option>
+			<option value="7">Split - Monthly on 1st</option>
+			<option value="8">Split - Monthly on 15th</option>
+			<option value="9">Every Week Budgeted Amount</option>
+		</select>
+			<select name="forecastweekday" style="display:none;" id="forecastweekdayid">
+				<option value="1">Monday</option>
+				<option value="2">Tuesday</option>
+				<option value="3">Wednesday</option>
+				<option value="4">Thursday</option>
+				<option value="5" selected="">Friday</option>
+				<option value="6">Saturday</option>
+				<option value="0">Sunday</option>
+			</select>
+		<select name="accountforecast" class="inputorselection" onchange="selectredir(this.value)">
+			<option value="0">--Select Account--</option>
+			<option value="cash">Slavi</option><option style="background:;" value="590768">bobi</option>			<option value="addaccount" class="transactionAddnew">Add Account</option>
+		</select>
+		</span>
+	</td>
+	</tr>
+<tr class="optional" style="display: none;">
+		<td class="padding3 gboxb" nowrap="">
+Tracking Type</td>
+	<td class="padding3 gboxb">
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This field allows you to track what type of budgeting you would like to do. Note that when in weekly mode, you will only see budget items that are tracked weekly and vice versa for monthly budgeting.&#39;)" name="tracktype" onchange="UpdateTrack(this.value)">
+			<option value="0">Monthly Budgeting			</option><option value="1">Weekly Budgeting			</option><option value="2">Twice a Month
+		</option></select>
+	</td>
+	<td class="padding3 gboxb" nowrap="">Row Color:</td>
+	<td class="padding3 gboxb">
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This allows you to define a color for your budget sub-category. Not only will the appear on the My Budget page, but when any transaction is entered with this sub-category, it will also show up with the background color you choose here.&#39;)" name="colorid">
+		<option value="0" selected="" style="background:white">Default</option><option value="1" style="background:red">Red</option><option value="2" style="background:orange">Orange</option><option value="3" style="background:green">Green</option><option value="4" style="background:maroon">Maroon</option><option value="5" style="background:yellow">Yellow</option><option value="6" style="background:navy;color:white;">Navy</option><option value="7" style="background:blue">Blue</option><option value="8" style="background:olive">Olive</option><option value="9" style="background:purple">Purple</option><option value="10" style="background:aqua">Aqua</option><option value="11" style="background:black;color:white">Black</option><option value="12" style="background:gray">Gray		</option></select>
+	</td>
+	</tr>
+
+<tr class="optional" style="display: none;">
+	<td class="padding3 gboxb" nowrap="">
+Auto Carry Over</td>
+	<td class="padding3 gboxb" colspan="3">
+		<label>
+		<input type="checkbox" name="autocarryover" onclick="CheckCOType(this,&#39;newbudgetcarryovertype&#39;)">
+		This will automatically carry over the left over budget amount to the following month.		</label>
+		<div class="padding5" style="display:none;" id="newbudgetcarryovertype">
+		<select name="carryovertype">
+			<option value="0">Ongoing
+			</option><option value="1">Yearly
+		</option></select>
+		</div>
+	</td>
+	</tr>
+
+<input type="hidden" name="offdays" value="0">
+<tr>
+		<td align="right" class="padding3 apps_boxlrb" colspan="4">
+	<a class="smallTxt" style="float:left;" href="javascript:void(showOptions())">more options...</a>
+	<input class="button" name="addbudgetbtn" style="vertical-align:middle;" type="submit" value="Add Bill">
+		<input class="button cancelbutton" type="button" onclick="CancelNewBudget()" style="vertical-align:middle;" value="Cancel">
+		</td>
+	</tr>
+
+</tbody></table>
+</form>				
 					<div align="center" class="subprenavigation padding5">
 <form name="monthnav" style="margin:0px;">
 
