@@ -1,6 +1,6 @@
 
-<!-- saved from url=(0051)https://secure.budgettracker.com/updateaccounts.php -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+<!-- saved from url=(0043)https://secure.budgettracker.com/budget.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 			<meta name="description" content="Free Personal Finance Software to track your Bills, Budget, Calendar, and Transactions. For a small business, We offer Invoice, Estimates, Charts, and other useful tools.">
 <meta name="keywords" content="personal budgeting, budget, track, tracker, money, create a budget, bills, finance, loan, budgettracker, budgetracker, living on a budget, mybudget, control, moneytracker, money saving tips, saving money, budgeting system, finance, tracking my expenses, making money,planning,household budget,personal budget,monthly budget, budget examples, debt, spending, debit, credit card, credit, free online budget, money management, budgeting plan, cash, spending, expenses, revenue, allowance, budget calculator, web20, savings, accounting, debt, credit report, economy, payment, bad credit, debt consolidation, make money, credit counseling, microsoft money, quicken, mint, mortgage payment, credit bureau, credit repair, credit rating, business solutions, college savings, auto finance, loan payment, personal finance, how to make money, loan payment calculator, financial accounting, money making, money transfer, debt management, savings accounts, bank credit, money online, software solutions, housing finance, your money, debit card, home budget, loans, spreadsheet, envelope system, envelopes, spreadsheets, debtconsolidation, investing, monetary">
 <meta name="robots" content="index,follow,all">
@@ -10,8 +10,8 @@
 						<link rel="shortcut icon" href="https://secure.budgettracker.com/bticon.ico">
 										
 			
-<link rel="STYLESHEET" type="text/css" href="./updateaccount_files/style_business.php">
-<link rel="STYLESHEET" type="text/css" href="./updateaccount_files/default2.css">
+<link rel="STYLESHEET" type="text/css" href="./BudgetTracker, Inc._files/style_business.php">
+<link rel="STYLESHEET" type="text/css" href="./BudgetTracker, Inc._files/default2.css">
 
 <style>
 .subprenavigation{
@@ -94,7 +94,6 @@
 	font-size:15px;
 	
 }
-#newacctformid{display: none;}
 .personalized{
 	width:500px;
 	border:solid 1px #cccccc;
@@ -133,6 +132,7 @@
 	vertical-align: middle;
 	padding-top:5px !important;
 }
+#newbudgetfrmId{display: none;}
 .maincontentarea{
 	*width: 100%;
 }
@@ -147,6 +147,19 @@ li.tabon{
 .setupPos{
 	top:70px;
 }
+
+	.column{
+		min-height:200px;
+	}
+
+	.emptyPlaceMarker
+	{
+		border-right: red thin dashed;
+		border-top: red thin dashed;
+		border-left: red thin dashed;
+		border-bottom: red thin dashed;
+		background-color: Transparent;
+	}
 
 .ui-sortable, .handle{
     cursor:move;
@@ -214,14 +227,14 @@ span.smallTxt>a,a.smallTxt,.smallTxt{
 }
 </style>
 
-				<link type="text/css" href="./updateaccount_files/jquery.ui.selectmenu.css" rel="stylesheet">
-	<script type="text/javascript" async="" src="./updateaccount_files/inpage_linkid.js" id="undefined"></script><script type="text/javascript" async="" src="./updateaccount_files/ga.js"></script><script src="./updateaccount_files/bat.js" async=""></script><script id="facebook-jssdk" src="./updateaccount_files/all.js"></script><script src="./updateaccount_files/jquery-1.6.1.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="./updateaccount_files/jquery.ui.core.js"></script>
-	<script type="text/javascript" src="./updateaccount_files/jquery.ui.widget.js"></script>
-	<script type="text/javascript" src="./updateaccount_files/jquery.ui.position.js"></script>
-		<script type="text/javascript" src="./updateaccount_files/gstatic.js"></script>
-		<script type="text/javascript" src="./updateaccount_files/jquery.ui.selectmenu.js"></script>
-	<script type="text/javascript" src="./updateaccount_files/jquery-ui-1.9.2.custom.min.js"></script>
+				<link type="text/css" href="./BudgetTracker, Inc._files/jquery.ui.selectmenu.css" rel="stylesheet">
+	<script type="text/javascript" async="" src="./BudgetTracker, Inc._files/inpage_linkid.js.???????? ????" id="undefined"></script><script type="text/javascript" async="" src="./BudgetTracker, Inc._files/ga.js.???????? ????"></script><script src="./BudgetTracker, Inc._files/bat.js.???????? ????" async=""></script><script id="facebook-jssdk" src="./BudgetTracker, Inc._files/all.js.???????? ????"></script><script src="./BudgetTracker, Inc._files/jquery-1.6.1.min.js.???????? ????" type="text/javascript"></script>
+	<script type="text/javascript" src="./BudgetTracker, Inc._files/jquery.ui.core.js.???????? ????"></script>
+	<script type="text/javascript" src="./BudgetTracker, Inc._files/jquery.ui.widget.js.???????? ????"></script>
+	<script type="text/javascript" src="./BudgetTracker, Inc._files/jquery.ui.position.js.???????? ????"></script>
+		<script type="text/javascript" src="./BudgetTracker, Inc._files/gstatic.js.???????? ????"></script>
+		<script type="text/javascript" src="./BudgetTracker, Inc._files/jquery.ui.selectmenu.js.???????? ????"></script>
+	<script type="text/javascript" src="./BudgetTracker, Inc._files/jquery-ui-1.9.2.custom.min.js.???????? ????"></script>
 
 		<script>
 		jQuery.noConflict();
@@ -265,12 +278,13 @@ span.smallTxt>a,a.smallTxt,.smallTxt{
 		var jqueryset=false;
   
     </script>
-			<script src="./updateaccount_files/prototype_c.js" type="text/javascript"></script>
-			<script type="text/javascript" src="./updateaccount_files/autocomplete.js"></script>
+			<script src="./BudgetTracker, Inc._files/prototype_c.js.???????? ????" type="text/javascript"></script>
+				<script src="./BudgetTracker, Inc._files/scriptaculous_c.js.???????? ????" type="text/javascript"></script>
+		<script type="text/javascript" src="./BudgetTracker, Inc._files/autocomplete.js.???????? ????"></script>
 	
-<link rel="STYLESHEET" type="text/css" href="./updateaccount_files/jquery-ui-1.9.2.custom.min.css">
-<script src="./updateaccount_files/header2.js" type="text/javascript"></script>
-<script src="./updateaccount_files/calculators.js" type="text/javascript"></script>
+<link rel="STYLESHEET" type="text/css" href="./BudgetTracker, Inc._files/jquery-ui-1.9.2.custom.min.css">
+<script src="./BudgetTracker, Inc._files/header2.js.???????? ????" type="text/javascript"></script>
+<script src="./BudgetTracker, Inc._files/calculators.js.???????? ????" type="text/javascript"></script>
 
 <script language="JavaScript">
 
@@ -498,7 +512,7 @@ function validatetxt(){
 		Element.hide('cashbackId');
 		$('tbaraddtoId').options[0].selected=true;
 		loadtransgraph();
-				getaccounts();
+				loadmain();
 				gettips('trans');
 		checkAchievements('trans');
 	}
@@ -621,7 +635,7 @@ var header = {
 
 			IsLoggedIn();
 	function updatemonthsnav(){
-	var month=eval(monthnav.monthview.value)-9;
+	var month=eval(monthnav.monthview.value)-10;
 	var year = eval(monthnav.yearview.value)-2017;
 	document.location.href=monthnav.openpage.value+"&monthview="+(month+((year)*12));
 }
@@ -662,11 +676,7 @@ function closeshadepopup(){
 <script>
 
  	var payeeArray = new Array();
-	payeeArray[19756]='0|0';
-payeeArray[131445]='0|0';
-payeeArray[1632]='0|1711984';
-payeeArray[1026736]='0|1711986';
-	
+		
 
 function PayeeChange(payeeid){
 	if(payeeid){
@@ -705,11 +715,11 @@ function showSubHeader(tab){
 
 function ImplementAutocomplete(){
 
-	var availableTags = ["Balance Account","Cash to Cash Transfer","Internet","IT Talents"];
+	var availableTags = [];
 	jQuery( ".Payees" ).autocomplete({
 		source: availableTags
 	});
-	var availableSubCats = [{"value":"1711971","label":"Auto:Car Payment"},{"value":"1711984","label":"Bills:Internet"},{"value":"1711986","label":"Income:IT Talents"}];
+	var availableSubCats = [];
 	console.log(availableSubCats);
 	jQuery("#SubcatSearch").autocomplete({
 		source: availableSubCats,
@@ -731,9 +741,9 @@ var accountchanged = false;
 </script>
 
 						
-		<link id="load-css-0" rel="stylesheet" type="text/css" href="./updateaccount_files/util.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="./updateaccount_files/tooltip.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
-.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(http://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+		<link id="load-css-0" rel="stylesheet" type="text/css" href="./BudgetTracker, Inc._files/util.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="./BudgetTracker, Inc._files/tooltip.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
 	<body leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0" class="">
 												
 			<div class="setupWrapper" style="top:70 !important;">
@@ -746,11 +756,11 @@ var accountchanged = false;
 			<a style="float:right;" href="javascript:void(closeAchievement());">Dismiss</a>
 			</div>
 				
-								 <a style="position:absolute;left:0px;top:300px;" href="javascript:void(hideLeftPage());"><img id="hidearrow" border="0" src="./updateaccount_files/leftarrow.png"></a>
+								 <a style="position:absolute;left:0px;top:300px;" href="javascript:void(hideLeftPage());"><img id="hidearrow" border="0" src="./BudgetTracker, Inc._files/leftarrow.png"></a>
 												
 				
 						<table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>
-				<div id="pagedesc" style="display:none;" class="pagedesc">This page will allow you to update your accounts as well as view the balances of each account. By entering an account, this allows you to tie your Bills, Budget, and Transactions to a single account. Please note that Credit and Loan accounts will automatically be entered as a negative amount for your opening balance.</div>
+				<div id="pagedesc" style="display:none;" class="pagedesc">This page will allow you to view all items in your budget for the current month. Enter transactions to adjust your total available Budget amounts.</div>
 								<div id="ajax_wait" class="loadingTxt" align="center" style="-moz-box-shadow: 1px 1px 5px #ccc;-webkit-box-shadow: 1px 1px 5px #ccc;box-shadow: 1px 1px 5px #ccc;background:#e8e8e8;border:solid 1px #ccc;padding:30px;border-radius:5px;position:absolute;left:400px;top:300;display:none;">Loading, please wait...</div>
 										<ul class="tabNav">
 																																												<li class="tabon tabon6" onmouseover="closeSubHeaders();">
@@ -780,7 +790,7 @@ var accountchanged = false;
 									</li>
 																													
 																<li style="text-align:left;background:none;padding-top:8px;">
-						<a href="javascript:void(openbiztabs());"><img border="0" src="./updateaccount_files/downarrow.png"></a>	
+						<a href="javascript:void(openbiztabs());"><img border="0" src="./BudgetTracker, Inc._files/downarrow.png"></a>	
 												</li>
 									</ul>
 				
@@ -1062,7 +1072,7 @@ var accountchanged = false;
 				</a>
 				</span>
 			</div>
-						<div class="item ">
+						<div class="item off">
 				<span class="SideLink"><span class="SidebarIcon iconaccounts"></span>
 				<a href="https://secure.budgettracker.com/save/updatebrand.php?brand=3&amp;url=updateaccounts.php">
 					<span>My Accounts</span>
@@ -1097,9 +1107,9 @@ var accountchanged = false;
 				</a>
 				</span>
 			</div>
-						<div class="item off">
+						<div class="item ">
 				<span class="SideLink"><span class="SidebarIcon iconbudget"></span>
-				<a href="https://secure.budgettracker.com/my_budget.jsp">
+				<a href="https://secure.budgettracker.com/save/updatebrand.php?brand=3&amp;url=budget.php">
 					<span>My Budget</span>
 				</a>
 				</span>
@@ -1346,7 +1356,7 @@ var accountchanged = false;
 					</option></select>
 					<input type="text" name="subject" size="29" placeholder="subject" class="textbox">
 					<textarea name="message" placeholder="description of issue" cols="23" style="width:100%;" rows="5" class="textbox"></textarea>
-					<input type="hidden" name="pagename" value="updateaccounts.php">
+					<input type="hidden" name="pagename" value="budget.php">
 					<input type="hidden" id="qtypeid" name="qtype" value="quick">
 					
 					<input type="submit" id="qsendbutton" class="button" value="Send Feedback">
@@ -1362,7 +1372,7 @@ var accountchanged = false;
 							<span>
 <span class="whiteTxt">Logged in as:</span>
 			<select onchange="header.updateuser(this.value);">
-						<option selected="" value="mvcdGOaDUT8="></option>
+						<option selected="" value="poU2MzOgbLM=">ivo7@abv.bg</option>
 									<option style="background:#e7e7e7;" value="0">Update Sub-Accounts...
 					</option></select>
 		
@@ -1370,14 +1380,13 @@ var accountchanged = false;
 </span>
 							</div>
 														
-							<img src="./updateaccount_files/spacer.gif" width="650px" height="1">
+							<img src="./BudgetTracker, Inc._files/spacer.gif" width="650px" height="1">
 						</td>
 						<td width="99%" height="70" align="right" style="color:#fff;" valign="top">
 							<div style="position:relative">
 
 														<div class="toplinks">
-																									<a class="" style="color:darkorange;" href="https://secure.budgettracker.com/subscription.php">Limited User</a>
-																								
+																																
 								<a class="inboxgray" href="https://secure.budgettracker.com/notifications.php">Inbox(0)</a>
 																								<a href="https://secure.budgettracker.com/profileupdate.php">My Profile</a>
 								<a href="https://secure.budgettracker.com/settings.php">Settings</a>
@@ -1394,7 +1403,7 @@ var accountchanged = false;
 							
 							
 							</div>
-							<img src="./updateaccount_files/spacer.gif" height="1" width="400">
+							<img src="./BudgetTracker, Inc._files/spacer.gif" height="1" width="400">
 							
 						</td>
 						<td height="70" align="right">				
@@ -1416,12 +1425,12 @@ var accountchanged = false;
 													
 					
 							
-					<img id="leftcolumnspacer" src="./updateaccount_files/spacer.gif" height="1" width="250">
+					<img id="leftcolumnspacer" src="./BudgetTracker, Inc._files/spacer.gif" height="1" width="250">
 																		
 
 								<div id="sidebarcontainer">
 							<div class="padding5"><select id="relatedpages" class="redmond" style="width: 180px; display: none;" onchange="UpdateTabNavigation(this.value);" aria-disabled="false">
-<option value="">Related Pages...</option><option value="balancesheet.php">Balance Sheet</option><option value="incomestatement.php">Income Statement</option></select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="relatedpages-button" role="button" href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="relatedpages-menu" aria-disabled="false" style="width: 180px;"><span class="ui-selectmenu-status">Related Pages...</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+<option value="">Related Pages...</option><option value="categories.php">My Categories</option><option value="newtransaction.php">New Transaction</option><option value="download_data.php">Download to Excel</option><option value="barchart_budget.php">Budget Bar Chart</option><option value="piechart_budget.php">Budget Pie Chart</option><option value="setupwizard.php">Budgeting Wizard</option><option value="goals.php">Goals</option><option value="transactionforecast.php">Transaction Forecast</option><option value="budget.php?showall=1">Show All Spent</option></select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="relatedpages-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="relatedpages-menu" style="width: 180px;" aria-disabled="false"><span class="ui-selectmenu-status">Related Pages...</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
 </div>
 								<div class="sidebarNav">
 			<span id="sidelinksId">
@@ -1433,7 +1442,7 @@ var accountchanged = false;
 						</a>
 						</span>
 					</div>
-									<div class=" folder0">
+									<div class="off folder0">
 						<span class="SideLink"><span class="SidebarIcon iconaccounts"></span>
 						<a href="https://secure.budgettracker.com/updateaccounts.php">
 							<span>My Accounts</span>
@@ -1454,7 +1463,7 @@ var accountchanged = false;
 						</a>
 						</span>
 					</div>
-									<div class="off folder0">
+									<div class=" folder0">
 						<span class="SideLink"><span class="SidebarIcon iconbudget"></span>
 						<a href="https://secure.budgettracker.com/budget.php">
 							<span>My Budget</span>
@@ -1692,14 +1701,7 @@ var accountchanged = false;
 						</a>
 						</span>
 					</div>
-												<div class="off">
-					<span class="SideLink"><span class="SidebarIcon iconnews"></span>
-						<a href="https://secure.budgettracker.com/pricing.php">
-							<span>Subscription</span>
-						</a>
-					</span>
-				</div>
-												<div class="off">
+																<div class="off">
 					<span class="SideLink"><span class="SidebarIcon iconmenu"></span>
 					<a href="https://secure.budgettracker.com/tabcustom.php?tab=3">
 						<span>Customize</span>
@@ -1716,7 +1718,7 @@ var accountchanged = false;
 
 
 	<form class="padding0" action="https://secure.budgettracker.com/save/newtransaction.php" name="transactionfrm" onsubmit="return validatefields(this)" method="post">
-	<table bgcolor="#ffffff" class="module" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="1" id="modTrans" class="apps_titlebar1"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><span class="IconOnly icontrans"></span></td><td><a href="javascript:void(ToggleTransToolbar())">New&nbsp;Transaction</a></td><td align="right"><a href="https://secure.budgettracker.com/newtransaction.php"><img src="./updateaccount_files/toggleRight.png" border="0" alt="New Transaction"></a></td></tr></tbody></table></td></tr>	<tr>
+	<table bgcolor="#ffffff" class="module" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="1" id="modTrans" class="apps_titlebar1"><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><span class="IconOnly icontrans"></span></td><td><a href="javascript:void(ToggleTransToolbar())">New&nbsp;Transaction</a></td><td align="right"><a href="https://secure.budgettracker.com/newtransaction.php"><img src="./BudgetTracker, Inc._files/toggleRight.png" border="0" alt="New Transaction"></a></td></tr></tbody></table></td></tr>	<tr>
 				<td>
 		<div id="transtoolID" style="display:none;">
 		<div id="transactionToolbarID"><div id="innerTransToolbar" class="padding5 apps_boxlrb">Loading, please wait...</div></div>
@@ -1743,7 +1745,7 @@ function UpdateTrans_success(){
 </script>
 <br>
 
-	<table bgcolor="#ffffff" class="module" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="1" id="apps_titlebar1Id" class="apps_titlebar1"><table cellpadding="0" width="100%" cellspacing="0"><tbody><tr><td><span class="IconOnly iconaccounts"></span></td><td width="100%">&nbsp;<a href="javascript:void(AccountSummary());">Account Summary</a></td><td align="right"><a href="https://secure.budgettracker.com/updateaccounts.php"><img src="./updateaccount_files/toggleRight.png" alt="My Accounts" border="0"></a></td></tr></tbody></table></td></tr>	<tr>
+	<table bgcolor="#ffffff" class="module" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="1" id="apps_titlebar1Id" class="apps_titlebar1"><table cellpadding="0" width="100%" cellspacing="0"><tbody><tr><td><span class="IconOnly iconaccounts"></span></td><td width="100%">&nbsp;<a href="javascript:void(AccountSummary());">Account Summary</a></td><td align="right"><a href="https://secure.budgettracker.com/updateaccounts.php"><img src="./BudgetTracker, Inc._files/toggleRight.png" alt="My Accounts" border="0"></a></td></tr></tbody></table></td></tr>	<tr>
 				<td class="apps_boxlrb">
 				
 		<div id="acctsumaryID" style="display:none;"><div id="acctsumToolbarID"></div></div>
@@ -1952,7 +1954,7 @@ function HideNoteMsg(){
 				<td class="white padding5" id="calndr" valign="top">Loading, please wait...</td>
 			</tr>
 			<tr>
-				<td align="right" class="padding3 manage"><a href="https://secure.budgettracker.com/reminders.php"><img border="0" src="./updateaccount_files/managereminders.gif"></a></td>
+				<td align="right" class="padding3 manage"><a href="https://secure.budgettracker.com/reminders.php"><img border="0" src="./BudgetTracker, Inc._files/managereminders.gif"></a></td>
 			</tr>
 		</tbody></table>
 			</td><td>
@@ -1972,7 +1974,7 @@ function updateCalendarMod(){
 
 <br>
 
-<table bgcolor="#ffffff" class="module" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="1" id="apps_titlebar1Id" class="apps_titlebar1"><table cellpadding="0" width="100%" cellspacing="0"><tbody><tr><td><span class="IconOnly iconsurvey"></span></td><td width="100%">&nbsp;<a href="javascript:void(OpenNewPoll());">Monthly Poll</a></td><td align="right"><a href="https://secure.budgettracker.com/pollarchives.php"><img src="./updateaccount_files/toggleRight.png" alt="Poll Archive" border="0"></a></td></tr></tbody></table></td></tr>	<tr>
+<table bgcolor="#ffffff" class="module" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="1" id="apps_titlebar1Id" class="apps_titlebar1"><table cellpadding="0" width="100%" cellspacing="0"><tbody><tr><td><span class="IconOnly iconsurvey"></span></td><td width="100%">&nbsp;<a href="javascript:void(OpenNewPoll());">Monthly Poll</a></td><td align="right"><a href="https://secure.budgettracker.com/pollarchives.php"><img src="./BudgetTracker, Inc._files/toggleRight.png" alt="Poll Archive" border="0"></a></td></tr></tbody></table></td></tr>	<tr>
 					<td class="apps_box">
 			<table style="display:none;" id="pollbody" bgcolor="#ffffff" cellpadding="0" cellspacing="0" width="100%">
 <tbody><tr><td class="padding3 apps_boxlrb">
@@ -2033,10 +2035,10 @@ function ShowResults(month,year){
 
 						<div class="sideTextLinks">
 	<h2 class="padding5" style="padding-left:10px;">Quick Settings</h2>
-<div class="padding5" style="width:100%;"><img height="10" src="./updateaccount_files/star.png">&nbsp; <a href="https://secure.budgettracker.com/save/startpage.php?pagename=updateaccounts.php" class="smallTxt">Set current page as start page</a></div>
-<div class="padding5" style="width:100%;"><img height="10" src="./updateaccount_files/spacer.png">&nbsp; <a href="https://secure.budgettracker.com/save/movecustomlink.php?after=1&amp;pagename=updateaccounts.php&amp;tab=3" class="smallTxt">Move current page under More...</a></div>
+<div class="padding5" style="width:100%;"><img height="10" src="./BudgetTracker, Inc._files/star.png">&nbsp; <a href="https://secure.budgettracker.com/save/startpage.php?pagename=budget.php" class="smallTxt">Set current page as start page</a></div>
+<div class="padding5" style="width:100%;"><img height="10" src="./BudgetTracker, Inc._files/spacer.png">&nbsp; <a href="https://secure.budgettracker.com/save/movecustomlink.php?after=1&amp;pagename=budget.php%3Fmonthview%3D0&amp;tab=3" class="smallTxt">Move current page under More...</a></div>
 
-<div class="padding5" style="width:100%;"><img height="10" src="./updateaccount_files/spacer.gif">&nbsp; <a class="smallTxt" href="https://secure.budgettracker.com/addmore.php">Update Modules</a></div>
+<div class="padding5" style="width:100%;"><img height="10" src="./BudgetTracker, Inc._files/spacer.gif">&nbsp; <a class="smallTxt" href="https://secure.budgettracker.com/addmore.php">Update Modules</a></div>
 
 
 <div style="padding-left:15px">
@@ -2053,7 +2055,7 @@ function ShowResults(month,year){
 		<option value="7">Teal</option>
 		<option value="8">Olive</option>					
 		<option value="9">Orange</option>									<option value="11">Pink</option>					
-	</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-1-button" role="button" href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-1-menu" aria-disabled="false" style="width: 150px;"><span class="ui-selectmenu-status">Blue</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+	</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-1-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-1-menu" style="width: 150px;" aria-disabled="false"><span class="ui-selectmenu-status">Blue</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
 		<br><br>
 	<select name="fonts" class="redmond" style="width: 150px; display: none;" onchange="UpdateFontSchema(this.value,&#39;3&#39;);" id="ui-id-2" aria-disabled="false">
 		<option value="0">AvantGarde Book</option>
@@ -2068,7 +2070,7 @@ function ShowResults(month,year){
 		<option value="9">Redressed</option>
 		<option value="10">Optima</option>
 		<option value="11">Futura</option>
-	</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-2-button" role="button" href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-2-menu" aria-disabled="false" style="width: 150px;"><span class="ui-selectmenu-status">Helvetica Neue Light</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+	</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-2-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-2-menu" style="width: 150px;" aria-disabled="false"><span class="ui-selectmenu-status">Helvetica Neue Light</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
 </div>
 </div>
 </div>
@@ -2088,33 +2090,33 @@ function ShowResults(month,year){
 						<td colspan="3">
 							<table cellpadding="0" cellspacing="0" border="0" width="100%" style="min-width: 845px;">
 								<tbody><tr>
-									<td style="font-size: 0px; width: 13px;"><img src="./updateaccount_files/topbar_topleft.png"></td>
-									<td class="pagetitle" width="100%" background="./updateaccount_files/topbar-tile.png">
-										<img height="25" width="25" src="./updateaccount_files/accountsMd.png">										
-										My Bank Accounts										
+									<td style="font-size: 0px; width: 13px;"><img src="./BudgetTracker, Inc._files/topbar_topleft.png"></td>
+									<td class="pagetitle" width="100%" background="./BudgetTracker, Inc._files/topbar-tile.png">
+										<img height="25" width="25" src="./BudgetTracker, Inc._files/budgetMd.png">										
+										My Budget										
 									</td>
-									<td align="right" class="pagetitle" background="./updateaccount_files/topbar-tile.png">
+									<td align="right" class="pagetitle" background="./BudgetTracker, Inc._files/topbar-tile.png">
 									</td>
-									<td width="1%" nowrap="" style="padding-right:30px;" align="right" background="./updateaccount_files/topbar-tile.png">
+									<td width="1%" nowrap="" style="padding-right:30px;" align="right" background="./BudgetTracker, Inc._files/topbar-tile.png">
 																										
 																		
 									</td>
-									<td width="1%" nowrap="" style="padding-left:10px;" align="right" background="./updateaccount_files/topbar-tile.png">
+									<td width="1%" nowrap="" style="padding-left:10px;" align="right" background="./BudgetTracker, Inc._files/topbar-tile.png">
 																		</td>
-									<td style="font-size: 0px; width: 13px;"><img src="./updateaccount_files/topbar_topright.png"></td>
+									<td style="font-size: 0px; width: 13px;"><img src="./BudgetTracker, Inc._files/topbar_topright.png"></td>
 								</tr>
 							</tbody></table>
 						</td>
 					</tr>
 					<tr>
-						<td style="font-size: 0px; width: 13px;" valign="top"><img src="./updateaccount_files/leftsidefade.png"></td>
+						<td style="font-size: 0px; width: 13px;" valign="top"><img src="./BudgetTracker, Inc._files/leftsidefade.png"></td>
 						<td class="centermainbody" valign="top">
 							<div>
 								
 							
 							
 								
-<div class="LoadingSmall" id="loadingsmall" style="display:none;"><table width="200" height="50" align="center" background="https://secure.budgettracker.com/updateaccounts.php" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp; &nbsp;<img src="./updateaccount_files/loading.gif"></td><td>&nbsp; Loading, please wait...</td></tr></tbody></table></div>
+<div class="LoadingSmall" id="loadingsmall" style="display:none;"><table width="200" height="50" align="center" background="https://secure.budgettracker.com/budget.php" cellpadding="0" cellspacing="0"><tbody><tr><td>&nbsp; &nbsp;<img src="./BudgetTracker, Inc._files/loading.gif"></td><td>&nbsp; Loading, please wait...</td></tr></tbody></table></div>
 
 <table class="maintablebox" cellpadding="0" cellspacing="0" border="0" width="100%">
 
@@ -2133,19 +2135,20 @@ function ShowResults(month,year){
 <table cellpadding="0" cellspacing="0" border="0" width="100%" id="subnavcontainerId">
 	<tbody><tr>
 		<td class="subnavdivider" width="100">&nbsp;</td>
-				<td nowrap="" width="1%" id="subnavnewentryId" class="subnavnewentry"><a href="javascript:void(opennewaccount())">New Account</a></td>
-								<td nowrap="" width="1%" class="subnavchart"><a href="https://secure.budgettracker.com/charts.php?accounts=1">Accounts Chart</a></td>
+				<td nowrap="" width="1%" id="subnavnewentryId" class="subnavnewentry"><a href="javascript:void(opennewbudget())">Add to Budget</a></td>
+								<td nowrap="" width="1%" class="subnavchart"><a href="https://secure.budgettracker.com/charts.php">Budget Charts</a></td>
 										
 	
-				<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/merge.php">Merge Accounts</a>					</td>
-								<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/shared.php?appid=4">Account Sharing</a>					</td>
+								<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/setupwizard.php">Setup Wizard</a>					</td>
+						<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/budgetreport.php">Budget Report</a>					</td>
+						<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/budget_transfers.php">Budget Transfers</a>					</td>
 						<td nowrap="" width="1%" class="subnavrelated"><a href="https://secure.budgettracker.com/newtransaction.php">New Transaction</a>					</td>
-														
+										
 						<td width="99%" class="subnavdivider">&nbsp;</td>
 														<td width="1%" nowrap="" class="subnavrelated helpSubNav"><a href="javascript:void(OpenGuide());">
-				<img src="./updateaccount_files/help2.png">
+				<img src="./BudgetTracker, Inc._files/help2.png">
 			</a></td>
-						<td width="1%" class="subnavprinter"><a target="_new" href="https://secure.budgettracker.com/updateaccounts.php?print=1"><span class="IconOnly iconprinter"></span></a></td>
+						<td width="1%" class="subnavprinter"><a target="_new" href="https://secure.budgettracker.com/budget.php?print=1"><span class="IconOnly iconprinter"></span></a></td>
 		
 
 	</tr>
@@ -2157,16 +2160,43 @@ function ShowResults(month,year){
 		
 				
 				
-					<div class="trialmsg" style="background:transparent;width:600px;">
-				Try our subscription plan <span class="greenTxt">FREE</span> of charge for 14 days <a href="https://secure.budgettracker.com/subscription.php">Click here</a> to get started.
-			</div>
 					<div class="subscriptionpast"><font color="red">*</font>
-						You have used 0 of 10 Accounts <a href="https://secure.budgettracker.com/subscription.php">Click Here</a>
+						You have used 0 of 15 Sub-Categories <a href="https://secure.budgettracker.com/subscription.php">Click Here</a>
 			 for unlimited data.
 						
 			</div>
 				
-									
+					<div align="center" class="subprenavigation padding5">
+<form name="monthnav" style="margin:0px;">
+
+<input class="monthnavbuttons" type="button" value=" &lt; " onclick="location.href=&#39;https://secure.budgettracker.com/budget.php?monthview=-1&#39;">
+<select class="redmond" id="monthviewID" name="monthview" onchange="location.href=&#39;https://secure.budgettracker.com/budget.php?1=1&amp;monthview=&#39;+(monthview.value-10+((yearview.value-2017)*12));" style="display: none;" aria-disabled="false">
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10" selected="">October</option>
+<option value="11">November</option>
+<option value="12">December</option></select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="monthviewID-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="monthviewID-menu" style="width: 120px;" aria-disabled="false"><span class="ui-selectmenu-status">October</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+<select id="yearviewID" class="redmond" name="yearview" onchange="location.href=&#39;https://secure.budgettracker.com/budget.php?1=1&amp;monthview=&#39;+(monthview.value-10+((yearview.value-2017)*12));" style="display: none;" aria-disabled="false">
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017" selected="">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="yearviewID-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="yearviewID-menu" style="width: 54px;" aria-disabled="false"><span class="ui-selectmenu-status">2017</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+<input type="button" class="monthnavbuttons" value=" &gt; " onclick="location.href=&#39;https://secure.budgettracker.com/budget.php?monthview=1&#39;">
+</form>
+
+
+</div>				
 	
 		
 
@@ -2176,1080 +2206,845 @@ function ShowResults(month,year){
 	
 	<tr>
 	<td valign="top">
-	<input type="hidden" id="pagename" value="updateaccounts.php">
-	<input type="hidden" id="pagetitle" value="My Bank Accounts">
+	<input type="hidden" id="pagename" value="budget.php">
+	<input type="hidden" id="pagetitle" value="My Budget">
 				<div class="subnavigation">
-	<div class="redTxt" id="messageId"></div>
-	<table cellpadding="0" cellspacing="0" width="100%">
-	<tbody><tr><td>
-		
-	</td></tr>
 	
-	</tbody></table>
-		<div id="accountupdate_div" style="color:#ff0000;"></div>
-	
-		<div id="balancedateID" style="display:none;" align="center">
-		<form name="acctdatefrm" method="post" action="https://secure.budgettracker.com/updateaccounts.php">
-		<table cellpadding="0" class="boxb" width="50%" cellspacing="0" border="0" bgcolor="#ffffff">
-			<tbody><tr>
-				<td class="billstitle boxlrtb" colspan="8"><a href="javascript:void(Element.hide(&#39;balancedateID&#39;))" style="float:right;">Close</a>Update Balance Date</td>
-			</tr>
-			<tr>
-				<td class="padding3 apps_boxl"><font color="red">*</font> Balance Date:</td>
-				<td colspan="3" class="padding3 apps_boxr">
-					<input type="text" id="balancestartdateID" class="textbox datetest hasDatepicker" name="startdate" value="09/15/2017" size="13">
-				</td>
-			</tr>
-			<tr>
-				<td class="padding5 boxlr gboxt" align="center" colspan="8"><input type="submit" value="Update Balance Date" class="button"></td>
-			</tr>
-		</tbody></table>
-		</form>
-	</div>
 </div>
 <div class="maincontentarea">
+	<div id="budgetmessage"></div>
 	
-	<div id="mainsection">
-	
-	<table width="100%">
-		<tbody><tr>
-			<td>
-			&nbsp;
-			</td>
-			<td align="right">
-			<div align="right" class="smallTxt padding5">
-	Closed Accounts: <a href="https://secure.budgettracker.com/save/showaccounts.php?show=1">show</a> | <b>hide</b>	</div>
-			</td>
-		</tr>
-	</tbody></table>
-	
-		
-	<form name="accountsfrm" method="post" onsubmit="return deleteaccounts()" action="https://secure.budgettracker.com/save/accounts_checkbox.php">
-	<div id="accountbody">
-<div class="padding10" style="font-size:16px;" align="center">Balances as of: <a style="font-size:16px;" href="javascript:void(Element.show(&#39;balancedateID&#39;));$(&#39;balancestartdateID&#39;).focus();">09/15/2017</a></div>
-<div class="shades_wrapper"><table cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="1" id="apps_titlebar1Id" class="apps_titlebar1">Money Accounts</td></tr><tr>
-		<td>
-	<div class="shade_sidebars">
-	<table cellpadding="0" cellspacing="0" width="100%">
-
-<tbody><tr>
-	<td colspan="2" class="submenu1 submenu_left">
-		
-		Savings	</td>
-	<td class="submenu1" width="1%">
-						Account&nbsp;Number					</td>
-		
-			<td align="right" class="submenu1" width="1%" nowrap="">
-				<a href="javascript:void(Element.show(&#39;balancedateID&#39;));$(&#39;balancestartdateID&#39;).focus();">09/15/2017</a> 
-				Balance</td>
-				</tr>
-<tr onmouseover="Element.show(&#39;viewtrans0id&#39;);" onmouseout="Element.hide(&#39;viewtrans0id&#39;);" id="acctrow_0">
-	<td class="apps_datarows1_noright apps_datarows_left" width="1%" nowrap="">
-				&nbsp;
-	</td>
-	<td class="apps_datarows1" nowrap="" width="99%" style="position:relative;">
-				<span><a href="javascript:void(updateaccountid(&#39;0&#39;,&#39;844988&#39;));">Cash</a>		</span>
-										
-								
-
-		
-			<span style="left: 100px; display: none;" id="viewtrans0id" class="smallTxt addtobill">
-				<a style="color:maroon;" class="smallTxt" href="https://secure.budgettracker.com/transactionsall.php?monthview=0&amp;acctid=cash">view transactions</a> 
-				 | <span class="smallTxt"><a style="color:green;" href="https://secure.budgettracker.com/goals.php?acctid=0">add goal</a></span> | <span class="smallTxt"><a href="javascript:void(addspendinglimits(&#39;0&#39;));">add spending limit</a></span> | <a href="javascript:void(updatebalance(&#39;0&#39;,&#39;2017-09-15&#39;))">balance</a> |
-				<a href="https://secure.budgettracker.com/newtransaction.php?acctid=0">new transaction</a> |
-				<a href="https://secure.budgettracker.com/transferaccounts.php?acctid=0">transfer funds</a>
-							</span>
-		
-						&nbsp;&nbsp;&nbsp;
-	</td>
-	<td class="apps_datarows1">&nbsp;</td>
-		<td align="right" nowrap="" class="apps_datarows1">
-	
-	<a href="javascript:void(UpdateTotalBalance(&#39;0&#39;,&#39;844988&#39;))"><span class="blackTxt">$844,988.00</span></a>
-		
-	</td>
-		
-</tr>
-	<tr>
-		<td colspan="3" class="apps_totals2" align="right">Sub-Total:</td>
-		<td align="right" width="1%" nowrap="" class="apps_totals">
-			<span class="blackTxt">$844,988.00</span>			
-		</td>
-		
-	</tr>
-	<tr>
-		<td colspan="3" class="apps_totals2" align="right">Total:</td>
-		<td align="right" width="1%" nowrap="" class="apps_totals"><span class="blackTxt">$844,988.00</span></td>		
-		</tr>
-			</tbody></table>
-	</div>
-	</td>
-	</tr>
-</tbody></table></div><br>
-<br>
-
-<br>
-
-<!-- PAYPAL -->
-<br>
-
-
-<!-- Gift Card -->
-
-<input type="button" class="cancelbutton button" value="Update Stocks" onclick="location.href=&#39;stocks.php&#39;">
-
-
-<!-- NON-CASH ASSETS -->
-
-<input type="button" class="cancelbutton button" onclick="location.href=&#39;asset.php&#39;" value="Update Non-Cash Assets">
-<!-- Gift Card -->
-<input type="button" class="cancelbutton button" value="Update Gift Card" onclick="location.href=&#39;giftcards.php&#39;">
-
-
-<table cellpadding="3" width="100%" cellspacing="0" border="0" style="margin-top:50px;">
-<tbody><tr>
-	<td colspan="4">
-		
-		<input class="redButton button" type="submit" value="Delete Selected Accounts">
-	</td>
-	<td align="right">
-								<div>
-			
-				<div class="largeTotal">Net Worth: <span class="greenTxt">$844,988.00</span></div>
-				
-			
-		</div>
-			</td>
-
-</tr>
-</tbody></table>
-
-
-
-
-</div>
-	</form>
-	</div>
-	&nbsp;
-	<form id="someform" action="../AccountServlet" method="post"  name="newaccount">
-	<div class="newentryboxId" id="newaccountID" style="display:none;">
-		<div class="newentryinner"><table bgcolor="#ffffff" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr>
-	 
-	<td>
-
-	<table cellpadding="0" cellspacing="0" width="100%" id="newaccountID2">
-	<input type="hidden" name="validatebillpay" value="0">
-	<tbody><tr>
-		<td class="padding3 gboxb"><font color="red">*</font> Account Name:</td>
-		<td colspan="3" class="padding3 gboxb">
-						<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the name of your Bank or Financial Institution and will appear in dropdowns throughout the site. If you have a credit card with the same Bank, make sure you add a reference like Wells Fargo(1234) or Wells Fargo Checking.&#39;,&#39;Account Name&#39;,this)" type="text" id="accountNameId" class="textbox" name="accountName">
-			
-		</td>
-	</tr>
-	<tr>
-		<td nowrap="" class="padding3 gboxb"><font color="red">*</font> <span id="balancedivtxt">Current Balance:</span></td>
-		<td colspan="3" class="padding3 gboxb">
-						<span id="debtdivtxt">$</span>
-						<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;For this amount, make sure you check with your bank to find out the existing balance on the account. If you would like to find that information later, you can either enter an estimated amount or just enter 0&#39;,&#39;Opening Balance&#39;,this)" type="text" size="10" class="textbox" name="openingbalance">
-			<div class="smallTxt grayTxt padding5">enter opening balance to track past transactions, otherwise use current balance.</div>
-		</td>
-		
-	</tr>
-	<tr>
-		<td nowrap="" class="padding3 gboxb">Account Number:</td>
-		<td colspan="3" class="padding3 gboxb">
-			<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;For security reasons, we do not allow users to enter their full account number. The last 4 numbers should be sufficient for keeping track of different accounts with the same provider.&#39;,&#39;Account Number&#39;,this)" type="text" size="11" class="textbox" name="accountNumber" id="accountNumberId" maxlength="4"><span id="acctoptionalid"> (Optional last 4 digits)</span>
-		</td>
-	</tr>
-	<tr>
-		<td class="padding3 gboxb"><font color="red">*</font> Account&nbsp;Type:</td>
-		<td colspan="3" class="padding3 gboxb">
-						<select onmouseover="openshadepopup(&#39;This field gives you several options for choosing which type of account you would like to track. Notice that as you select a different type, more fields will either appear or be hidden on this form.&#39;,&#39;Account Type&#39;,this)" onmouseout="closeshadepopup()" name="accttype" onchange="checktype();">
-				<option value=""> -- Select Type --
-								</option><option value="checking">Checking				</option><option value="savings">Savings				</option><option value="paypal">PayPal
-				</option><option value="gift">Gift Card
-				</option><option value="other2">Other/Cash
-												</option><option value="credit">Credit Card												</option><option value="loan">Loan																</option><option value="401k">401k
-				</option><option value="ira">IRA
-				</option><option value="pension">Pension				</option><option value="other">Other Investment				</option><option value="mutual">Mutual Funds								
-			</option></select>
-						<select name="loantype" id="loantypeID" style="display:none;">
-			<option value="0">Personal</option>
-			<option value="1">Automotive</option>
-			<option value="2">Home</option>
-			<option value="3">Line of Credit</option>
-			<option value="4">Student</option>
-			<option value="5">Business</option>
-			</select>
-			
-			<select name="credittype" onchange="CheckCreditType(this.value)" id="credittypeID" style="display:none;">
-			<option value="1">Visa</option>
-			<option value="2">Mastercard</option>
-			<option value="3">American Express</option>
-			<option value="4">Discover</option>
-			<option value="0">Other</option>
-			</select>
-		</td>
-	</tr>
-	<tr>
-		<td class="padding3 gboxb">
-			<span id="routingdivtxt" style="display:none;"><font color="red">*</font> Routing Number:</span>
-			<span id="aprdivtxt" style="display:none;">APR:</span>
-			<span id="interestdivtxt" style="display:none;">Interest:</span>
-			&nbsp;
-		</td>
-		<td class="padding3 gboxrb">
-			<span id="routingdiv" style="display:none;">
-			<input type="text" size="30" class="inputorselection textbox" name="routing">
-			</span>
-			<span id="aprdiv" style="display:none;">
-			<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;The APR you enter here will also get used when setting up a transfer on the My Bills page to determine your Paydown Schedule for paying off a Home Loan, Car Loan, etc.&#39;,&#39;APR&#39;,this)" type="text" size="8" class="textbox" name="apr"> %
-			<div id="apr2div" style="display:none;">
-			<input type="text" size="8" class="textbox" name="apr2"> % <span class="smallTxt">cash advance</span>
-			</div>
-			<div class="grayTxt">Start Date:</div><input class="textbox datetest hasDatepicker" type="text" name="startdate" value="09/15/2017" size="10" id="dp1505489435020">
-			</span>
-			<span id="interestdiv" style="display:none;">
-			<input type="text" size="8" class="textbox" name="interest"> %
-			</span>
-			&nbsp;
-		</td>
-		<td class="padding3 gboxb">
-			<span>
-			<span id="limitdivtxt" style="display:none;">
-			<input type="checkbox" name="creditlimit_active" checked="" onclick="UpdateLimitActive()" id="creditlimit_active">
-			Credit Limit:</span>
-			<span id="loandivtxt" style="display:none;">Total Loan Amount:</span>
-			<span id="checknamedivtxt" style="display:none;">Name on Check:</span>
-			</span>
-			&nbsp;
-		</td>
-		<td class="padding3 gboxb">
-			<span>
-			<span id="limitdiv" style="display:none;">
-			$<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;By entering a credit limit, this allows you to see how much you have left for spending after your expenses are calculated in.&#39;,&#39;Credit Limit&#39;,this)" type="text" size="8" class="textbox" name="limit">
-			</span>
-			<span id="checknamediv" style="display:none;">
-			<input type="text" size="30" class="inputorselection textbox" name="checkname" value=" ">
-						</span>
-			
-			</span>
-			&nbsp;
-		</td>
-	</tr>
-	<tr>
-		<td width="25%" class="padding3 gboxb">
-			<span id="duedaydivtxt" style="display:none;"><font color="red">*</font> Payment Due Day:</span>
-			<span id="banknamedivtxt" style="display:none;"><font color="red">*</font> Bank:</span>
-			
-			&nbsp;
-		</td>
-		<td width="25%" class="padding3 gboxb">
-			<span id="duedaydiv" style="display:none;">
-			<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This the day each month your interest gets calculated into the amount. This is mainly for your own tracking purposes and is not tied to any options on the site.&#39;,&#39;Due Day&#39;,this)" name="dueday">
-									<option value="1">1										</option><option value="2">2										</option><option value="3">3										</option><option value="4">4										</option><option value="5">5										</option><option value="6">6										</option><option value="7">7										</option><option value="8">8										</option><option value="9">9										</option><option value="10">10										</option><option value="11">11										</option><option value="12">12										</option><option value="13">13										</option><option value="14">14										</option><option value="15">15										</option><option value="16">16										</option><option value="17">17										</option><option value="18">18										</option><option value="19">19										</option><option value="20">20										</option><option value="21">21										</option><option value="22">22										</option><option value="23">23										</option><option value="24">24										</option><option value="25">25										</option><option value="26">26										</option><option value="27">27										</option><option value="28">28										</option><option value="29">29										</option><option value="30">30										</option><option value="31">31								</option></select>
-			<br><input type="checkbox" name="autopayinterest">Auto Record Interest
-			</span>
-			<span id="banknamediv" style="display:none;">
-				<select name="bankname" onchange="checkbanks(this.value)" id="bankid">
-					<option value="0">-- Select Bank --
-					</option><option onselect="alert(&#39;2&#39;)" value="2">Bank of America		</option><option onselect="alert(&#39;1&#39;)" value="1">Wells Fargo					</option><option value="-1">Not Listed
-				</option></select>
-				<span id="fullbankid" style="display:none">
-				Bank Name:<br><input type="text" name="fullbankname" class="textbox"><br>
-				Bank City:<br><input type="text" name="bankcity" class="textbox"><br>
-				Bank Zip Code:<br><input type="text" name="bankzipcode" class="textbox"><br>
-								Bank State:<br><input type="text" name="bankstate" size="3" class="textbox">
-				</span>
-			</span>
-			&nbsp;
-		</td>
-		<td width="25%" class="padding3 gboxb">
-			<span id="addtobillid" style="display:none;"><input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This allows you to automatically create a recurring bill based on the name and type of account you enter here. Note that this is only used for monthly recurring bills. If you would like to track weekly bills, you can either create it from here and then update the recurrence of your Bill on the My Bills page or create a new bill directly on the My Bills page.&#39;,&#39;Add to Bills&#39;,this)" onclick="checkbill()" type="checkbox" id="addtobill" name="addtobill">Add&nbsp;to&nbsp;Bills:</span>
-		&nbsp;</td>	
-		<td width="25%" class="padding3 gboxb">
-			<span id="addtobillmain" style="display:none;">
-				<div class="padding5">Due on:
-				<select name="startday" class="inputorselection">
-										<option value="01">01</option>
-										<option value="02">02</option>
-										<option value="03">03</option>
-										<option value="04">04</option>
-										<option value="05">05</option>
-										<option value="06">06</option>
-										<option value="07">07</option>
-										<option value="08">08</option>
-										<option value="09">09</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-										<option value="13">13</option>
-										<option value="14">14</option>
-										<option value="15">15</option>
-										<option value="16">16</option>
-										<option value="17">17</option>
-										<option value="18">18</option>
-										<option value="19">19</option>
-										<option value="20">20</option>
-										<option value="21">21</option>
-										<option value="22">22</option>
-										<option value="23">23</option>
-										<option value="24">24</option>
-										<option value="25">25</option>
-										<option value="26">26</option>
-										<option value="27">27</option>
-										<option value="28">28</option>
-										<option value="29">29</option>
-										<option value="30">30</option>
-										<option value="31">31</option>
+	<div id="whatifId" align="right" style="background:#fff;z-index:999;display:none;">
+		<form method="post" action="https://secure.budgettracker.com/save/whatif.php">
+			<div align="left">
+				<div style="float:right"><a href="javascript:void(jQuery(&#39;#whatifId&#39;).hide());">close</a></div>
+				<h2>What If...</h2>
+				<select name="subcatid">
+					<option>-- select sub-category --</option>
 									</select>
+				=
+				$<input type="text" size="5" name="amount" class="textbox">
+				<div class="smallTxt grayTxt" style="padding:10px;">This will temporarily change the amount of your budget category without actually updating the amount in our system.</div>
+				<div class="padding5" align="left">
+					<input type="submit" class="button" value="Update Amount">
+					<input type="button" class="button cancelbutton" value="Clear" onclick="location.href=&#39;budget.php&#39;">
 				</div>
-				<div class="padding5">
-				for: $<input type="text" size="5" name="billamount" class="textbox">/month
-				</div>
-				<div class="padding5">
-				from:				<select id="billaccountsId" name="billaccount"><option value="cash">Cash</option>	</select>
-				</div>
-				<div class="padding5">
-				<font color="red">*</font> <i>If the from account has not yet been created, you can either create it first or select Cash and then update it on the My Bills page.</i>
-				</div>
-			</span>
-		&nbsp;</td>
-	</tr>
+			</div>
+		</form>
+	</div>
 	
-	
-	<tr>
-			<td class="padding3 gboxb apps_boxl">Currency:</td>
-		<td class="padding3 gboxrb">	
-		<select id="acctcurrencyidnew" name="acctcurrency" onchange="UpdateAcctCurrencyNew(this.value);">
-			<option value="">Default</option>
-			<option value="us">($) US Dollars
-</option><option value="pounds">(£) British Pounds
-</option><option value="yen">(¥) Japanese Yen 
-</option><option value="euro">(?) Euro
-</option><option value="franc">(?) Franc
-</option><option value="real">(R$) Real
-</option><option value="rupee">(Rs.) Rupee
-</option><option value="rand">(R) Rand
-</option><option value="cfa">(CFA) CFA Francs
-</option><option value="aed">(AED)
-</option><option value="can">(Can$) Canadian Dollars
-</option><option value="ukrane">(?) Ukrainian
-</option><option value="china">(?) Renminbi
-</option><option value="aus">($A) Australian
-</option><option value="kor">(?)Korean Won
-</option><option value="bgn">(BGN)Bulgarian Lev
-</option><option value="ils">(ILS)Israeli Shekel
-</option><option value="rub">(RUB)Ruble			</option><option value="new" style="background:red;color:white;">New Currency Symbol		</option></select>
-		<input type="text" id="newcurrencyIdnew" name="newcurrency" value="" placeholder="enter symbol" style="display:none;" class="textbox">
-		</td>
-		<td class="padding3 gboxb">Decimal:</td>	
-		<td class="padding3 gboxrb">
-		
-		<select name="acctdecimal">
-			<option value="0">English (1,100.00)</option>
-			<option value="1">Japanese (1,100)</option>
-			<option value="2">French (1 100,00)</option>
-			<option value="3">Swiss (1'100,00)</option>
-			<option value="4">Euro/German (1.100,00)</option>
-			
-		</select>
-		</td>
-		
-			</tr>
-	<tr id="exchangerownew" style="display:none;">
-			<td class="padding3 gboxb apps_boxl">Exchange Rate:</td>
-		<td class="padding3 gboxrb">	
-			1 $ = <input type="text" size="8" value="" name="exchangerate" class="textbox">
-			<span id="excurrnew">($)</span>
-		</td>
-		<td class="padding3 gboxb">&nbsp;</td>	
-		<td class="padding3 gboxrb">
-		&nbsp;
-		</td>
-		
-			</tr>
-	<tr>
-		<td colspan="4" class="padding3" align="right">
-			<input style="vertical-align:middle;" type="submit" name="submit" value="Add Account" class="button">
-			<input style="vertical-align:middle;" type="button" onclick="CancelNewAccount()" class="button cancelbutton" value="Cancel">			
-		</td>
-	</tr>
-	
+	<form name="budgetfrm" method="post" style="margin:0px;" action="https://secure.budgettracker.com/save/deletesubcategory_checked.php">
+	<div id="budgetmain">
 
-</tbody></table>
+<div align="left" class="settingsContainer">
+		<div align="right" class="padding5 smallTxt"><a href="https://secure.budgettracker.com/budget.php?showall=1" class="smallTxt">show</a> | <b>hide</b> non-budgeted transactions</div>	
+	<select class="redmond" style="width: 150px; display: none;" onchange="UpdateStyle(this.value)" id="ui-id-3" aria-disabled="false">
+		<option value="st">Standard Budget</option>
+		<option value="envelope">Envelope</option>
+        <option value="kids">Kids Budgeting</option>
+	</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-3-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-3-menu" style="width: 150px;" aria-disabled="false"><span class="ui-selectmenu-status">Standard Budget</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+	&nbsp; 
+	<select class="redmond" style="width: 150px; display: none;" name="acctid" onchange="CheckAcct(this.value)" id="ui-id-4" aria-disabled="false">
+		<option value="0">All Accounts</option>
+			</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-4-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-4-menu" style="width: 150px;" aria-disabled="false"><span class="ui-selectmenu-status">All Accounts</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+	&nbsp; &nbsp;
+	<select style="width: 150px; display: none;" class="redmond" onchange="UpdateTemplate(this.value);" id="ui-id-5" aria-disabled="false">
+		<option value="0">Filter on Template</option>
+		<option value="1">Business</option>
+				<option value="add">Update Templates
+		</option><option value="category">Assign Templates
+	</option></select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-5-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-5-menu" style="width: 150px;" aria-disabled="false"><span class="ui-selectmenu-status">Filter on Template</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+	
+	&nbsp; &nbsp;
+	<select class="redmond" style="width: 150px; display: none;" onchange="budgetdates(this.value)" id="ui-id-6" aria-disabled="false">
+		<option value="monthly">Monthly</option>
+		<option value="yeartodate">Year-to-Date</option>
+		<option value="yeartodate2">Last 2 Months</option>
+		<option value="yeartodate3">Last Year</option>
+		<option value="yeartodate4">This Year</option>
+		<option value="weekly">Weekly</option>
+		<option value="twice">Twice a Month</option>
+		<option value="custom">Custom Date</option>
+	</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ui-selectmenu-dropdown" id="ui-id-6-button" role="button" href="https://secure.budgettracker.com/budget.php#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-id-6-menu" style="width: 150px;" aria-disabled="false"><span class="ui-selectmenu-status">Monthly</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+	</div>
+		
 
-</td>
-	</tr>
+	
+<table cellpadding="3" cellspacing="0" border="0" width="100%">
+
+<tbody><tr><td colspan="6">
+</td></tr><tr>
+	<td class="gboxlrtb" style="background:#f0f0f0;" colspan="6">
+		<p class="padding5" align="center">You have no categories created. Use the "Add to Budget" form above to add new categories. </p>
+        
+</td></tr>
+	
+	
 </tbody></table>
+<div class="padding5">
+<a href="javascript:void(selectall());">select all</a> | <a href="javascript:void(selectnone());">select none</a>
 </div>
-	</div>
+<br>
+<br><br>
+		</div>
 	</form>
+	<br>
+	<div class="newentryBudgetboxId" id="budget_div" style="display:none;">
+			<div class="newentryinner"><style>
+	.addbillline{border-bottom:solid 1px #e7e7e7;}
+	.addbilllinel{border-left:solid 1px #e7e7e7;}
+	.addbilllinelb{border-left:solid 1px #e7e7e7;border-bottom:solid 1px #e7e7e7;}
 	
-	<span id="routingdivsample" style="display:none;"><img src="./updateaccount_files/routingsample.gif"></span>
-	
-	<div id="updateaccount" style="display:none;">
-	<form method="post" onsubmit="return validateCharsUpdate(this.accountName.value)" name="updateaccountfrm">
-	<div id="updateaccountbody"></div>
-	</form>
-	</div>
-	
-	<div id="updategoalid" style="display:none">
-	<form method="post" name="goalsfrmupdate" onsubmit="return savegoal_update()">
-	<div id="updategoalbody"></div>
-	</form>
-	</div>
-	
-	<div id="addgoalid" style="display:none">
-	<form method="post" name="goalsfrm" onsubmit="return savegoal()">
-	<div id="addgoalbody"><div class="padding5">By checking "Tie to a Budget" box, a Budget Category will be created for this Goal. The balance of your Goal will be determined by the Transactions entered for that Category. <br>By leaving this unchecked, your Goal balance will be based on the amount available in your account.</div><br>
-<table cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="boxlrtb">
-	<input type="hidden" name="acctid">
-	<tbody><tr>
-		<td class="padding5 header" colspan="2" bgcolor="#e8e8e8"><span id="newgoaltxt">New Goal</span></td>
-	</tr>
-	<tr>
-		<td class="padding3 gboxb">Goal Name:</td>
-		<td class="padding3 gboxb"><input type="text" name="goalname" size="50" class="textbox"></td>
-	</tr>
-	<tr class="goalamounttr">
-		<td class="padding3 gboxb">Goal Amount:</td>
-		<td class="padding3 gboxb">$<input type="text" name="goalamount" size="8" class="textbox"></td>
-	</tr>
-	<tr class="monthlyalloctr" style="display:none;">
-		<td class="padding3 gboxb">Monthly Allocation:</td>
-		<td class="padding3 gboxb">$<input type="text" name="goalmonthly" size="8" class="textbox"></td>
-	</tr>
-	<tr class="tieaccounttr">
-		<td class="padding3 gboxb" nowrap="">Tie to Account:</td>
-		<td class="padding3 gboxb">
-			<select name="savingsacctid" id="accountID" onchange="checksavings(this.value)">
-				<option value="0">-- Select Account --
-								</option><option value="-1" style="background:red;color:#fff;">Add Account
-			</option></select>	
-		</td>
-	</tr>
-	
-	<tr>
-		<td class="padding3 gboxb" nowrap="">Tie to a Budget Category:</td>
-		<td class="padding3 gboxb"><input type="checkbox" id="goalbudgetID" name="goalbudget" onclick="CheckAccount()"></td>
-	</tr>
-	<tr>
-		<td class="padding3" colspan="2" align="center">
-			<input type="submit" value="Add New Goal" class="button"> &nbsp; &nbsp;
-			<input type="button" value="Cancel" onclick="cancelgoal()" class="button cancelbutton">		</td>
-	</tr>
-</tbody></table></div>
-	</form>
-	</div>
-	<div id="updatespendinglimitsid" style="display:none;width:500px;">
-		<form method="post" name="spendinglimitsfrmupdate" onsubmit="return savespendinglimits_update()">
-		<div id="updatespendinglimitsbody"></div>
-		</form>
-	</div>
+</style>
+<script>
+	function validateChars(catname,subcatname,newsubcat,numberentered){
+		if(subcatname==''&&newsubcat==''){
+			alert("Please enter a sub-category");
+			return false;
+		}
 		
-	<div id="addspendinglimitsid" style="display:none;width:500px;">
-		<form method="post" name="spendinglimitsfrm" onsubmit="return savespendinglimits()">
-		<div id="addspendinglimitsbody"><table cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="boxlrtb" width="100%">
-	<input type="hidden" name="acctid">
-	<tbody><tr>
-		<td class="padding3 boxb" colspan="2" bgcolor="#eee"><span id="newspendinglimitstxt">Add Spending Limit</span></td>
-	</tr>
-	
+		if(catname==''){
+			alert("Please enter a category");
+			return false;
+		}
+		saveinfo_newbudget();
+		return false;
+	}
+</script>
+<form name="newsubfrm" onsubmit="return validateChars(this.catid.value,this.subcatid.value,this.newsubcat.value,this.budget.value)" method="post">
+	<table bgcolor="#ffffff" cellpadding="0" width="100%" cellspacing="0" border="0"><tbody><tr><td colspan="4" id="newbudgetfrmId" class="apps_titlebar1"><a style="float:right;" href="https://secure.budgettracker.com/setupwizard.php"><span class="smallTxt">Budgeting Wizard</span></a>Add to Budget</td></tr>	<tr>
+				<td class="padding3 gboxb">Category:</td>
+		<td class="padding3 gboxb" width="40%">
+		
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the main category to keep all your sub-categories contained in. Most transaction will be recorded under your sub-categories but this gives you a way to organize your sub-categories and view reports on combined sub-category totals&#39;)" class="inputorselection" name="catid" onchange="updatecat(this.selectedIndex);">
+					<option value="Auto">Auto						</option><option value="Food">Food						</option><option value="Home">Home						</option><option value="Investments">Investments						</option><option value="Income">Income						</option><option value="Leisure">Leisure						</option><option value="Miscellaneous">Miscellaneous						</option><option value="Spending">Spending						</option><option value="Utilities">Utilities						</option><option class="transactionAddnew" value="">Add Category</option>
+		</select>
+		<span id="newcatid" style="display:none;">
+			<input type="text" class="inputorselection textbox" name="newcat">
+		</span>
+		</td>
+		<td class="padding3 gboxb">Amount:</td>
+		<td class="padding3 gboxb">$<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the amount you would like to be allocated to this category each month. This should be an estimated amount as your budget may change from month to month. To change the amount for one month only, you can update your budget by clicking the sub-category link and clicking the Override link next to the amount field on the update form.&#39;)" type="text" class="inputorselection textbox" name="budget" id="AmountId" size="8"></td>
+			</tr>
 	<tr>
-		<td class="padding5" colspan="2">
-		This will allow you to set a monthly spending limit per account
+				<td class="padding3  gboxb" nowrap="">Sub-Category:</td>
+		<td class="padding3 gboxb">
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the category that will be directly tied to your Transactions, Bills and Income. Each sub-category will allow you to set a budget amount to compare expenses against. The sub-category is your main point of reference when comparing transaction expenses vs budgeted amounts.&#39;)" name="subcatid" onchange="updatesubcat();"><option value="Car Insurance">Car Insurance</option><option value="Car Payment">Car Payment</option><option value="Gasoline">Gasoline</option><option style="background: rgb(255, 0, 0); color: rgb(255, 255, 255);">New Sub-Category</option></select>
+		<span id="newsubcatid" style="display:none;">
+			<input type="text" class="textbox inputorselection" id="newsubcatinputId" name="newsubcat">
+		</span>
+		</td>
+		<td class="padding3 gboxb">Recurrence:</td>
+		<td class="padding3 gboxb">
+			<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;From here you can set your basic recurrence options for monthly budgeting but you can also choose Custom to define specific months during the year only to track your budget.&#39;)" class="inputorselection" name="occurance" onchange="checknewbudgetcat(this.value)" id="occuranceId">
+				<option value="onemonth">One Month Only				</option><option value="monthly" selected="">Every Month				</option><option value="bimonthly">Bi-Monthly				</option><option value="thirdmonth">Every Third Month				</option><option value="sixmonths">Every Six Months				</option><option value="yearly">Yearly				</option><option value="custom" style="background:#b1a0b9;" class="boxt">Custom...
+			</option></select>
+			<select name="weeklyoccurance" style="display:none;" id="weeklyoccuranceId">
+			<option value="weekly">Every Week			</option><option value="biweekly">Bi-Weekly			</option><option value="triweekly">Every 3 Weeks			</option></select>
+			<div style="display:none;" id="budgetreccustom">
+			<table>
+			<tbody><tr><td><input name="jan" id="newjan" type="checkbox"></td><td>January</td><td>$<input onkeyup="addChecked(&#39;newjan&#39;,this)" name="jana" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="feb" id="newfeb" type="checkbox"></td><td>February </td><td>$<input onkeyup="addChecked(&#39;newfeb&#39;,this)" name="feba" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="mar" id="newmar" type="checkbox"></td><td>March </td><td>$<input onkeyup="addChecked(&#39;newmar&#39;,this)" name="mara" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="apr" id="newapr" type="checkbox"></td><td>April </td><td>$<input onkeyup="addChecked(&#39;newapr&#39;,this)" name="apra" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="may" id="newmay" type="checkbox"></td><td>May </td><td>$<input onkeyup="addChecked(&#39;newmay&#39;,this)" name="maya" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="jun" id="newjun" type="checkbox"></td><td>June </td><td>$<input onkeyup="addChecked(&#39;newjun&#39;,this)" name="juna" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="jul" id="newjul" type="checkbox"></td><td>July </td><td>$<input onkeyup="addChecked(&#39;newjul&#39;,this)" name="jula" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="aug" id="newaug" type="checkbox"></td><td>August </td><td>$<input onkeyup="addChecked(&#39;newaug&#39;,this)" name="auga" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="sep" id="newsep" type="checkbox"></td><td>September </td><td>$<input onkeyup="addChecked(&#39;newsep&#39;,this)" name="sepa" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="oct" id="newoct" type="checkbox"></td><td>October </td><td>$<input onkeyup="addChecked(&#39;newoct&#39;,this)" name="octa" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="nov" id="newnov" type="checkbox"></td><td>November</td><td> $<input onkeyup="addChecked(&#39;newnov&#39;,this)" name="nova" type="text" size="5" class="textbox"></td></tr>
+			<tr><td><input name="dec" id="newdec" type="checkbox"></td><td>December </td><td>$<input onkeyup="addChecked(&#39;newdec&#39;,this)" name="deca" type="text" size="5" class="textbox"></td></tr>
+			</tbody></table>
+			</div>
+		</td>
+			</tr>
+	<tr>
+			<td class="padding3 gboxb" nowrap="">Starting Month:</td>
+	<td class="padding3 gboxb">
+		<div id="monthlyStartDateId">
+			<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This is the month you would like to start tracking your budget. If you are viewing a previous month than what is selected, you will see text explaining when your budget will occur next. You can override this view by selecting the dropdown Related Pages in the top left corner and select Show All Spent&#39;)" class="inputorselection" name="monthstart">
+				<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10" selected="">October</option>
+<option value="11">November</option>
+<option value="12">December</option>			</select>
+			<select class="inputorselection" name="yearstart">
+				<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017" selected="">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+			</select>
+		</div>
+		<div id="weeklyStartDateId" style="display:none;">
+			<input type="text" class="textbox datetest hasDatepicker" name="startdate" value="10/06/2017" size="10" id="dp1507284952852">
+		</div>
+	</td>
+	<td class="padding3 gboxb" nowrap="">Budget Type:</td>
+	<td class="padding3 gboxb">
+		<select id="incomeexpenseid" onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;The My Budget page allows you to combine both expenses and income to see how much will be left after all has been entered. Additionally you can mix expenses and income budget sub-categories under a single category&#39;)" name="budgettype" onchange="updatebillname();">
+			<option value="0">Expense</option>
+			<option value="1">Income/Deposit</option>
+			<option value="2">Transfer</option>
+		</select>
+	</td>
+	</tr>
+
+<tr class="optional" style="display: none;">
+			<td class="padding3 gboxb" nowrap="">Ending Month:</td>
+	<td colspan="3" class="padding3 gboxb">
+		<input type="checkbox" name="doEndDate" onclick="updateEndDate();" style="float:left;padding-top:3px;">
+		<div id="monthlyEndDateId" style="display:none;float:left;">
+			<select class="inputorselection" name="monthend">
+				<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10" selected="">October</option>
+<option value="11">November</option>
+<option value="12">December</option>			</select>
+			<select class="inputorselection" name="yearend">
+				<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017" selected="">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+			</select>
+		</div>
+	</td>
+	
+	</tr>
+<tr class="optional" style="display: none;">
+	<td class="padding3 gboxb" nowrap=""><span id="billname">Add to "My Bills":</span></td>
+	<td class="padding3 gboxb" colspan="3">
+		<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This will allow you to automatically create a Bill based on the amount entered for your Budget and the name you give your sub-category. Alternatively, you can go directly to the My Bills page and choose the category you enter here.&#39;)" type="checkbox" name="addtobill" onclick="showbills();">
+		<span id="addbills" style="display:none;">
+		Due on:
+		<select name="startday" class="inputorselection">
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+		and paid from:
+		<select name="account" class="inputorselection" onchange="selectredir(this.value)">
+			<option value="0">--Select Account--</option>
+			<option value="cash">Cash</option>				<option value="addaccount" class="transactionAddnew">Add Account</option>
+		</select>
+		</span>
+	</td>
+	</tr>
+<tr class="optional" style="display: none;">
+	<td class="padding3 gboxb" nowrap=""><span id="billname">Add to Forecast:</span></td>
+	<td class="padding3 gboxb" colspan="3">
+		<input onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This will include your budget in your transaction forecast based on the account you choose.&#39;)" type="checkbox" name="addtoforecast" onclick="showforecast();">
+		<span id="addforecast" style="display:none;">
+		<select name="forecastoccurance" onchange="checkForecast(this.value)">
+			<option value="1">Beginning of the Month</option>
+			<option value="2">End of the Month</option>
+			<option value="3">Split into 4 weeks</option>
+			<option value="4">Split - 1rst and 15th</option>
+			<option value="5">Split - 15th and End of Month</option>
+			<option value="6">Split - 1rst and End of Month</option>
+			<option value="7">Split - Monthly on 1st</option>
+			<option value="8">Split - Monthly on 15th</option>
+			<option value="9">Every Week Budgeted Amount</option>
+		</select>
+			<select name="forecastweekday" style="display:none;" id="forecastweekdayid">
+				<option value="1">Monday</option>
+				<option value="2">Tuesday</option>
+				<option value="3">Wednesday</option>
+				<option value="4">Thursday</option>
+				<option value="5" selected="">Friday</option>
+				<option value="6">Saturday</option>
+				<option value="0">Sunday</option>
+			</select>
+		<select name="accountforecast" class="inputorselection" onchange="selectredir(this.value)">
+			<option value="0">--Select Account--</option>
+			<option value="cash">Cash</option>			<option value="addaccount" class="transactionAddnew">Add Account</option>
+		</select>
+		</span>
+	</td>
+	</tr>
+<tr class="optional" style="display: none;">
+		<td class="padding3 gboxb" nowrap="">
+Tracking Type</td>
+	<td class="padding3 gboxb">
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This field allows you to track what type of budgeting you would like to do. Note that when in weekly mode, you will only see budget items that are tracked weekly and vice versa for monthly budgeting.&#39;)" name="tracktype" onchange="UpdateTrack(this.value)">
+			<option value="0">Monthly Budgeting			</option><option value="1">Weekly Budgeting			</option><option value="2">Twice a Month
+		</option></select>
+	</td>
+	<td class="padding3 gboxb" nowrap="">Row Color:</td>
+	<td class="padding3 gboxb">
+		<select onmouseout="closeshadepopup()" onmouseover="openshadepopup(&#39;This allows you to define a color for your budget sub-category. Not only will the appear on the My Budget page, but when any transaction is entered with this sub-category, it will also show up with the background color you choose here.&#39;)" name="colorid">
+		<option value="0" selected="" style="background:white">Default</option><option value="1" style="background:red">Red</option><option value="2" style="background:orange">Orange</option><option value="3" style="background:green">Green</option><option value="4" style="background:maroon">Maroon</option><option value="5" style="background:yellow">Yellow</option><option value="6" style="background:navy;color:white;">Navy</option><option value="7" style="background:blue">Blue</option><option value="8" style="background:olive">Olive</option><option value="9" style="background:purple">Purple</option><option value="10" style="background:aqua">Aqua</option><option value="11" style="background:black;color:white">Black</option><option value="12" style="background:gray">Gray		</option></select>
+	</td>
+	</tr>
+
+<tr class="optional" style="display: none;">
+	<td class="padding3 gboxb" nowrap="">
+Auto Carry Over</td>
+	<td class="padding3 gboxb" colspan="3">
+		<label>
+		<input type="checkbox" name="autocarryover" onclick="CheckCOType(this,&#39;newbudgetcarryovertype&#39;)">
+		This will automatically carry over the left over budget amount to the following month.		</label>
+		<div class="padding5" style="display:none;" id="newbudgetcarryovertype">
+		<select name="carryovertype">
+			<option value="0">Ongoing
+			</option><option value="1">Yearly
+		</option></select>
+		</div>
+	</td>
+	</tr>
+
+<input type="hidden" name="offdays" value="0">
+<tr>
+		<td align="right" class="padding3 apps_boxlrb" colspan="4">
+	<a class="smallTxt" style="float:left;" href="javascript:void(showOptions())">more options...</a>
+	<input class="button" name="addbudgetbtn" style="vertical-align:middle;" type="submit" value="Add to Budget">
+		<input class="button cancelbutton" type="button" onclick="CancelNewBudget()" style="vertical-align:middle;" value="Cancel">
 		</td>
 	</tr>
-	<tr>
-		<td class="bold padding5 gboxb">Spending Limit Amount:</td>
-		<td class="padding5 gboxb">$<input type="text" name="spendinglimitsamount" size="10" class="textbox"></td>
-	</tr>
-	<tr>
-		<td class="padding5" colspan="2" align="center">
-			<input type="submit" value="Add Spending Limit" class="submitbutton button"> &nbsp; &nbsp;
-			<input class="submitbutton button cancelbutton" type="button" value="Cancel" onclick="cancelspendinglimits()">		</td>
-	</tr>
-</tbody></table></div>
-		</form>
+
+</tbody></table>
+</form>
+<script>
+	function UpdateTrack(track){
+		if(track=="1"){
+			Element.hide('occuranceId');
+			Element.hide('budgetreccustom');
+			Element.show('weeklyoccuranceId');
+			$('AmountId').disabled=false;
+			$('weeklyoccuranceId')[0].selected=true;
+			Element.show('weeklyStartDateId');
+			Element.hide('monthlyStartDateId');
+		}
+		else
+		{
+			Element.hide('weeklyoccuranceId');
+			Element.show('occuranceId');
+			$('occuranceId')[1].selected=true;
+			Element.hide('weeklyStartDateId');
+			Element.show('monthlyStartDateId');
+		}
+	}
+	function checknewbudgetcat(x){
+		if(x=="custom"){
+			Element.show('budgetreccustom');
+			newsubfrm.budget.disabled=true;
+			newsubfrm.budget.value="0.00";
+		}
+		else
+		{
+			Element.hide('budgetreccustom');
+			
+			newsubfrm.budget.disabled=false;
+		}
+	}
+	
+	function checkcustomu(x){
+		if(x=="custom"){
+			Element.show('budgetreccustomu');
+			updatesubfrm.budget.disabled=true;
+			updatesubfrm.budget.value="0.00";
+		}
+		else
+		{
+			Element.hide('budgetreccustomu');
+			updatesubfrm.budget.disabled=false;
+		}
+	}
+	
+	//document.newsubfrm.monthstart[10-1].selected=true;
+	function selectsubcattredir(redirname){
+		if(redirname=="addcategory"){
+			document.location.href="newcategory.php";
+		}
+		else if(redirname=="addsubcategory"){
+			document.location.href="https://secure.budgettracker.com/newsubcategory.php";
+		}
+		else if(redirname=="addaccount"){
+			document.location.href="newaccount.php";
+		}
+		else if(redirname=="updateaccount"){
+			document.location.href="updateaccount.php";
+		}
+	}
+	function newcat(){
+		
+		document.newsubfrm.catid.style.display='none';
+		document.newcatid.style.display='';
+		document.newsubfrm.subcatid.style.display='none';
+		document.newsubcatid.style.display='';
+	}
+	
+	
+		var multicategory = [];
+			multicategory[0] = "Auto";
+				multicategory[0] = [];
+		multicategory[0][0] = "Car Insurance";
+multicategory[0][1] = "Car Payment";
+multicategory[0][2] = "Gasoline";
+		multicategory[1] = "Food";
+				multicategory[1] = [];
+		multicategory[1][0] = "Coffee";
+multicategory[1][1] = "Dining Out";
+multicategory[1][2] = "Groceries";
+		multicategory[2] = "Home";
+				multicategory[2] = [];
+		multicategory[2][0] = "Association Dues";
+multicategory[2][1] = "Home Insurance";
+multicategory[2][2] = "Lawn Care";
+multicategory[2][3] = "Mortgage";
+multicategory[2][4] = "Rent";
+		multicategory[3] = "Investments";
+				multicategory[3] = [];
+		multicategory[3][0] = "401k";
+multicategory[3][1] = "ESPP";
+multicategory[3][2] = "IRA";
+multicategory[3][3] = "Mutual Funds";
+multicategory[3][4] = "Savings";
+multicategory[3][5] = "Stocks";
+		multicategory[4] = "Income";
+				multicategory[4] = [];
+		multicategory[4][0] = "Paycheck";
+		multicategory[5] = "Leisure";
+				multicategory[5] = [];
+		multicategory[5][0] = "Clothing";
+multicategory[5][1] = "Entertainment";
+multicategory[5][2] = "Movies/Video Rentals";
+		multicategory[6] = "Miscellaneous";
+				multicategory[6] = [];
+		multicategory[6][0] = "Charity";
+multicategory[6][1] = "Day Care";
+multicategory[6][2] = "Dental Insurance";
+multicategory[6][3] = "Life Insurance";
+multicategory[6][4] = "Medical Insurance";
+multicategory[6][5] = "Personal Loan";
+multicategory[6][6] = "Pet Care";
+multicategory[6][7] = "Pet Food";
+multicategory[6][8] = "Student Loan";
+		multicategory[7] = "Spending";
+				multicategory[7] = [];
+				multicategory[8] = "Utilities";
+				multicategory[8] = [];
+		multicategory[8][0] = "Cable TV";
+multicategory[8][1] = "Cellular";
+multicategory[8][2] = "Electric";
+multicategory[8][3] = "Garbage";
+multicategory[8][4] = "Gas";
+multicategory[8][5] = "Internet";
+multicategory[8][6] = "Sewer";
+multicategory[8][7] = "Telephone";
+multicategory[8][8] = "Water";
+	function updatecat(x){
+		document.newsubfrm.newsubcat.value='';
+		if(x==7) {
+			jQuery('#incomeexpenseid').val(1);
+		} else {
+			jQuery('#incomeexpenseid').val(0);
+		}
+		if(document.newsubfrm.catid.selectedIndex==document.newsubfrm.catid.length-1){
+			document.newsubfrm.subcatid.style.display='none';
+			newsubcatid.style.display='';
+			newcategory=prompt("Enter your new Category name","");
+			if(newcategory!=null&&newcategory!=''){
+				document.newsubfrm.catid[document.newsubfrm.catid.length-1].text=newcategory;
+				document.newsubfrm.catid[document.newsubfrm.catid.length-1].value=newcategory;
+				document.newsubfrm.catid[document.newsubfrm.catid.length-1].style.background="#ffffff";
+				document.newsubfrm.catid[document.newsubfrm.catid.length-1].style.color="#000000";
+				document.newsubfrm.catid.length=document.newsubfrm.catid.length+1;
+				document.newsubfrm.catid[document.newsubfrm.catid.length-1].text="New Category";
+				document.newsubfrm.catid[document.newsubfrm.catid.length-1].style.background="#ff0000";
+				document.newsubfrm.catid[document.newsubfrm.catid.length-1].style.color="#ffffff";
+				document.newsubfrm.newsubcat.focus();
+				document.newsubfrm.newsubcat.select();
+				var url = "save/newcategory.php";
+				var getParameters = "skipredir=1&catName="+newcategory;
+				new Ajax.Request(url, {asynchronous:true,method:'get',parameters:getParameters});	
+			}
+			else
+			{
+				document.newsubfrm.subcatid.style.display='none';
+				newsubcatid.style.display='none';
+				document.newsubfrm.newsubcat.value='';
+			}
+		}
+		else
+		{
+			document.newsubfrm.subcatid.length=0;
+			if(multicategory[x]&&multicategory[x].length>0){
+				for(i=0;i<multicategory[x].length;i++){
+					document.newsubfrm.subcatid.length=document.newsubfrm.subcatid.length+1;
+					document.newsubfrm.subcatid[i].text=multicategory[x][i];
+					document.newsubfrm.subcatid[i].value=multicategory[x][i];
+				}
+				
+				document.newsubfrm.subcatid.length=document.newsubfrm.subcatid.length+1;
+				document.newsubfrm.subcatid[i].text="New Sub-Category";
+				document.newsubfrm.subcatid[i].style.background="#ff0000";
+				document.newsubfrm.subcatid[i].style.color="#ffffff";
+				document.newsubfrm.subcatid.style.display='';
+				$('newsubcatid').style.display='none';
+			}
+			else
+			{
+				document.newsubfrm.subcatid.style.display='none';
+				newsubcatid.style.display='';
+				//newsubfrm.newsubcat.focus();
+				//newsubfrm.newsubcat.select();
+			}
+		}
+	}
+	function updatesubcat(){
+		
+		if(document.newsubfrm.subcatid.selectedIndex==document.newsubfrm.subcatid.length-1){
+			document.newsubfrm.subcatid.style.display='none';
+			newsubcatid.style.display='';
+			//newsubfrm.newsubcat.focus();
+			//newsubfrm.newsubcat.select();
+		}
+	}
+	function showbills(){
+		if(addbills.style.display==''){
+			addbills.style.display='none';
+		}
+		else
+		{
+			addbills.style.display='';
+			updatebillname();
+		}
+	}
+	function showforecast(){
+		if(addforecast.style.display==''){
+			addforecast.style.display='none';
+		}
+		else
+		{
+			addforecast.style.display='';
+
+		}
+	}
+	function updatebillname(){
+		if(newsubfrm.budgettype.value==0){
+			document.getElementById("billname").innerHTML="Add to \"My Bills\":";
+		}
+		else
+		{
+			document.getElementById("billname").innerHTML="Add to \"My Income\":";
+		}
+	}
+	updatecat(0);
+
+
+function saveinfo_newbudget(){
+	openajax();
+		if(window.XMLHttpRequest)
+		http = new XMLHttpRequest();
+	else if (window.ActiveXObject)
+		http = new ActiveXObject("Microsoft.XMLHTTP");
+	http.open("POST","https://secure.budgettracker.com/save/newsubcategory_ajax.php",true);
+	http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	http.onreadystatechange = handleInfo_newsubcategory;
+	addtobill="";
+	if(document.newsubfrm.addtobill.checked==true){
+		addtobill="on";
+	}
+	var months = "";
+
+	sendvar="BUDGETTYPE="+document.newsubfrm.budgettype.value+"&BUDGET="+document.newsubfrm.budget.value+"&ADDTOBILL="+addtobill+"&STARTDATE="+document.newsubfrm.startdate.value+"&MONTHSTART="+document.newsubfrm.monthstart.value+"&YEARSTART="+document.newsubfrm.yearstart.value+"&OCCURANCE="+document.newsubfrm.occurance.value+"&WEEKLYOCCURANCE="+document.newsubfrm.weeklyoccurance.value+"&SUBCATID="+document.newsubfrm.subcatid.value+"&CATID="+document.newsubfrm.catid.value+"&NEWCAT="+document.newsubfrm.newcat.value+"&NEWSUBCAT="+document.newsubfrm.newsubcat.value+"&ACCOUNT="+document.newsubfrm.account.value+"&STARTDAY="+document.newsubfrm.startday.value+"&OFFDAYS="+document.newsubfrm.offdays.value+"&TRACKTYPE="+document.newsubfrm.tracktype.value+"&AUTOCARRYOVER="+document.newsubfrm.autocarryover.checked+"&colorid="+document.newsubfrm.colorid.value+"&doenddate="+document.newsubfrm.doEndDate.checked+"&YEAREND="+document.newsubfrm.yearend.value+"&MONTHEND="+document.newsubfrm.monthend.value+"&carryovertype="+document.newsubfrm.carryovertype.value;
+	if(document.newsubfrm.addtoforecast.checked==true){
+		sendvar+="&accountforecast="+document.newsubfrm.accountforecast.value+"&forecastoccurance="+document.newsubfrm.forecastoccurance.value;
+	}
+		//sendvar+="&accountforecast="+document.newsubfrm.accountforecast.value+"&forecastoccurance="+document.newsubfrm.forecastoccurance.value;
+	if(document.newsubfrm.occurance.value=="custom"){
+		months+=document.newsubfrm.jan.checked+"|"+document.newsubfrm.jana.value+",";
+		months+=document.newsubfrm.feb.checked+"|"+document.newsubfrm.feba.value+",";
+		months+=document.newsubfrm.mar.checked+"|"+document.newsubfrm.mara.value+",";
+		months+=document.newsubfrm.apr.checked+"|"+document.newsubfrm.apra.value+",";
+		months+=document.newsubfrm.may.checked+"|"+document.newsubfrm.maya.value+",";
+		months+=document.newsubfrm.jun.checked+"|"+document.newsubfrm.juna.value+",";
+		months+=document.newsubfrm.jul.checked+"|"+document.newsubfrm.jula.value+",";
+		months+=document.newsubfrm.aug.checked+"|"+document.newsubfrm.auga.value+",";
+		months+=document.newsubfrm.sep.checked+"|"+document.newsubfrm.sepa.value+",";
+		months+=document.newsubfrm.oct.checked+"|"+document.newsubfrm.octa.value+",";
+		months+=document.newsubfrm.nov.checked+"|"+document.newsubfrm.nova.value+",";
+		months+=document.newsubfrm.dec.checked+"|"+document.newsubfrm.deca.value+",";
+		sendvar+="&MONTHS="+months;
+	}
+	
+	http.send(sendvar);
+	document.newsubfrm.budget.value="";
+	  	CancelNewBudget();
+  	}
+function handleInfo_newsubcategory() {
+  if(http.readyState == 1) {
+    
+  }
+  if(http.readyState == 4) {
+  	
+    var response = http.responseText;
+	new Ajax.Updater('categorydropdownID', 'common/selcategories.php', {method:'post', parameters:'lastcat=1',asynchronous:true});
+	loadmain();
+    document.getElementById('budgetmessage').innerHTML = response;
+  }
+}
+function updateEndDate(){
+	jQuery('#monthlyEndDateId').toggle();
+}
+function showOptions(){
+	jQuery('.optional').toggle();
+}
+jQuery('.optional').hide();
+</script>
+
+</div>	
+	</div>
+	<form name="updatesubfrm" id="updatesubfrmId" onsubmit="return validateCharsUpdate(this.catid.value,this.subcatid.value,this.budget.value)" method="post" style="display:none;">
+	<div id="updatesubcategory"></div>
+	</form>
+
+	<form name="transferfrm" method="post">
+	<div id="transferpopup" style="display:none;"><input type="hidden" name="amount"></div>
+	</form>
+	<input type="hidden" id="printId" value="0">
+		
+	<div id="bills" title="My Bills" style="display:none;">
+		<input type="hidden" id="subcatid_bill">
+		<select id="mybills" name="" onchange="UpdateBillCategory(this.value)">
+			<option value="0">-- Select Bill --
+					</option></select>
 	</div>
 	
-	<form method="post" name="balancefrm" onsubmit="return balanceamount();">
-	<div id="balanceID" style="display:none;position:absolute;top:250px;right:200px;"></div>
-	</form>
+</div>
+
+
+<script src="./BudgetTracker, Inc._files/budget.js.???????? ????"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./BudgetTracker, Inc._files/budget.css">
+
 	
 <script>
-    $(document).on("submit", "#someform", function (event) {
-        alert("safdasf")
-        var $form = $(this);
+function handleInfo_budgetmain() {
+  if(http.readyState == 1) {
+  
+  }
+  if(http.readyState == 4) {
+    var response = http.responseText;
+	closeajax();
 
-        $.post($form.attr("action"), $form.serialize(), function (response) {
-           
-        });
 
-        event.preventDefault(); 
-    });
-</script>
-	
-	<script>
-		function opennewaccount(){
-		jQuery('#newaccountID').slideToggle('medium',function(){
-		$('accountNameId').focus();
-		$('accountNameId').select();
-		cancelupdate();	
-	});
-		
-}
-function checktype(){
-		limit=document.getElementById("limitdiv");
-		limittxt=document.getElementById("limitdivtxt");
-		routing=document.getElementById("routingdiv");
-		routingtxt=document.getElementById("routingdivtxt");
-		routingsample=document.getElementById("routingdivsample");
-		interest=document.getElementById("interestdiv");
-		interesttxt=document.getElementById("interestdivtxt");
-		apr=document.getElementById("aprdiv");
-		aprtxt=document.getElementById("aprdivtxt");
-		checkname=document.getElementById("checknamediv");
-		checknametxt=document.getElementById("checknamedivtxt");
-		dueday=document.getElementById("duedaydiv");
-		duedaytxt=document.getElementById("duedaydivtxt");
-		loantxt=document.getElementById("loandivtxt");
-		debttxt=document.getElementById("debtdivtxt");
-		banknametxt=document.getElementById("banknamedivtxt");
-		bankname=document.getElementById("banknamediv");
-		if(document.newaccount.accttype.value=="gift"){
-			document.getElementById("acctoptionalid").innerHTML="";
-			jQuery('#accountNumberId').attr('size','30');
-			jQuery('#accountNumberId').attr('maxlength','');
-		}else{
-			document.getElementById("acctoptionalid").innerHTML="&nbsp;(Optional last 4 digits)";	
-			jQuery('#accountNumberId').attr('size','11');
-			jQuery('#accountNumberId').attr('maxlength','4');
-			jQuery('#accountNumberId').val(jQuery('#accountNumberId').val().substring(0,4));
-		}
-		
-		Element.hide('addtobillid');
-		Element.hide('addtobillmain');
-		Element.hide('loantypeID');
-		Element.hide('credittypeID');
-		Element.hide('apr2div');
-		$('addtobill').checked=false;
-		if(document.newaccount.accttype.value=="checking"){
-			$('debtdivtxt').innerHTML="<font color=green>$</font>";
-						apr.style.display='none';
-			aprtxt.style.display='none';
-			limit.style.display='none';
-			limittxt.style.display='none';
-			loantxt.style.display='none';
-			interest.style.display='none';
-			interesttxt.style.display='none';
-			dueday.style.display='none';
-			duedaytxt.style.display='none';
-		}
-		else if(document.newaccount.accttype.value=="credit"||document.newaccount.accttype.value=="loan"){
-			debtdivtxt.innerHTML="<font color=red>$ - </font>";
-			apr.style.display='';
-			aprtxt.style.display='';
-			routing.style.display='none';
-			routingtxt.style.display='none';
-			routingsample.style.display='none';
-			document.newaccount.accountNumber.value="";
-			checkname.style.display='none';
-			checknametxt.style.display='none';
-			bankname.style.display='none';
-			banknametxt.style.display='none';
-			interest.style.display='none';
-			interesttxt.style.display='none';
-			dueday.style.display='';
-			duedaytxt.style.display='';
-			limit.style.display='';
-			Element.show('addtobillid');
-			if(document.newaccount.accttype.value=="credit"){
-				Element.show('credittypeID');
-				limittxt.style.display='';
-				loantxt.style.display='none';
-				jQuery('#limitdiv').show();
-				jQuery('#creditlimit_active').prop('checked',true);
-				Element.show('apr2div');
-			}
-			else
-			{
-				Element.show('loantypeID');
-				limittxt.style.display='none';
-				loantxt.style.display='';
-				jQuery('#limitdiv').show();
-			}
-		}
-		else if(document.newaccount.accttype.value=="savings"||document.newaccount.accttype.value=="mutual"||document.newaccount.accttype.value=="ira"||document.newaccount.accttype.value=="pension"||document.newaccount.accttype.value=="other"||document.newaccount.accttype.value=="401k"){
-			debtdivtxt.innerHTML="<font color=green>$</font>";
-			apr.style.display='none';
-			aprtxt.style.display='none';
-			routing.style.display='none';
-			routingtxt.style.display='none';
-			routingsample.style.display='none';
-			checkname.style.display='none';
-			checknametxt.style.display='none';
-			bankname.style.display='none';
-			banknametxt.style.display='none';
-			interest.style.display='none';
-			interesttxt.style.display='none';
-			limit.style.display='none';
-			limittxt.style.display='none';
-			loantxt.style.display='none';
-			interest.style.display='';
-			interesttxt.style.display='';
-			dueday.style.display='';
-			duedaytxt.style.display='';
-		}
-		else
-		{
-			debtdivtxt.innerHTML="<font color=green>$</font>";
-			routing.style.display='none';
-			routingtxt.style.display='none';
-			routingsample.style.display='none';
-			checkname.style.display='none';
-			checknametxt.style.display='none';
-			bankname.style.display='none';
-			banknametxt.style.display='none';
-			apr.style.display='none';
-			aprtxt.style.display='none';
-			limit.style.display='none';
-			limittxt.style.display='none';
-			loantxt.style.display='none';
-			interest.style.display='none';
-			interesttxt.style.display='none';
-			dueday.style.display='none';
-			duedaytxt.style.display='none';
-		}
-	}
-	function checktypeupdate(){
-		apru=document.getElementById("aprdivu");
-		aprtxtu=document.getElementById("aprdivtxtu");
-		interestu=document.getElementById("interestdivu");
-		interesttxtu=document.getElementById("interestdivtxtu");
-		limitu=document.getElementById("limitdivu");
-		limittxtu=document.getElementById("limitdivtxtu");
-		loantxtu=document.getElementById("loandivtxtu");
-		routingu=document.getElementById("routingdivu");
-		routingtxtu=document.getElementById("routingdivtxtu");
-		routingsampleu=document.getElementById("routingdivsampleu");
-		duedayu=document.getElementById("duedaydivu");
-		duedaytxtu=document.getElementById("duedaydivtxtu");
-		checknameu=document.getElementById("checknamedivu");
-		checknametxtu=document.getElementById("checknamedivtxtu");
-		Element.hide('loantypeuID');
-		Element.hide('credittypeuID');
-		Element.hide('apr2divu');
-		Element.hide('addtobillid');
-		Element.hide('addtobillmain');
-		if(document.updateaccountfrm.accttype.value=="gift"){
-			document.getElementById("acctoptionalidu").innerHTML="";
-			jQuery('#accountNumberu').attr('size','30');
-			jQuery('#accountNumberu').attr('maxlength','');
-		}else{
-			document.getElementById("acctoptionalidu").innerHTML="&nbsp;(Optional last 4 digits)";	
-			jQuery('#accountNumberu').attr('size','11');
-			jQuery('#accountNumberu').val(jQuery('#accountNumberu').val().substring(0,4));
-			jQuery('#accountNumberu').attr('maxlength','4');
-		}
-		
-		if(document.updateaccountfrm.accttype.value=="checking"){
-			routingu.style.display='none';
-			routingtxtu.style.display='none';
-			routingsampleu.style.display='none';
-			checknameu.style.display='none';
-			checknametxtu.style.display='none';
-			apru.style.display='none';
-			aprtxtu.style.display='none';
-			limitu.style.display='none';
-			limittxtu.style.display='none';
-			loantxtu.style.display='none';
-			interestu.style.display='none';
-			interesttxtu.style.display='none';
-			duedayu.style.display='none';
-			duedaytxtu.style.display='none';
-		}
-		else if(document.updateaccountfrm.accttype.value=="credit"||document.updateaccountfrm.accttype.value=="loan"){
-			
-			apru.style.display='';
-			aprtxtu.style.display='';
+	$("budgetmain").innerHTML = response;
+	//btCategories.createSortable();
 
-			routingu.style.display='none';
 
-			routingtxtu.style.display='none';
-
-			routingsampleu.style.display='none';
-
-			checknameu.style.display='none';
-
-			checknametxtu.style.display='none';
-
-			interestu.style.display='none';
-
-			interesttxtu.style.display='none';
-
-//			Element.show('addtobillidU');
-			
-			if(jQuery('#creditlimitu_active:checked').length>0)
-				limitu.style.display='';
-			if(updateaccountfrm.accttype.value=="credit"){
-				Element.show('credittypeuID');
-				limittxtu.style.display='';
-				loantxtu.style.display='none';
-				jQuery('#limitdivu').show();
-				Element.show('apr2divu');
-			}
-			else
-			{
-				Element.show('loantypeuID');
-				limittxtu.style.display='none';
-				loantxtu.style.display='';
-				jQuery('#limitdivu').show();
-			}
-			duedayu.style.display='';
-			duedaytxtu.style.display='';
-			
-		}
-		else if(updateaccountfrm.accttype.value=="savings"||updateaccountfrm.accttype.value=="mutual"||updateaccountfrm.accttype.value=="401k"||updateaccountfrm.accttype.value=="ira"||updateaccountfrm.accttype.value=="other"||updateaccountfrm.accttype.value=="pension"){
-			apru.style.display='none';
-			aprtxtu.style.display='none';
-			routingu.style.display='none';
-			routingtxtu.style.display='none';
-			routingsampleu.style.display='none';
-			checknameu.style.display='none';
-			checknametxtu.style.display='none';
-			interestu.style.display='none';
-			interesttxtu.style.display='none';
-			limitu.style.display='none';
-			limittxtu.style.display='none';
-			loantxtu.style.display='none';
-			interestu.style.display='';
-			interesttxtu.style.display='';
-			duedayu.style.display='';
-			duedaytxtu.style.display='';
-		}
-		else
-		{
-			routingu.style.display='none';
-			routingtxtu.style.display='none';
-			routingsampleu.style.display='none';
-			checknameu.style.display='none';
-			checknametxtu.style.display='none';
-			apru.style.display='none';
-			aprtxtu.style.display='none';
-			limitu.style.display='none';
-			limittxtu.style.display='none';
-			loantxtu.style.display='none';
-			interestu.style.display='none';
-			interesttxtu.style.display='none';
-			duedayu.style.display='none';
-			duedaytxtu.style.display='none';
-		}
-	}
-	function validateChars(nameentered){
-		validStrings="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-0123456789@.' ";
-		for(i=0;i < nameentered.length;i++){
-			checkletter=nameentered.substr(i,1);
-			if(validStrings.indexOf(checkletter)==-1){
-				alert("Invalid character ( " + checkletter + " ) entered.");
-				document.newaccount.accountName.focus();
-				document.newaccount.accountName.select();
-				return false;
-			}
-		}
-		if(nameentered==''){
-			alert("Please enter a valid name.");
-			document.newaccount.accountName.focus();
-			document.newaccount.accountName.select();
-			return false;
-		}
-		if(document.newaccount.validatebillpay.value==1){
-			if(newaccount.routing.value==''){
-				alert("Please enter a routing number.");
-				document.newaccount.routing.focus();
-				document.newaccount.routing.select();
-				return false;
-			}
-			else if(isNaN(document.newaccount.routing.value)==true){
-				alert("Invalid routing number entered. Routing numbers must be numbers only.");
-				document.newaccount.routing.focus();
-				document.newaccount.routing.select();
-				return false;
-			}
-			else if(document.newaccount.routing.value.length!=9){
-				alert("Invalid routing number entered. Routing numbers must be 9 digits.");
-				document.newaccount.routing.focus();
-				document.newaccount.routing.select();
-				return false;
-			}
-			else if(document.newaccount.accountNumber.value==''){
-				alert("Please enter an account number.");
-				document.newaccount.accountNumber.focus();
-				document.newaccount.accountNumber.select();
-				return false;
-			}
-		}
-		if(document.newaccount.accttype[0].selected==true){
-			alert("Please select an account type.");
-			return false;
-		}
-		saveinfo_accountadd();
-		return false; 
-	}
-	function validateCharsUpdate(nameentered){
-		validStrings="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-0123456789@.' ";
-		for(i=0;i < nameentered.length;i++){
-			checkletter=nameentered.substr(i,1);
-			if(validStrings.indexOf(checkletter)==-1){
-				alert("Invalid character ( " + checkletter + " ) entered.");
-				updateaccountfrm.accountName.focus();
-				updateaccountfrm.accountName.select();
-				return false;
-			}
-		}
-		if(document.updateaccountfrm.accttype[0].selected==true){
-			alert("Please select an account type.");
-			document.updateaccountfrm.accttype.focus();
-			return false;
-		}
-		else if(nameentered==''){
-			alert("Please enter a valid name.");
-			document.updateaccountfrm.accountName.focus();
-			document.updateaccountfrm.accountName.select();
-			return false;
-		}
-		else if(document.updateaccountfrm.validatebillpay.value==1){
-			if(document.updateaccountfrm.routing.value==''){
-				alert("Please enter a routing number.");
-				document.updateaccountfrm.routing.focus();
-				document.updateaccountfrm.routing.select();
-				return false;
-			}
-			else if(isNaN(document.updateaccountfrm.routing.value)==true){
-				alert("Invalid routing number entered. Routing numbers must be numbers only.");
-				document.updateaccountfrm.routing.focus();
-				document.updateaccountfrm.routing.select();
-				return false;
-			}
-			else if(document.updateaccountfrm.routing.value.length!=9){
-				alert("Invalid routing number entered. Routing numbers must be 9 digits.");
-				document.updateaccountfrm.routing.focus();
-				document.updateaccountfrm.routing.select();
-				return false;
-			}
-			else if(document.updateaccountfrm.accountNumber.value==''){
-				alert("Please enter an account number.");
-				document.updateaccountfrm.accountNumber.focus();
-				document.updateaccountfrm.accountNumber.select();
-				return false;
-			}
-			else
-			{
-				saveinfo_accountupdate();
-				return false;
-			}
-		}
-		else{
-			saveinfo_accountupdate();
-			return false;
-		}
-	}
-	
-	function cancelupdate(){
-		$('updateaccount').style.display='none';
-		$('mainsection').style.display='';
-			}
-	function saveinfo_accountadd(){
-			  	
-		document.getElementById('accountupdate_div').innerHTML = "";
-		
-		new Ajax.Request('save/newaccount_ajax.php',{asynchronous:true,method:'post',parameters:Form.serialize(document.newaccount),onComplete:handleInfo_accountadd});
-handleInfo_accountadd
-
-		document.newaccount.accountName.value="";
-		document.newaccount.accountNumber.value="";
-		document.newaccount.routing.value="";
-				document.newaccount.accttype[0].selected=true;
-				document.newaccount.accountName.focus();
-			  	CancelNewAccount();
-	  		  	
-		return false;
-	}
-	function saveinfo_accountupdate(){
-		openajax();
-		document.getElementById('accountupdate_div').innerHTML = "";
-		new Ajax.Request('save/updateaccounts_ajax.php',{asynchronous:true,method:'post',parameters:Form.serialize(document.updateaccountfrm),onComplete:handleInfo_accountadd});
-		$('updateaccount').style.display='none';
-		$('mainsection').style.display='';
-		
-	}
-	function handleInfo_accountadd(e) {
-	  	var response = e.responseText;
-		document.getElementById('accountupdate_div').innerHTML = response;
-		document.newaccount.validatebillpay.value=0;
-		p=setTimeout("closeajax()",500);
-		$('accountupdate_div').style.display='';
-		Element.hide('addtobillid');
-		Element.hide('addtobillmain');
-		$('addtobill').checked=false;
-		document.newaccount.billamount.value="";
-		document.newaccount.apr2.value="";
-		document.newaccount.apr.value="";
-		document.newaccount.limit.value="";
-		document.newaccount.newcurrency.value="";
-		document.newaccount.exchangerate.value="";		
-        new Ajax.Updater('billaccountsId','common/selaccounts.php',{asynchronous:true,method:'post'});
-		getaccounts();
-		checktype();
-	}
-	function deleteacct(acctid){
-		testcon=confirm("This will also delete all transactions tied to this account. Do you wish to continue?");
-		if(testcon==true){
-			new Ajax.Request('save/deleteaccount.php',{asynchronous:true,method:'post',parameters:'fromajax=1&accountid='+acctid,onComplete:deleteaccount_complete});
-			Element.hide('acctrow_'+acctid);
-		}
-	}
-	function deleteaccount_complete(){
-		getaccounts();
-	}
-	function deleteaccounts(){
-		testcon=confirm("This will also delete all transactions tied to these account(s). Do you wish to continue?");
-		if(testcon==true){
-			return true;
-		}
-		return false;
-	}
-	
-	function getaccounts(){
-		if(window.XMLHttpRequest){
-			http = new XMLHttpRequest();
-		}
-		else if (window.ActiveXObject){
-			http = new ActiveXObject("Microsoft.XMLHTTP");
-		}
-				http.open("POST","updateaccounts_ajax.php",true);
-				sendvar="";
-				
-		http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		http.onreadystatechange = handleInfo_getaccounts;
-		http.send(sendvar);
-	}
-	function handleInfo_getaccounts() {
-	  if(http.readyState == 1) {
-	  }
-	  if(http.readyState == 4) {
-	 	var response = http.responseText;
-		document.getElementById('accountbody').innerHTML = response;
-		clearmsg();
-        jQuery('.datetest').datepicker({
-            dateFormat:jQuery('#jdateFormat').val(),
-        });
-	  }
-	}
-	
-	function updateaccountid(id,balance){
-		scrollToTop();
-		$('accountupdate_div').style.display='none';
-		Element.hide('newaccountID');
-		$('updateaccount').style.display='';
-		$('mainsection').style.display='none';
-		document.getElementById('updateaccountbody').innerHTML="<div class=loadingTxt align=center>Loading, please wait...</div>";
-		if(window.XMLHttpRequest){
-			http = new XMLHttpRequest();
-		}
-		else if (window.ActiveXObject){
-			http = new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		http.open("POST","accounts_update.php",true);
-		http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		http.onreadystatechange = handleInfo_updateaccount;
-		sendvar="ACCTID="+id+"&currentbalance="+balance;
-				http.send(sendvar);
-	}
-	function handleInfo_updateaccount() {
-	  if(http.readyState == 1) {
-	  	
-	  }
-	  if(http.readyState == 4) {
-	    var response = http.responseText;
-	    jQuery('.datetest').datepicker({
+	jQuery(document).ready(function(){
+		jQuery('.datetest').datepicker({
 			dateFormat:jQuery('#jdateFormat').val(),
 			firstDay:1		});
+				jQuery('.redmond').selectmenu();
 		
-		document.getElementById('updateaccountbody').innerHTML = response;
-		if(document.updateaccountfrm.invalidacct.value==0){
-			checktypeupdate();
-		}
-		checkbillu();
-	  }
-	  
-	}
-	function vclose(aid){
-		cacct=confirm("Are you sure you wish to close this account?");
-		if(cacct==true){
-			location.href="/BudgetTracker/secure.budgettracker.com/createuser.jsp";
-		}
-	}
-	function vopen(aid){
-		cacct=confirm("Are you sure you wish to re-open this account?");
-		if(cacct==true){
-			location.href="/BudgetTracker/secure.budgettracker.com/createuser.jsp";
-		}
-	}
-	function checkbanks(bankid){
+        jQuery( "#budgetContainerId" ).sortable({
+            revert: true,
+            update: function( event, ui ) {
+                updateSort();
+            }
+        });
+        jQuery( ".handle" ).draggable({
+            connectToSortable: "#budgetContainerId",
+            helper: "clone",
+            revert: "invalid"
+        });
+        jQuery( "div" ).disableSelection();
+    });
 
-		if(bankid==-1){
-			document.getElementById("fullbankid").style.display='';
-			document.getElementById("bankid").style.display='none';
-			document.newaccount.fullbankname.focus();
-			document.newaccount.fullbankname.select();
-		}
-	}
-	function checkbanksu(bankid){
-		if(bankid==-1){
-			document.getElementById("fullbankidu").style.display='';
-			document.getElementById("bankidu").style.display='none';
-			document.getElementById("fullbankidu").focus();
-			document.getElementById("fullbankidu").select();
-		}
-	}
-	
-	function checkbillu(){
-		if($('addtobillU')){
-			if($('addtobillU').checked==true){
-				Element.show('addtobillmainU');
-			}
-			else
-			{
-				Element.hide('addtobillmainU');
-			}
-		}
-	}
-	
-	function checkbill(){
-		if($('addtobill').checked==true){
-			Element.show('addtobillmain');
-		}
-		else
-		{
-			Element.hide('addtobillmain');
-		}
-	}
+	updateTotals();
+  }
+}
 
-	getaccounts();	</script>
-	<script src="./updateaccount_files/goals.js" type="text/javascript"></script>
-	<script src="./updateaccount_files/spendinglimits.js" type="text/javascript"></script>
-	<script src="./updateaccount_files/accounts.js" type="text/javascript"></script>
-	
-	
 
-</div>
+function updateSort() {
+    var sortOrder = Array();
+    jQuery('.budgetSelection').each(function(idx,item){
+        var id = jQuery(item).attr('id').replace('col1_','');
+        sortOrder.push(id);
+    });
+    new Ajax.Request('save/budget_sort.php',{asynchronous:true,method:'post',parameters:'sort='+sortOrder});
+}
 
+function hidePrintElements(){
+
+}
+
+function loadmain(){
+
+	$("updatesubcategory").style.display='';
+	//$("budget_div").style.display='';
+	$("budgetmain").style.display='';
+	if(window.XMLHttpRequest)
+		http = new XMLHttpRequest();
+	else if (window.ActiveXObject)
+		http = new ActiveXObject("Microsoft.XMLHTTP");
+	
+	http.open("POST","budget_ajax2.php",true);
+	http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	http.onreadystatechange = handleInfo_budgetmain;
+	sendvar="1=1";
+						//openajax();
+	http.send(sendvar);
+}
+var budget = {
+	transfer: function(budgetfromid){
+		$("budgetmain").style.display='none';
+		$("budget_div").style.display='none';
+		$("transferpopup").style.display='';
+		$("transferpopup").innerHTML="<div class=loadingTxt>Loading, please wait...</div>";
+		var url = "budget_transfer.php";
+		var getParameters = "budgetfromid="+budgetfromid;
+		var options = {asynchronous:true,method:'post',parameters:getParameters,onComplete:budget.transfer_success}
+		new Ajax.Updater('transferpopup', url, options);
+	},
+	transfer_success: function(){
+		transferfrm.amount.select();
+		transferfrm.amount.focus();
+		
+	},
+	transfer_cancel: function(){
+		$("transferpopup").style.display='none';
+		$("budgetmain").style.display='';
+		$("budget_div").style.display='';
+	},
+	transfersave: function(){
+		$("transferpopup").style.display='none';
+		var budgetfromid = transferfrm.budgetfromid.value;
+		var budgettoid = transferfrm.catid.value;
+		var amount = transferfrm.amount.value;
+		new Ajax.Request('save/budget_transfer.php',{asynchronous:true,method:'post',parameters:'fromid='+budgetfromid+'&toid='+budgettoid+'&amount='+amount+'&realYear=2017&realMonth=10',onComplete:budget.reallocateComplete});
+		
+	},
+	reallocateComplete: function(){
+		loadmain();
+	}
+}
+function opennewbudget(){
+			jQuery('#budget_div').slideToggle('medium',function(){
+						$('newsubcatinputId').focus()
+			$('newsubcatinputId').select();
+					});
+		
+}
+function handleInfo_updatesubcategory(e) {
+   var response = e.responseText;
+    $("budgetmessage").innerHTML = response;
+    	$("updatesubcategory").innerHTML="";
+	$("budgetmain").style.display='';
+	
+	new Ajax.Updater('categorydropdownID', 'common/selcategories.php', {method:'post',asynchronous:true});
+	loadmain();
+}
+function buildtotal(catid){
+	var carryover="";
+	if($('carrytotal'+catid)){
+		carryover=" Carry Over:"+$('carrytotal'+catid).innerHTML;
+	}
+	var total = 'Budgeted:'+$('budgettotal'+catid).innerHTML+ carryover +' Spent:'+$('spenttotal'+catid).innerHTML+' Available:'+$('availabletotal'+catid).innerHTML;
+	$('topbar'+catid).innerHTML=total;
+	if($('cats_'+catid).style.display=='none'){
+		Element.show('topbar'+catid);
+	}
+	else
+	{
+		Element.hide('topbar'+catid);
+	}
+}
+
+
+loadmain();	
+
+function cancelupdate(){
+		$("updatesubcategory").style.display='none';
+	$("budgetmain").style.display='';
+	
+}
+
+function togglebudgetcats(catid){
+	var catObj=$('cats_'+catid);
+	if(catObj.style.display==''){
+		Element.hide(catObj);
+		$('collapse'+catid).src="pics/plussign_blue.gif";
+		params="catid="+catid+"&display=hide";
+		new Ajax.Request('save/hidecats.php',{asynchronous:true,parameters:params});
+	}
+	else
+	{
+		Element.show(catObj);
+		$('collapse'+catid).src="pics/minussign_blue.gif";
+		params="catid="+catid+"&display=show";
+		new Ajax.Request('save/hidecats.php',{asynchronous:true,parameters:params});
+	}
+	buildtotal(catid);
+}
+function UpdateTemplate(template_id){
+	if(template_id=='add'){
+		location.href='categories_templates.php';
+	} else if(template_id=='category'){
+		location.href='categories.php';
+	}else{
+		location.href='?business='+template_id;
+	}
+}
+</script>
+
+
+	
 </td>
 	</tr>
 	<tr>
-		<td><img src="./updateaccount_files/spacer.gif" width="1" height="10"></td>
+		<td><img src="./BudgetTracker, Inc._files/spacer.gif" width="1" height="10"></td>
 	</tr>
 	
 	<tr>
@@ -3287,7 +3082,7 @@ handleInfo_accountadd
 			</div>
 </div>
 
-<form name="switchuser" style="margin:0px;padding:0px;" method="post" action="https://secure.budgettracker.com/switchuser.php"><input type="hidden" name="refreshurl" value="updateaccounts.php"><input type="hidden" name="getid" value="0/"></form>
+<form name="switchuser" style="margin:0px;padding:0px;" method="post" action="https://secure.budgettracker.com/switchuser.php"><input type="hidden" name="refreshurl" value="budget.php"><input type="hidden" name="getid" value="0/"></form>
 
 
 <div id="updatetabsid" style="display:none;" class="updatetabs">
@@ -3520,7 +3315,7 @@ Display Order:<br>
 	<!-- #########GOOGLE SHARE ########## -->
 
 <td>
-	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./updateaccount_files/5oivrH7Newv.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./BudgetTracker, Inc._files/Z2duorNoYeF.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
@@ -3532,7 +3327,7 @@ Display Order:<br>
 </tr></tbody></table>
 		<br>
 			<!-- Twitter universal website tag code -->
-	<script src="./updateaccount_files/oct.js" type="text/javascript"></script>
+	<script src="https://platform.twitter.com/oct.js" type="text/javascript"></script>
 	<script type="text/javascript">twttr.conversion.trackPid('nunjd', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
 	<noscript>
 	&lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nunjd&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" /&gt;
@@ -3552,7 +3347,7 @@ Display Order:<br>
 				var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-1576641-1']);
 	  _gaq.push(['_trackPageview']);
-	  _gaq.push(['_setCustomVar',1,'UserID','342881',3]);
+	  _gaq.push(['_setCustomVar',1,'UserID','344397',3]);
 	  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
 	  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
 	  (function() {
@@ -3567,7 +3362,7 @@ Display Order:<br>
 			
 			<tbody><tr>
 				<td>
-				<script type="text/javascript" src="./updateaccount_files/getthawteseal"></script>
+				<script type="text/javascript" src="./BudgetTracker, Inc._files/getthawteseal"></script><a href="https://sealinfo.thawte.com/thawtesplash?form_file=fdf/thawtesplash.fdf&amp;dn=SECURE.BUDGETTRACKER.COM&amp;lang=en" tabindex="-1" onmousedown="return v_mDown(event);" target="THAWTE_Splash"><img name="seal" border="true" src="./BudgetTracker, Inc._files/getthawteseal(1)" oncontextmenu="return false;" alt="Click to Verify - This site has chosen a thawte SSL Certificate to improve Web site security"></a>
 				</td>
 							</tr>		
 		</tbody></table>
@@ -3606,71 +3401,66 @@ Display Order:<br>
 	</div>
 	</center>				
 	</td>
-			<td valign="top" style="width: 13px;"><img src="./updateaccount_files/rightsidefade.png">
+			<td valign="top" style="width: 13px;"><img src="./BudgetTracker, Inc._files/rightsidefade.png">
 			
 			</td>	
 		</tr>
 	</tbody></table>
-	<img src="./updateaccount_files/spacer.gif" height="1" width="700">
+	<img src="./BudgetTracker, Inc._files/spacer.gif" height="1" width="700">
 	</div>
 	</td>
 	<td valign="top" class="footerRightColumn" width="100">&nbsp;
 			
 	<div class="rightHelp">
 	<form name="SubmitQuestionForm">
-		<input type="hidden" id="pname" name="pname" value="updateaccounts.php">
+		<input type="hidden" id="pname" name="pname" value="budget.php">
 
 		<div class="helpBody">
-		<h1>My Bank Accounts Questions</h1>
+		<h1>My Budget Questions</h1>
 				<div style="padding-left:10px;">
 			<a style="float:right;padding-right:10px;" class="smallTxt" href="javascript:void(OpenGuide())">close</a>
-			<a class="smallTxt" href="https://secure.budgettracker.com/guide.php?pid=5">view full page</a>
+			<a class="smallTxt" href="https://secure.budgettracker.com/guide.php?pid=4">view full page</a>
 		</div>
 							<h2>Page Description</h2>
-			<div class="termdef">This page will allow you to update your accounts as well as view the balances of each account. By entering an account, this allows you to tie your Bills, Budget, and Transactions to a single account. Please note that Credit and Loan accounts will automatically be entered as a negative amount for your opening balance.</div>
+			<div class="termdef">This page will allow you to view all items in your budget for the current month. Enter transactions to adjust your total available Budget amounts.</div>
 				<h2>Terms</h2>
 				
-			<div class="termname">Opening Balance</div>
-			<div class="termdef">This is the amount you initially deposited in your bank.</div>
+			<div class="termname">Standard Budget</div>
+			<div class="termdef">This type of budgeting will compare your transactions against budget amounts you set for each sub-category</div>
 				
-			<div class="termname">Auto Record Interest</div>
-			<div class="termdef">We'll automatically create a new transaction for based on the interest of your balance on the day you choose.</div>
+			<div class="termname">Envelope Budget</div>
+			<div class="termdef">This allows you to allocate your budget amounts by category against each income payment.</div>
 				
-			<div class="termname">APR Start Date</div>
-			<div class="termdef">This is most commonly used when you get a year of no interest and then would like to start recording your interest once ended.</div>
+			<div class="termname">Add to Forecast</div>
+			<div class="termdef">This will allow you to apply your budget amounts on the Transaction Forecast page by dividing up your budget amount on a daily, weekly, or monthly basis.</div>
+				
+			<div class="termname">Auto Carry Over</div>
+			<div class="termdef">Checking this will carry over any left over balances to the following month with the option to restart it every year.</div>
 							<h2>Questions &amp; Answers</h2>
-							<div class="termname">How do I track my expenses and income?</div>
-				<div class="termdef">On the left side of the page, you should see a link for "My Transactions". From here, you can see all the transaction that were created as well as create new transactions by clicking the "New Transaction" link at the top. For a quick way to enter transactions, you can use the Transaction Toolbar on the left of each page. If you're using our mobile app, you can click the New Transaction link from the main page.</div>
-							<div class="termname">I have transactions in the future recorded, why arent' they showing up in my accounts?</div>
-				<div class="termdef">At the top of the My Accounts page, you should see "balance as of ..." and then a date. If you click the date link, you can change this to a future date to see what your balance will be on a given date. The default is for todays date.</div>
-							<div class="termname">How can I allow someone else to enter transactions on one of my accounts?</div>
-				<div class="termdef">At the top of the page, you should a link titled "Share Account". This will allow you to give permissions to a sub-account or a user to enter in new transactions but cannot delete transactions.</div>
-							<div class="termname">id like to add all my paychecks and transaction history from the last 2 years.  how do i do that?</div>
-				<div class="termdef">First setup a recurring paycheck starting 2 years ago or whenever you want it to start. Then click the payment # to right which should be around 24 if you choose monthly. From there, click each of the "overdue" links to enter in a transaction paid. We've added to our todo list having the ability to click a record button on the income payment number page so that you can just check them all off and hit record.</div>
-							<div class="termname">Why can't I delete the Cash Account?</div>
-				<div class="termdef">We require that you have at least one account entered so that your transactions will all be associated with some account. You can however change the name of this account or hide it from view by editing the Cash account.</div>
-							<div class="termname">will you update transactions automatically?</div>
-				<div class="termdef">No, for security, our system currently only supports importing transactions that were downloaded from your bank or financial institution but we hope to offer this in the near future.</div>
-							<div class="termname">How do I close an account?</div>
-				<div class="termdef">To close an account, click on the account you wish to close. In the upper right corner, you'll see a "close account" link. This will allow you to hide that account from the My Accounts page and accounts dropdowns throughout the site still let you view transactions on the My Transactions page.</div>
-							<div class="termname">how do i void a check</div>
-				<div class="termdef">To void a check, edit the transaction for that you've created and change the status to "Void" then save your transaction</div>
-							<div class="termname">Delete an account</div>
-				<div class="termdef">To delete an account, click the trash can icon to the left of each account.</div>
-							<div class="termname">How do i save my entered information?</div>
-				<div class="termdef">When you enter information, this will automatically get saved to our servers since our program is completely online.</div>
-							<div class="termname">Can I get reporting that will include all sub accounts?</div>
-				<div class="termdef">We currently do not offer a report shows all your sub-accounts but we'll keep you on the reports page when switching sub-accounts. We've added this request to our todo list.</div>
-							<div class="termname">I want to track my budget in a yearly basis instead of monthly basis. How can I do that?</div>
-				<div class="termdef">At the top of the My Budget page, you can change the Monthly dropdown to Yearly</div>
-							<div class="termname">How do I get the text back to something I can read...block letters like this text?</div>
-				<div class="termdef">On the left side of the page near the bottom, you can change your font style in the dropdown under quick settings section</div>
-							<div class="termname">How do I change account from savings to checking</div>
-				<div class="termdef">If you are using the cash account, this can't be changed but other accounts you should see an account type option where you can choose Checking instead.</div>
-							<div class="termname">Though, I found this interesting. But can this software works for a client in Nigeria? before I option for it. Thanks</div>
-				<div class="termdef">Yes, the site will support any currency and any currency format from the settings page.</div>
-							<div class="termname">how do I connect to my account?</div>
-				<div class="termdef">We currently do not support connecting your bank accounts due to security concerns. We are looking into adding this in the future from a secure third party.</div>
+							<div class="termname">How can I view the transactions that make up the Spent/Deposited amount?</div>
+				<div class="termdef">If you click on the Spent amount link, it will pull the transactions that make up that amount and list them below. You can then click into any of them to edit your transaction.</div>
+							<div class="termname">I have sub-categories that are showing up twice, how do I get rid of them?</div>
+				<div class="termdef">If you go to My Categories, you'll see a merge link next to each sub-category allowing you to combine duplicate categories.</div>
+							<div class="termname">How do I get started with budgeting?</div>
+				<div class="termdef">You have a few options for starting your Budget.  First, you can select "Budgeting Wizard" at the top of the My Budget page. This will give you pre-defined Budget entries to help get you started. Once entered, you can then go into your Budget and change the names, recurrences, or amounts. Another option is to start by creating a category and sub-category. Your category is a way to group your Budget items such as "Auto" or "Utilities". Since these categories can have have several expenses in them, you now can enter Sub-Categories such as "Gasoline" or "Electric Bill". A third option is to begin your data entries on the "My Bills" page. When creating a new Bill, you have the option to associate your Bill with a Budget Item. Once a Budget item is selected for a Bill, this will automatically be entered for you on the "My Budget" page. This also applies to the My Income page. If setting up a credit card, create it on the My Accounts page and check the Add to Bills checkbox. This will automatically add that credit card into your budget as a new category.</div>
+							<div class="termname">how does envelope budgeting work</div>
+				<div class="termdef">At the top of the page, you will see all your income items in the order they are due which represents your envelopes. You can then allocate payments for each income column until the balance of that income is used up.</div>
+							<div class="termname">How to tie credit cards to your budget.</div>
+				<div class="termdef">If you go to My Credit Cards, then at the top, select Credit Card Schedule. This is where you can setup monthly payments to the card. What you'll be doing is creating a transfer from your checking to your credit card each month. You can then create a category which is what ties it to your budget. If you pay the card off each month and dont need it scheduled, you can create an expense category in your budget and then create a new transaction with the category you just created to pay the card off.</div>
+							<div class="termname">how do I delete and  start over?</div>
+				<div class="termdef">If you click on the Settings link in the upper right corner of the page, then scroll to the bottom you should see a reset link to delete your data and start over.</div>
+							<div class="termname">what is expense totals</div>
+				<div class="termdef">These are the totals for sub-categories that you've marked as expense. This will include both withdrawal and deposit transactions.</div>
+							<div class="termname">I would like to view my budget in weekly view and have it tell me how much I have to allocate each week to get to that target goal. However, when I select "Weekly" from the drop down box, every single item in my budget shows $0.00 in the budgeted amount. What am I missing?</div>
+				<div class="termdef">Thank you for the feedback. This should be fixed for standard sub-categories. We are looking into Bills and Income ties</div>
+							<div class="termname">how do I start an envelope budget</div>
+				<div class="termdef">To get started with envelope budgeting, go to My Budget and change the Standard Budget to Envelope. We will save your settings for the next time you go to the My Budget page.</div>
+							<div class="termname">How do you get your opening balance to add to your totals?</div>
+				<div class="termdef">The opening balance is actually your first transaction in the account so if you do a show all on the My Transactions page, you will see a transaction for the opening balance.</div>
+							<div class="termname">I would like to run my budget from say the 7th of one month to the 8th of the next instead of the 1st to the 30th or 31st. When I choose custom dates and put those dates in, it works great for expenses, the but the budget doubles. How can I run my budget amounts for the same time frame?</div>
+				<div class="termdef">If you go to the Settings page in the upper right corner, you should see a Fiscal Date option under Business Settings. This will adjust your budget to the day of your fiscal date instead of the 1st of each month.</div>
+							<div class="termname">How does "Filter on Template" work?</div>
+				<div class="termdef">This will allow you to filter your budget categories and save them as a template to allow you to view what your budget numbers will look like with a sub set of budget categories. This gives you the ability to create multiple budget pages to use for either different family members or distinguishing between your business and personal budget.</div>
 							
 		</div>
 		<div class="askquestion" align="center">
@@ -3684,16 +3474,18 @@ Display Order:<br>
 	</tbody></table>
 		</td></tr></tbody></table>
 	
-			<div id="helpfultips">
+			<div id="helpfultips" style="display: none;">
 			<div style="float:right;"><a href="javascript:void(hidetips());" class="smallTxt">hide</a></div>
-	<h1>Business CRM</h1>
-	<div class="smallTxt">Did you know BudgetTracker has a full CRM built into the Business sections? Try it for free by clicking on the Business tab.</div>
+	<h1>Be Creative</h1>
+	<div class="smallTxt">The <a href="https://secure.budgettracker.com/common.php">Add Ons</a> tab section allows you to design your tracking application to keep track of anything you like.</div>
 	
 		</div>
-		<div id="showtips" style="display:none;">
+		<div id="showtips" style="">
 		<a class="smallTxt" href="javascript:void(showtips())">Show Notifications</a>
 		</div>
 		
 	
-<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div class="ui-selectmenu-menu" style="z-index: 1001; top: 201px; left: 73px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="relatedpages-button" id="relatedpages-menu" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-30" style="width: 180px; height: auto;"><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-30">Related Pages...</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Balance Sheet</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Income Statement</a></li></ul></div><div class="ui-selectmenu-menu" style="z-index: 1001; top: 1004px; left: 89px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-1-button" id="ui-id-1-menu" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-612" style="width: 150px; height: auto;"><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Select Theme Color
-		</a></li><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-612">Blue</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Green</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Brown</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Purple</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Red</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Gray</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Teal</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Olive</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Orange</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Pink</a></li></ul></div><script type="text/javascript" src="./updateaccount_files/jsapi_compiled_format_module.js"></script><script type="text/javascript" src="./updateaccount_files/jsapi_compiled_default_module.js"></script><script type="text/javascript" src="./updateaccount_files/jsapi_compiled_ui_module.js"></script><script type="text/javascript" src="./updateaccount_files/jsapi_compiled_corechart_module.js"></script><div class="ui-selectmenu-menu" style="z-index: 1001; top: 1016px; left: 89px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-2-button" id="ui-id-2-menu" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-977" style="width: 150px; height: auto;"><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">AvantGarde Book</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Verdana</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Helvetica</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Times</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Arial</a></li><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-977">Helvetica Neue Light</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Alex Brush</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Quicksand Book</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Exo</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Redressed</a></li><li role="presentation"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Optima</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/updateaccounts.php#nogo" tabindex="-1" role="option" aria-selected="false">Futura</a></li></ul></div><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.22020792140387924"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.609795210731876" width="0" height="0" alt="" src="./updateaccount_files/0"></div></body></html>
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div class="ui-selectmenu-menu" style="z-index: 1001; top: 201px; left: 73px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="relatedpages-button" id="relatedpages-menu" style="width: 180px; height: 212.333px;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-827"><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-827">Related Pages...</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">My Categories</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">New Transaction</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Download to Excel</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Budget Bar Chart</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Budget Pie Chart</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Budgeting Wizard</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Goals</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Transaction Forecast</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Show All Spent</a></li></ul></div><div class="ui-selectmenu-menu" style="z-index: 1001; top: 1066px; left: 89px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-1-button" id="ui-id-1-menu" style="width: 150px; height: 212.333px;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-322"><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Select Theme Color
+		</a></li><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-322">Blue</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Green</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Brown</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Purple</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Red</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Gray</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Teal</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Olive</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Orange</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Pink</a></li></ul></div><div class="ui-selectmenu-menu" style="z-index: 1001; top: 1106px; left: 89px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-2-button" id="ui-id-2-menu" style="width: 150px; height: 212.333px;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-22"><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">AvantGarde Book</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Verdana</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Helvetica</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Times</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Arial</a></li><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-22">Helvetica Neue Light</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Alex Brush</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Quicksand Book</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Exo</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Redressed</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Optima</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Futura</a></li></ul></div><div class="ui-selectmenu-menu" style="z-index: 1; top: 258px; left: 658.828px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="monthviewID-button" id="monthviewID-menu" style="width: 120px; height: 212.333px;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-540"><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">January</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">February</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">March</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">April</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">May</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">June</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">July</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">August</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">September</a></li><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-540">October</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">November</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">December</a></li></ul></div><script type="text/javascript" src="./BudgetTracker, Inc._files/jsapi_compiled_format_module.js.???????? ????"></script><script type="text/javascript" src="./BudgetTracker, Inc._files/jsapi_compiled_default_module.js.???????? ????"></script><script type="text/javascript" src="./BudgetTracker, Inc._files/jsapi_compiled_ui_module.js.???????? ????"></script><script type="text/javascript" src="./BudgetTracker, Inc._files/jsapi_compiled_corechart_module.js.???????? ????"></script><div class="ui-selectmenu-menu" style="z-index: 1; top: 258px; left: 784.156px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="yearviewID-button" id="yearviewID-menu" style="width: 54px; height: auto;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-550"><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">2014</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">2015</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">2016</a></li><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-550">2017</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">2018</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">2019</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">2020</a></li></ul></div><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.7464647537031575"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.08719431300675984" width="0" height="0" alt="" src="./BudgetTracker, Inc._files/0"></div><div class="ui-selectmenu-menu" style="z-index: 1; top: 353px; left: 318px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-3-button" id="ui-id-3-menu" style="width: 150px; height: auto;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-917"><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-917">Standard Budget</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Envelope</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Kids Budgeting</a></li></ul></div><div class="ui-selectmenu-menu" style="z-index: 1; top: 353px; left: 479.984px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-4-button" id="ui-id-4-menu" style="width: 150px; height: auto;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-292"><li role="presentation" class="ui-corner-bottom ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-292">All Accounts</a></li></ul></div><div class="ui-selectmenu-menu" style="z-index: 1; top: 353px; left: 648.641px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-5-button" id="ui-id-5-menu" style="width: 150px; height: auto;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-913"><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-913">Filter on Template</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Business</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Update Templates
+		</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Assign Templates
+	</a></li></ul></div><div class="ui-selectmenu-menu" style="z-index: 1; top: 353px; left: 817.297px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-id-6-button" id="ui-id-6-menu" style="width: 150px; height: 212.333px;" aria-disabled="false" aria-activedescendant="ui-selectmenu-item-3"><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-3">Monthly</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Year-to-Date</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Last 2 Months</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Last Year</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">This Year</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Weekly</a></li><li role="presentation"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Twice a Month</a></li><li role="presentation" class="ui-corner-bottom"><a href="https://secure.budgettracker.com/budget.php#nogo" tabindex="-1" role="option" aria-selected="false">Custom Date</a></li></ul></div></body></html>

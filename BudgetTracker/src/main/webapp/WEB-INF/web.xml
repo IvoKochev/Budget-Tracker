@@ -12,6 +12,10 @@
         <servlet-name>AccountServlet</servlet-name>
         <servlet-class>com.budgettracker.servlet.new_account.AccountServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddBudget</servlet-name>
+        <servlet-class>com.budgettracker.AddBudget.AddBudget</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistrationServlet</servlet-name>
         <url-pattern>/RegistrationServlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>AccountServlet</servlet-name>
         <url-pattern>/AccountServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBudget</servlet-name>
+        <url-pattern>/AddBudget</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

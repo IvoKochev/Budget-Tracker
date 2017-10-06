@@ -1,0 +1,10 @@
+.depositbottom{
+	border-bottom: solid 1px lightgreen;
+}
+.expensebottom{
+	border-bottom: solid 1px #F9C3B7;
+}
+.topbudgetbar{
+	float:right;
+	font-size:10px;
+}
