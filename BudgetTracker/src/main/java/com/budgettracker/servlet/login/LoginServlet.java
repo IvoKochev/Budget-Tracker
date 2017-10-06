@@ -5,6 +5,7 @@
  */
 package com.budgettracker.servlet.login;
 
+import com.budgettracker.current_user.User;
 import com.budgettracker.database.connection.DBConnection;
 import java.io.IOException;
 import java.sql.Connection;
@@ -29,22 +30,24 @@ public class LoginServlet extends HttpServlet {
         try (Connection connection = new DBConnection().getConnection()) {
 
             if (checkEmailAndPassword(email, password, connection)) {
+
                 response.sendRedirect("/BudgetTracker/secure.budgettracker.com/updateaccount.jsp");
                 return;
             }
             response.sendRedirect("/BudgetTracker/secure.budgettracker.com/login_secure-f.jsp");
 
         } catch (ClassNotFoundException | SQLException ex) {
-            response.getWriter().print(ex);
+            response.sendRedirect("/BudgetTracker/secure.budgettracker.com/login_secure-f.jsp");
         }
     }
 
     private boolean checkEmailAndPassword(String email, String password, Connection connection) throws SQLException {
-        String query = "SELECT email,password FROM users WHERE email ='" + email + "'";
+        String query = "SELECT id,email,password FROM users WHERE email ='" + email + "'";
         String pass;
         try (Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             rs.next();
+            User.setId(rs.getInt("id"));
             pass = rs.getString("password");
         }
         return password.equals(pass);
