@@ -1071,7 +1071,7 @@ var accountchanged = false;
 			</div>
 						<div class="item off">
 				<span class="SideLink"><span class="SidebarIcon iconbills"></span>
-				<a href="https://secure.budgettracker.com/save/updatebrand.php?brand=3&amp;url=bills.php">
+				<a href="budget_tracker_bills.html">
 					<span>My Bills</span>
 				</a>
 				</span>
