@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.budgettracker.AddBudget;
+package com.budgettracker.servlet.AddBudget;
 
 import com.budgettracker.current_user.User;
 import com.budgettracker.database.connection.DBConnection;

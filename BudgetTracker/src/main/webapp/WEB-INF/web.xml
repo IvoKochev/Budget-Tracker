@@ -14,7 +14,7 @@
     </servlet>
     <servlet>
         <servlet-name>AddBudget</servlet-name>
-        <servlet-class>com.budgettracker.AddBudget.AddBudget</servlet-class>
+        <servlet-class>com.budgettracker.servlet.AddBudget.AddBudget</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistrationServlet</servlet-name>
