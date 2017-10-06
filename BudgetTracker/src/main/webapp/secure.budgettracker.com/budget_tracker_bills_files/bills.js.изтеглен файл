@@ -1,0 +1,671 @@
+
+var uID = document.getElementById("updatedbill");
+var nID = document.getElementById("newbillmain");
+var mID = document.getElementById("billsmain");
+
+
+
+function UpdateAddClass(){
+	if($("newbillmain").style.display==''){
+		$('subnavnewentryId').className="subnavnewentryon";
+	}
+	else
+	{
+		$('subnavnewentryId').className="subnavnewentry";
+	}
+}
+
+function CancelNewBill(){
+	Element.hide('newbillmain');
+	UpdateAddClass();
+}
+function showenddate(){
+	if(addbillfrm.enddate.checked==true){
+		document.getElementById("showenddate").style.display='';
+	}
+	else
+	{
+		document.getElementById("showenddate").style.display='none';
+	}
+}
+
+function checkaddress(){
+	if(addbillfrm.billpay.checked==false){
+		document.getElementById("addressid").style.display='none';
+	}
+	else
+	{
+		document.getElementById("addressid").style.display='';
+	}	
+}
+function checkaddressu(){
+	if(document.updatebillfrm.billpay.checked==false){
+		document.getElementById("addressidu").style.display='none';
+	}
+	else
+	{
+		document.getElementById("addressidu").style.display='';
+	}	
+}
+
+function validaterecupdate(x){
+	//Element.hide('updatesemimonthly');
+	document.getElementById("updatedailytxt").style.display='none';
+	Element.hide('updatesemimonthly');
+	if(x=="monthly"){
+		document.getElementById("updatemonthlytxt").style.display='';
+		document.getElementById("updateweeklytxt").style.display='none';
+	}
+	else if(x=="daily2"){
+		document.getElementById("updatedailytxt").style.display='';
+		document.getElementById("updatemonthlytxt").style.display='none';
+		document.getElementById("updateweeklytxt").style.display='none';
+	}
+	else if(x=="yearly"){
+		document.getElementById("updatemonthlytxt").style.display='';
+		document.getElementById("updateweeklytxt").style.display='none';
+		//updatebillfrm.recurrence[3].selected=true;
+		document.updatebillfrm.often[11].selected=true;
+	}
+	else if(x=="weekly"){
+		document.getElementById("updatemonthlytxt").style.display='none';
+		document.getElementById("updateweeklytxt").style.display='';
+	}
+	else if(x=="biweekly"){
+		document.getElementById("updatemonthlytxt").style.display='none';
+		document.getElementById("updateweeklytxt").style.display='';
+		//updatebillfrm.recurrence[1].selected=true;
+		document.updatebillfrm.weekoften[1].selected=true;
+	}
+	else if(x=="bimonthly"){
+		document.getElementById("updatemonthlytxt").style.display='';
+		document.getElementById("updateweeklytxt").style.display='none';
+		//updatebillfrm.recurrence[3].selected=true;
+		document.updatebillfrm.often[1].selected=true;
+	}
+	else if(x=="semimonthly"){
+		Element.hide("updatemonthlytxt");
+		Element.hide('updateweeklytxt');
+		Element.show('updatesemimonthly');
+	}
+	else if(x=="quarterly"){
+		document.getElementById("updatemonthlytxt").style.display='';
+		document.getElementById("updateweeklytxt").style.display='none';
+		//updatebillfrm.recurrence[3].selected=true;
+		document.updatebillfrm.often[2].selected=true;
+	}
+	else if(x=="semiannual"){
+		document.getElementById("updatemonthlytxt").style.display='';
+		document.getElementById("updateweeklytxt").style.display='none';
+		//updatebillfrm.recurrence[3].selected=true;
+		document.updatebillfrm.often[5].selected=true;
+	}
+	else
+	{
+		document.getElementById("updatemonthlytxt").style.display='none';
+		document.getElementById("updateweeklytxt").style.display='none';
+	}
+}
+
+
+function cancelupdate(){
+	uID.style.display='none';
+	//nID.style.display='';
+	mID.style.display='';
+}
+
+function showenddate_update(){
+	if(document.updatebillfrm.enddate.checked==true){
+		document.getElementById("showenddate_update").style.display='';
+	}
+	else
+	{
+		document.getElementById("showenddate_update").style.display='none';
+	}
+}
+
+function loadforecast(){
+	document.getElementById("billmsg").innerHTML="";
+	document.billsfrm.billmain.value="forecast";
+	loadmain();
+}
+function filterforecast(currval){
+	if(currval==''){
+		jQuery('.subprenavigation').show();
+	}else{
+		jQuery('.subprenavigation').hide();
+	}
+	params="noredir=1&billsforecast="+currval+'&billstartdate='+jQuery('#billstartdate').val()+'&billenddate='+jQuery('#billenddate').val();		
+	new Ajax.Request('settings_save.php',{asynchronous:true,parameters:params,onComplete:filterforecast_complete});
+	document.getElementById("billmsg").innerHTML="";
+	if(currval=="custom"){
+		
+		jQuery('.customdates').show();
+	}
+	else{
+		jQuery('.customdates').hide();
+	}
+	document.billsfrm.billmain.value=currval;
+}
+function filterforecast_complete(){
+	loadmain();
+}
+
+function loadlist(){
+	document.getElementById("billmsg").innerHTML="";
+	document.billsfrm.billmain.value="list";
+	loadmain();
+}
+function loadinfo(){
+	document.getElementById("billmsg").innerHTML="";
+	if($('currmonthview'))
+		$('currmonthview')[0].selected=true;
+	document.billsfrm.billmain.value="info";
+	loadmain();
+}
+function loadoverdue(){
+	$("billmsg").innerHTML="";
+	if($('currmonthview'))
+		$('currmonthview')[0].selected=true;
+	document.billsfrm.billmain.value="overdue";
+	loadmain();
+}
+function loadupcoming(){
+	$("billmsg").innerHTML="";
+	if($('currmonthview'))
+		$('currmonthview')[0].selected=true;
+	document.billsfrm.billmain.value="upcoming";
+	loadmain();
+}
+function loadtransforecast(){
+	document.getElementById("billmsg").innerHTML="";
+	$('currmonthview')[0].selected=true;
+	document.billsfrm.billmain.value="transforecast";
+	loadmain();
+}
+function loadtransforecast2(){
+	document.getElementById("billmsg").innerHTML="";
+	$('currmonthview')[0].selected=true;
+	document.billsfrm.billmain.value="transforecast2";
+	loadmain();
+}
+function loadforecastpaid(){
+	document.getElementById("billmsg").innerHTML="";
+	//$('currmonthview')[0].selected=true;
+	document.billsfrm.billmain.value="forecastpaid";
+	loadmain();
+}
+function loadforecastbill(){
+	document.getElementById("billmsg").innerHTML="";
+	document.billsfrm.billmain.value="forecastbill";
+	loadmain();
+}
+function loadpmt(billid){
+	document.getElementById("billmsg").innerHTML="";
+	document.billsfrm.billmain.value="pmthist";
+	document.billsfrm.billid.value=billid;
+	loadmain();
+}
+function addtocontacts(){
+	if(document.getElementById('addressid').style.display=='none'){
+		document.getElementById('addressid').style.display='';
+	}
+	else
+	{
+		document.getElementById('addressid').style.display='none';
+	}
+	
+}
+
+function newremindertime(){
+	if(document.addbillfrm.emailreminder.checked==false){
+		document.getElementById("newremindertime").style.display='none';
+	}
+	else
+	{
+		document.getElementById("newremindertime").style.display='';
+	}
+}
+function updateremindertime(){
+	if(document.updatebillfrm.emailreminder.checked==false){
+		document.getElementById("uremindertime").style.display='none';
+	}
+	else
+	{
+		document.getElementById("uremindertime").style.display='';
+	}
+}
+function checkcategory(x){
+	if(x==-1){
+		Element.show('newbudgetcatid');
+		Element.hide('budgetcatid');
+		Element.hide('budgetcatid_existing');
+		document.addbillfrm.newbudgetcat.focus();
+	}
+	else if(x==-2){
+		Element.show('budgetcatid_existing');
+		Element.hide('budgetcatid');
+		document.addbillfrm.newbudgetcat.focus();
+		params="noredir=1&billsdefcat=0";
+		new Ajax.Request('settings_save.php',{asynchronous:true,parameters:params});
+	}
+	else if(x==-3){
+		Element.hide('budgetcatid_existing');
+		Element.show('budgetcatid');
+		document.addbillfrm.newbudgetcat.focus();
+		params="noredir=1&billsdefcat=1";
+		new Ajax.Request('settings_save.php',{asynchronous:true,parameters:params});
+	}
+	else
+	{
+		Element.hide('newbudgetcatid');
+	}
+}
+function checktransferto()
+{
+	if(document.addbillfrm.transferto.checked==true){
+		document.getElementById("toacctid").style.display='';
+	}
+	else
+	{
+		document.addbillfrm.toaccount[0].selected=true;
+		document.addbillfrm.billname.disabled=false;
+		document.getElementById("toacctid").style.display='none';
+	}
+}
+function checkutransferto(){
+	if(document.updatebillfrm.transferto.checked==true){
+		document.getElementById("utoacctid").style.display='';
+	}
+	else
+	{
+		document.updatebillfrm.toaccount[0].selected=true;
+		document.updatebillfrm.billname.disabled=false;
+		document.getElementById("utoacctid").style.display='none';
+	}
+}
+
+function checktaxes(x){
+	if(x=="5"){
+		if(navigator.userAgent.indexOf("MSIE")!=-1){
+			confirmmb();
+			if(addbillfrm.msgboxhdn.value=="true"){
+				document.getElementById("taxesid").style.display='';	
+			}
+			document.addbillfrm.msgboxhdn.value="";
+		}
+		else
+		{
+			confirmMortgage=confirm("Does the above Mortgage amount include Taxes and Insurance?");
+			if(confirmMortgage==true){
+				document.getElementById("taxesid").style.display='';	
+			}
+		}
+	}
+	else
+	{
+		document.getElementById("taxesid").style.display='none';
+	}
+}
+function checktaxesu(x){
+	if(x=="5"){
+		if(navigator.userAgent.indexOf("MSIE")!=-1){
+			confirmmbu();
+			if(document.updatebillfrm.msgboxhdn.value=="true"){
+				document.getElementById("taxesid").style.display='';	
+			}
+			document.updatebillfrm.msgboxhdn.value="";
+		}
+		else
+		{
+			confirmMortgage=confirm("Does the above Mortgage amount include Taxes and Insurance?");
+			if(confirmMortgage==true){
+				document.getElementById("taxesidu").style.display='';
+			}
+		}
+	}
+	else
+	{
+		document.getElementById("taxesidu").style.display='none';
+	}
+}
+
+function markpaid(billid,pmtnum){
+	var getParameters="billid="+billid+"&pmtnum="+pmtnum;
+	new Ajax.Request('save/markpaid.php',{asynchronous:true,method:'post',parameters:getParameters,onSuccess:markpaid_success});
+	
+}
+function carryover(billid,pmtnum,carryoveramount){
+	var getParameters="billid="+billid+"&pmtnum="+pmtnum;
+	new Ajax.Request('save/markpaid.php',{asynchronous:true,method:'post',parameters:getParameters,onSuccess:markpaid_success});
+	pmtnum++;
+	new Ajax.Request('save/billoverride.php',{method:'post',asynchronous:'true',parameters:'amount='+carryoveramount+'&billid='+billid+'&pmtnum='+pmtnum});
+}
+
+function markpaid_success(t){
+
+	$('billmsg').innerHTML=t.responseText;
+	
+	loadmain();
+}
+
+function loadnewbill_success(){
+	
+	jQuery('.datetest').datepicker({
+		dateFormat:jQuery('#jdateFormat').val(),
+		firstDay:1
+	});
+	
+	//addbillfrm.billname.focus();
+	//addbillfrm.billname.select();
+	
+	//validaterec('monthly');	
+}
+
+
+function checkmonthsUpdate(val){
+	/*
+	if(val==2){
+		document.updatebillfrm.recurrence[4].selected=true;
+	}
+	else if(val==3){
+		document.updatebillfrm.recurrence[5].selected=true;
+	}
+	else if(val==6){
+		document.updatebillfrm.recurrence[6].selected=true;
+	}
+	else if(val==12){
+		document.updatebillfrm.recurrence[7].selected=true;
+	}
+	else
+	{
+		document.updatebillfrm.recurrence[3].selected=true;
+	}
+	*/
+}
+
+function checkmonths(val){
+	/*
+	if(val==2){
+		document.addbillfrm.recurrence[4].selected=true;
+	}
+	else if(val==3){
+		document.addbillfrm.recurrence[5].selected=true;
+	}
+	else if(val==6){
+		document.addbillfrm.recurrence[6].selected=true;
+	}
+	else if(val==12){
+		document.addbillfrm.recurrence[7].selected=true;
+	}
+	else
+	{
+		document.addbillfrm.recurrence[3].selected=true;
+	}
+	*/
+}
+
+function BillOverride(billid,pmtnum,curramount,currtype){
+	jQuery("#dialog-billamount").dialog("open");
+	jQuery('#override_amount').val(curramount);
+	jQuery('#override_amount').focus();
+	jQuery('#override_amount').select();
+	jQuery('#override_billid').val(billid);
+	jQuery('#override_pmtnum').val(pmtnum);
+	if(currtype==1){
+		jQuery('#override_type').val('1');
+	}
+	
+}
+function BillOverride_Submit(billid,pmtnum,amount,type){
+
+	if(amount&&amount!=""){
+		if(amount=="d"||amount=="delete"){
+			new Ajax.Request('save/billoverride.php',{method:'post',onComplete:loadmain,asynchronous:'true',parameters:'delete=1&billid='+billid+'&pmtnum='+pmtnum});
+		}
+		else
+		{
+			new Ajax.Request('save/billoverride.php',{method:'post',onComplete:loadmain,asynchronous:'true',parameters:'amount='+amount+'&billid='+billid+'&pmtnum='+pmtnum+'&type='+type});
+		}
+	}
+}
+
+function creditLeft(billid){
+	$('billsmain_body').innerHTML="<div align=center class=loadingTxt>Loading, please wait...</div>";
+	new Ajax.Updater('billsmain','creditleft.php',{method:'post',asynchronous:true,parameters:'billid='+billid});
+}
+
+function verifydelbill(){
+	var conf=confirm("Do you wish to also delete all transactions tied to these bills?");
+	if(conf==true){
+		billsfrm.deletetrans.value=1;
+	}
+}
+function DeleteBill(billid){
+	/*
+	var conf=confirm("Do you also wish to delete all transactions tied to this bill?");
+	var params = 'noreturn=1&billid='+billid;
+	if(conf==true){
+		params+="&deletetrans=1";
+	}
+	*/
+	var conf=confirm("This will delete all recurrences of this bill. Are you sure you wish to continue?");
+	var params = 'noreturn=1&billid='+billid;
+	if(conf==true){
+		new Ajax.Request('save/deletebill.php',{method:'get',asynchronous:true,parameters:params,onComplete:DeleteBill_Complete});
+	}
+}
+function DeleteBill_Complete(e){
+	var subcatid=e.responseText.split("|")[0];
+	var catname =e.responseText.split("|")[1]; 
+	if(subcatid && subcatid > 0){
+		//jQuery('#billmsg').html("Would you also like to delete the sub-category ("+catname+") that was tied to this bill? <a href=save/deletebillref.php?subcatid="+subcatid+">delete sub-category "+catname+"</a>");
+	}
+	loadmain();
+}
+
+function addBillSplit_Complete(){
+
+}
+
+function updateBillSplit(){
+	var newdiv = document.createElement('div');
+	itemcount=$('ubillitemcountId').value;
+	itemcount++;
+	$('ubillitemcountId').value=itemcount;
+	newdiv.id="itemcount_"+itemcount;
+	$('updatebillitemId').appendChild(newdiv);
+	var params='itemcount='+itemcount+'&isupdate=1';
+	if(itemcount<30){
+		new Ajax.Updater('itemcount_'+itemcount,'bill_split.php', {asynchronous:true,method:'post',parameters:params});
+	}
+	else
+	{
+		alert("Maximum split items reached(30)");
+	}
+}
+function OpenSplitBills(){
+	if($('splitcb').checked==true){
+		Element.show('billsplitcontainer');
+		Element.hide('budgetcatid_existing');
+		document.addbillfrm.catid[0].selected=true;
+		Element.hide('budgetcatid');
+		Element.show('splitTxtId');
+
+	}
+	else
+	{
+		Element.hide('billsplitcontainer');
+		Element.show('budgetcatid_existing');
+		Element.hide('budgetcatid');
+		Element.hide('splitTxtId');
+	}
+}
+function OpenUpdateSplitBills(){
+	if($('updatesplitcb').checked==true){
+		Element.show('updatebillsplitcontainer');
+	}
+	else
+	{
+		Element.hide('updatebillsplitcontainer');
+	}
+}
+function addBillSplit(){
+	var newdiv = document.createElement('div');
+	itemcount=$('billitemcountId').value;
+	itemcount++;
+	$('billitemcountId').value=itemcount;
+	newdiv.id="itemcount_"+itemcount;
+	$('addbillitemId').appendChild(newdiv);
+	if(itemcount<30){
+		new Ajax.Updater('itemcount_'+itemcount,'bill_split.php', {asynchronous:true,method:'post',parameters:'itemcount='+itemcount,onComplete:addBillSplit_Complete});
+	}
+	else
+	{
+		alert("Maximum split items reached(30)");
+	}
+}
+
+function UpdatePayDate(billid,pmtnum,orig_date){
+	
+	Element.show("billdateinput_"+billid+pmtnum);
+	Element.hide("billdatespan_"+billid+pmtnum);
+	$("billdateinput_"+billid+pmtnum).focus();
+	$("billdateinput_"+billid+pmtnum).select();
+	//jQuery('.datetest').datepicker({
+	//	dateFormat:jQuery('#jdateFormat').val()
+	//});
+}
+
+function UpdatePayDate2(billid,pmtnum){
+	var params="billid="+billid+"&pmtnum="+pmtnum+"&billdate="+$("billdateinput_"+billid+pmtnum).value+'&billdate_orig='+$("billdateoriginput_"+billid+pmtnum).value;
+	new Ajax.Request('save/updatebilldate.php',{asynchronous:true,method:'post',parameters:params,onComplete:UpdatePayDate2_Complete});
+	
+}
+function UpdatePayDate2_Complete(e){
+	var response = e.responseText;
+	if(response!="error"){
+		response=response.split("|");
+		Element.hide("billdateinput_"+response[0]+response[1]);
+		Element.show("billdatespan_"+response[0]+response[1]);
+		$("billdatespan_"+response[0]+response[1]).innerHTML=response[2];
+		$('billmsg').innerHTML="Success! Your date was saved.";
+		Element.show('billmsg');
+	}
+	else
+	{
+		$('billmsg').innerHTML="There was an error saving your date. Please use the format MM/DD/YYYY";
+		Element.show('billmsg');
+	}
+	return false;
+}
+
+
+function checkInput(){
+	var f = billsfrm.getElementsByTagName("input");
+	for(i=0;i<f.length;i++){
+		if(f[i].id.indexOf("billdateinput")!=-1){
+			if(f[i].style.display!="none"){
+				$('newbillbtn').focus();
+				return false;
+			}
+		}
+	}
+		
+	return true;
+}
+
+function selectall(id){
+	var checkboxes = $(id).getElementsByTagName("input");
+	for(i=0;i<checkboxes.length;i++){
+		checkboxes[i].checked=true;
+	}
+}
+function selectnone(id){
+	var checkboxes = $(id).getElementsByTagName("input");
+	for(i=0;i<checkboxes.length;i++){
+		checkboxes[i].checked=false;
+	}
+}
+
+function filteracct(val){
+	new Ajax.Request('settings_save.php',{asynchronous:true,method:'post',parameters:'noredir=1&billacctfilter='+val,onComplete:filteracct_complete});
+}
+function filterbill(val){
+	new Ajax.Request('settings_save.php',{asynchronous:true,method:'post',parameters:'noredir=1&billidfilter='+val,onComplete:filteracct_complete});
+}
+
+function filteracct_complete(){
+	loadmain();
+}
+
+function updatebilloptions(){
+	Element.show('emailrow');
+	Element.show('contactrow');
+	Element.show('splitrow');
+	Element.show('totalrow');
+	Element.show('interestrow');
+	Element.hide('updatemoreoptions');
+}
+
+function selectbillcat(x,catnum){
+	$('budgetcat'+catnum).hide();
+	if(x=="new"){
+		$('budgetcat'+catnum).show();
+		$('budgetcat'+catnum).focus();
+	}
+}
+
+function UpdateActive(obj){
+	if(jQuery(obj).is(':checked')){
+		jQuery('.nonactive').hide();	
+	}
+	else{
+		jQuery('.nonactive').show();	
+	}
+}
+
+function checkCycle(obj){
+	if(jQuery(obj).is(':checked')){
+		jQuery('#cycledateid').show();
+		jQuery('#enddateid').prop( "checked", true );
+		showenddate_update();
+	}
+	else
+	{
+		jQuery('#cycledateid').hide();
+	}
+}
+
+jQuery(document).ready(function($){
+	$( "#dialog-billamount" ).dialog({
+	  autoOpen: false,
+	  height: 250,
+	  width: 350,
+	  modal: true,
+	  buttons: {
+		  "Edit Overrides" : function(){
+		    location.href='bills_override.php?billid='+jQuery('#override_billid').val();
+	    },
+	    "Update Amount": function() {
+			var billid = jQuery('#override_billid').val();
+			var pmtnum = jQuery('#override_pmtnum').val();
+			var amount = jQuery('#override_amount').val();
+			var type = jQuery('#override_type').val();
+			BillOverride_Submit(billid,pmtnum,amount,type);
+			$( "#dialog-billamount" ).dialog("close");
+	    }
+	    
+	  }
+	});
+});
+
+function numberOfPayments(id) {
+	var pmts = prompt("# of payments left");
+	if(pmts) {
+		var today = new Date();
+		today.setMonth(today.getMonth()+pmts);
+		jQuery('#'+id).val(today.getUTCMonth()+1+'/'+today.getDate()+'/'+today.getFullYear());
+	}
+
+}
