@@ -46,16 +46,16 @@ public class AddBudget extends HttpServlet {
     }
 
     private boolean checkAccount(String accName, Connection connect) throws SQLException {
-        String query = "SELECT id,name,user_id FROM accounts WHERE name ='" + accName + "'";
+        String query = "SELECT id,name,user_id FROM accounts WHERE name ='" + accName + "' and user_id =" + User.getId();
         ResultSet rs = null;
         try (Statement stmt = connect.createStatement()) {
             rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                int user_id = rs.getInt("user_id");
-                if (user_id == User.getId()) {
-                    acc_Id = rs.getInt("id");
-                    return true;
-                }
+            rs.next();
+            int user_id = rs.getInt("user_id");
+            if (user_id == User.getId()) {
+                acc_Id = rs.getInt("id");
+                return true;
+
             }
         } finally {
             if (rs != null) {
