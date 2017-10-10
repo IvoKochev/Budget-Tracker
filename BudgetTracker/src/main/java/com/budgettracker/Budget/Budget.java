@@ -51,6 +51,10 @@ public class Budget {
     }
 
     
-    
+    public void addToBudget(String accountName, double amount) {
+        if(accountName != null && ! accountName.isEmpty() && amount > 0) {
+            this.amount += amount;
+        }
+    }
 
 }

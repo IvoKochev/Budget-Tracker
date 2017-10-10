@@ -1,17 +1,15 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.budgettracker.MyBills;
 
-import java.util.Date;
-import java.util.List;
-
+/**
+ *
+ * @author Ivo
+ */
 public interface IBill {
-	void addBill(Bill bill);
-	void deleteBill(Bill bill);
-	void cancelBill(Bill bill);
-	void updateAmount(Type type, double amount);
-	void renewBill(Bill bill);
-	void recordBills(List<Bill> bills);
-	void filterOutChecked();
-	void filterOutPaid();
-	void filterByDates(Date startDate, Date endDate);
-
+    void addBill(Bill bill);
+    
 }
