@@ -9,24 +9,24 @@ package com.budgettracker.exceptions;
  *
  * @author Ivo
  */
-public class InvalidAccountNameException extends Exception{
+public class InvalidAccountException extends Exception{
 
-    public InvalidAccountNameException() {
+    public InvalidAccountException() {
     }
 
-    public InvalidAccountNameException(String message) {
+    public InvalidAccountException(String message) {
         super(message);
     }
 
-    public InvalidAccountNameException(String message, Throwable cause) {
+    public InvalidAccountException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public InvalidAccountNameException(Throwable cause) {
+    public InvalidAccountException(Throwable cause) {
         super(cause);
     }
 
-    public InvalidAccountNameException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public InvalidAccountException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     

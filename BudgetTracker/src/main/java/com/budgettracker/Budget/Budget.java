@@ -1,6 +1,7 @@
 package com.budgettracker.Budget;
 
-import com.budgettracker.exceptions.InvalidAccountNameException;
+
+import com.budgettracker.exceptions.InvalidAccountException;
 import com.budgettracker.exceptions.InvalidAmountException;
 import java.time.LocalDateTime;
 
@@ -13,7 +14,8 @@ public class Budget {
     private String accountName;
     private BudgetType budgetType;
 
-    public Budget(Category category, double amount, LocalDateTime startDate, Recurrence recurrence, String accountName, BudgetType budgetType) throws InvalidAmountException, InvalidAccountNameException {
+   
+    public Budget(Category category, double amount, LocalDateTime startDate, Recurrence recurrence, String accountName, BudgetType budgetType) throws InvalidAmountException, InvalidAccountException {
         if(category != null)
             this.category = category;
         if(amount > 0){
@@ -28,7 +30,7 @@ public class Budget {
         if(accountName != null && !accountName.isEmpty()){
             this.accountName = accountName;
         } else {
-            throw new InvalidAccountNameException("Invalid account name!");
+            throw new InvalidAccountException("Invalid account name!");
         }
         if(budgetType != null)
             this.budgetType = budgetType;
