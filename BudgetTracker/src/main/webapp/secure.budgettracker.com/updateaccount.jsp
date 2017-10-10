@@ -1113,7 +1113,7 @@ var accountchanged = false;
 			</div>
 						<div class="item off">
 				<span class="SideLink"><span class="SidebarIcon icontrans"></span>
-				<a href="https://secure.budgettracker.com/save/updatebrand.php?brand=3&amp;url=transactionsall.php?monthview=0">
+				<a href="transaction.html">
 					<span>My Transactions</span>
 				</a>
 				</span>
@@ -1463,7 +1463,7 @@ var accountchanged = false;
 					</div>
 									<div class="off folder0">
 						<span class="SideLink"><span class="SidebarIcon icontrans"></span>
-						<a href="https://secure.budgettracker.com/transactionsall.php?monthview=0">
+						<a href="transaction.html">
 							<span>My Transactions</span>
 						</a>
 						</span>
