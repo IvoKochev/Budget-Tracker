@@ -3,7 +3,7 @@ package com.budgettracker.Overview;
 import com.budgettracker.account.Account;
 
 public interface IOverview {
-	void showEverything(Account account);
         void addAccount(Account account);
+        void getInformation();
 
 }

@@ -13,6 +13,8 @@ import com.budgettracker.income.Income;
 import com.budgettracker.sender_or_payee.IPayee;
 import com.budgettracker.sender_or_payee.SenderOrPayee;
 import com.budgettracker.transaction.Transaction;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -34,6 +36,10 @@ public class Account extends SenderOrPayee implements IAccount {
     private String currency;
 
     public Account(String name, double currentBalance, int accountNumber, AccountType accountType, String currency) throws InvalidAccountException {
+        this.bills = new HashSet<Bill>();
+        this.transactions = new ArrayList<>();
+        this.incomes = new HashSet<>();
+        this.budgets = new HashSet<>();
         if(name != null && !name.isEmpty()) {
             this.name = name;
         } else {
@@ -64,4 +70,48 @@ public class Account extends SenderOrPayee implements IAccount {
         double myMoney = this.save.getMoney(money);
         payee.addMoney(myMoney);    
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getCurrentBalance() {
+        return currentBalance;
+    }
+
+    public Set<Bill> getBills() {
+        return bills;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public Set<Income> getIncomes() {
+        return incomes;
+    }
+
+    public Set<Budget> getBudgets() {
+        return budgets;
+    }
+
+    public Save getSave() {
+        return save;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    
+    
+    
 }

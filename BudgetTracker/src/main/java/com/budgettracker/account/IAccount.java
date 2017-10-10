@@ -11,5 +11,6 @@ package com.budgettracker.account;
  * @author slavi
  */
 public interface IAccount  {
+    
 
 }
