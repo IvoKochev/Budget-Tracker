@@ -1,5 +1,7 @@
 package com.budgettracker.MyBills;
 
+import com.budgettracker.exceptions.InvalidAccountNameException;
+import com.budgettracker.exceptions.InvalidAmountException;
 import java.time.LocalDateTime;
 
 
@@ -12,13 +14,19 @@ public class Bill{
         private Recurrence recurrence;
         private Type type;
 
-    public Bill(Category category, double amount, String payee, LocalDateTime startDate, Recurrence recurrence, Type type) {
+    public Bill(Category category, double amount, String payee, LocalDateTime startDate, Recurrence recurrence, Type type) throws InvalidAmountException, InvalidAccountNameException {
         if(category != null)
             this.category = category;
-        if(amount > 0)
+        if(amount > 0){
             this.amount = amount;
-        if(payee != null && !payee.isEmpty())
+        } else {
+            throw new InvalidAmountException("Invalid amount!");
+        }
+        if(payee != null && !payee.isEmpty()){
             this.payee = payee;
+        } else {
+            throw new InvalidAccountNameException("Invalid payee name!");
+        }
         if(!startDate.isBefore(LocalDateTime.now()))
            this.startDate = startDate;
         if(recurrence != null)
